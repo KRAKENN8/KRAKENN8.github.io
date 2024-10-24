@@ -1,0 +1,235 @@
+/* Global settings */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 1.2em;
+            background-color: #ffffff;
+            color: #FFFFFF;
+        }
+
+        /* Background for the main page */
+        body.home {
+            background-image: url('81993.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Basic text styling */
+        p {
+            padding: 0 0 20px 0;
+            line-height: 1.7em;
+        }
+
+        input[type="text"], 
+        input[type="password"], 
+        input[type="search"] {
+            color: #5d5d5d;
+            width: 60%;
+            padding: 8px;
+        }
+
+        input, 
+        textarea {
+            outline: none;
+            border: solid 1px #ffffff;
+        }
+
+        a, a:hover {
+            outline: none;
+            text-decoration: underline;
+            color: #00BFFF;
+        }
+
+        ul {
+            margin: 2px 0 22px 17px;
+        }
+
+        ul li {
+            margin: 0 0 6px 0;
+            padding: 0 0 4px 5px;
+            line-height: 1.5em;
+        }
+
+        .main, 
+        .logo, 
+        .menubar, 
+        .site_content, 
+        .footer {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Logo section */
+        .logo {
+            width: 880px;
+            padding-bottom: 40px;
+        }
+
+        .logo_text h1, 
+        .logo_text h1 a, 
+        .logo_text h1 a:hover {
+            padding: 22px 0 0 0;
+            color: #FFFFFF;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+        }
+
+        .logo_text h2 {
+            font-size: 0.9em;
+            padding: 4px 0 0 0;
+            color: #FFFFFF;
+        }
+
+        /* Menu bar styling */
+        .menubar {
+            width: 1100px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul.menu {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.menu li {
+            margin: 0 10px;
+            list-style: none;
+        }
+
+        ul.menu li a {
+            font: normal 175% 'Trebuchet MS', sans-serif;
+            display: block;
+            height: 55px;
+            padding: 6px 35px 5px 28px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        hr {
+            border: solid 1px #f3f3f3;
+            width: 77%; /* Установите желаемую ширину */
+            margin: 20px auto; /* Центрирует линию */
+        }
+
+        /* Content and sidebar styling */
+        .site_content {
+            width: 100%;
+            max-width: 1100px;
+            overflow: hidden;
+            margin: 20px auto 0 auto;
+            padding: 20px;
+            background-color: rgba(3, 44, 78, 0.726);
+        }
+
+        .sidebar_container {
+            float: right;
+            width: 224px;
+        }
+
+        .sidebar {
+            float: right;
+            width: 100%;
+            padding: 5%;
+            margin: 0 0 16px 0;
+            border: solid 1px #f2f2f2;
+            border-radius: 5px;
+            background-color: rgba(3, 44, 78, 0.726);
+        }
+
+        .sidebar h2 {
+            color: #FFFFFF;
+        }
+
+        .lables_passreg_text {
+            font-size: 0.7em;
+            margin-top: 3%;
+            margin-left: 2%;
+        }
+
+        .sidebar ul li {
+            list-style-type: none;
+        }
+
+        .rating_sidebar {
+            float: right;
+        }
+
+        .content {
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        /* Films block styling */
+        .films_block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-evenly;
+            margin-bottom: 5%;
+        }
+
+        .films_block img {
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            max-width: 100%;
+        }
+
+        /* Footer styling */
+        .footer {
+            width: 100%;
+            height: 100px;
+            padding: 28px 0 5px 0;
+            text-align: center;
+            background-color: #000000;
+            color: #a8aa94;
+            min-width: 900px;
+        }
+
+        .footer a {
+            color: #a8aa94;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #FFFFFF;
+        }
+
+        .posts {
+            width: 800px; /* Задайте желаемую ширину */
+            height: 400px; /* Задайте желаемую высоту */
+            margin: 0px; /* Центрирование */
+            padding: 0px; /* Отступы внутри блока */
+            border-radius: 5px; /* Закругленные углы */
+        }
+
+        .posts h2 {
+            padding-bottom: 10px; /* Внутренний отступ снизу для заголовка */
+        }
+
+        .posts p {
+            padding-bottom: 0px; /* Внутренний отступ сверху для текста */
+        }
+
+        /* New Films and New Series Container */
+        .new-content-container {
+            display: flex; /* Используем flexbox для параллельного расположения */
+            justify-content: space-between; /* Равномерно распределяем пространство */
+            margin-bottom: 40px; /* Отступ снизу */
+        }
+
+        .new-content {
+            width: 48%; /* Ширина каждого блока */
+        }
