@@ -439,3 +439,11 @@ td img {
 .footer p {
     padding: 0 0 10px 0;
 }
+
+ul.menu li.selected a {
+    color: #aeb002;
+}
+
+ul.menu li a:hover {
+    color: #e4ec04;
+}
