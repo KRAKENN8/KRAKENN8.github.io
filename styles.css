@@ -1,33 +1,83 @@
-*{
+/* Global Settings */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
-html{
+html, body {
     font-family: 'Roboto', sans-serif;
-    font-size: 50px;
+    color: #FFFFFF;
+    background-color: #1b2a34;
     text-align: center;
-    color: #ffff;
-    background: #27353f;
 }
 
-.container{
+header {
+    background-color: #1b2a34;
+    color: #ffffff;
+    font-size: 2.5em;
+    padding: 20px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
     min-height: 800px;
     background: url('background.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .my_projects {
-    display: block;
-    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.my_projects a{
-    color: #39bedc;
+.my_projects a {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid rgba(8, 85, 154);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.my_projects a:hover {
+    background-color: rgba(8, 85, 154);
+    color: #1b2a34;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #27353f;
+    padding: 20px;
+    font-size: 1.5em;
+    color: #ffffff;
+
 }
 
 #mailme {
-    color: aliceblue
+    color: rgba(8, 85, 154);
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+#mailme:hover {
+    color: #FFFFFF;
 }
