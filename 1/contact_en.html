@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <meta name="description" content="CineBase - a portal about movies">
+    <meta name="keywords" content="movies, movies online, HD">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logo">
+            <div class="logo_text">
+                <h1><a href="index_en.html">CineBase</a></h1>
+                <h2>Movies are our passion!</h2>
+            </div>
+        </div>
+
+        <nav class="menubar">
+            <ul class="menu">
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="films_en.html">Movies</a></li>
+                <li><a href="serials_en.html">TV Series</a></li>
+                <li><a href="rating_en.html">Movie Ratings</a></li>
+                <li class="selected"><a href="contact_en.html">Contacts</a></li>
+                <li><a href="contact.html">RU</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="site_content">
+
+        <div class="sidebar_container">
+
+            <div class="sidebar">
+                <h2>Search</h2>
+                <form method="post" action="#" id="searc_form">
+                    <input type="search" name="search-field" placeholder="your query" />
+                    <input type="submit" class="btn" value="Search" />
+                </form>
+            </div>
+
+            <div class="sidebar">
+                <h2>Login</h2>
+                <form method="post" action="#" id="login">
+                    <input type="text" name="Login_field" placeholder="login"/>
+                    <input type="password" name="password_field" placeholder="password"/>
+                    <input type="submit" class="btn" value="Login" />
+                    <div class="lables_passreg_text">
+                        <span><a href="#">Forgot password?</a></span> | <span><a href="serials.html">Register</a></span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="sidebar">
+                <h2>News</h2>
+                <span>31.02.2018</span>
+                <p>We have launched advanced search</p>
+                <a href="#">Read</a>
+            </div>
+
+            <div class="sidebar">
+                <h2>Movie Ratings</h2>
+                <ul>
+                    <li><a href="show_en.html">Interstellar</a><span class="rating_sidevar"> 8.1</span></li>
+                    <li><a href="matric_en">The Matrix</a><span class="rating_sidebar"> 8.0</span></li>
+                    <li><a href="madmax_en">Mad Max</a><span class="rating_sidebar"> 7.5</span></li>
+                    <li><a href="atlas_en">Cloud Atlas</a><span class="rating_sidebar"> 7.4</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <h1>Contacts</h1>
+            <p>Send your feedback about the CineBase portal</p>
+
+            <div class="send send_contact">
+                <form method="post" action="#" id="contact">
+                    <input type="text" name="review_name" placeholder="Your name">
+                    <input type="text" name="review_email" placeholder="Your email">
+                    <textarea name="review_text"></textarea>
+                    <br>
+                    <input class="btn" type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            <a href="index_en.html">Home</a>
+            <a href="films_en.html">Movies</a>
+            <a href="serials_en.html">TV Series</a>
+            <a href="rating_en.html">Movie Ratings</a>
+            <a href="contact_en.html">Contacts</a>
+        </p>
+    </footer>
+
+</body>
+</html>
