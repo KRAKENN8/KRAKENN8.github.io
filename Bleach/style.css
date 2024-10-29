@@ -1,0 +1,450 @@
+/* Global settings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nunito", serif;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    color: #FFFFFF;
+}
+
+/* Background for the main page */
+body.home {
+    background-image: url('Other/81993.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Добавляет легкий параллакс-эффект */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Basic text styling */
+p {
+    padding: 0 0 20px 0;
+    line-height: 1.7em;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="search"] {
+    color: #5d5d5d;
+    width: 60%;
+    padding: 8px;
+}
+
+input, 
+textarea {
+    outline: none;
+    border: solid 1px #ffffff;
+}
+
+a, a:hover {
+    align-items: center;
+    outline: none;
+    text-decoration: underline;
+    color: #2bcaff;
+}
+
+ul {
+    margin: 2px 0 22px 17px;
+}
+
+ul li {
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 5px;
+    line-height: 1.5em;
+}
+
+.main, 
+.logo, 
+.menubar, 
+.site_content, 
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Logo section */
+.logo {
+    width: 880px;
+    padding-bottom: 40px;
+}
+
+.logo_text h1, 
+.logo_text h1 a, 
+.logo_text h1 a:hover {
+    padding: 22px 0 0 0;
+    color: #FFFFFF;
+    font-size: 2.0em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    color: #FFFFFF; /* Цвет текста */
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Обводка (тень) */
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    margin-right: 345px;
+    color: #FFFFFF; /* Цвет текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Обводка (тень) */
+}
+
+.content-mid {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Отступ снизу для разделения от следующего блока */
+}
+
+.content-mid h3 {
+    margin: 10px 0; /* Корректировка отступов заголовка */
+}
+
+.logo_text h2 {
+    font-size: 1.5em;
+    padding: 4px 0 0 0;
+    color: #FFFFFF; /* Цвет текста */
+    text-align: center;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Обводка (тень) */
+}
+
+
+/* Menu bar styling */
+.menubar {
+    width: 1140px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+ul.menu {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+ul.menu li a {
+    font: normal 175% 'Trebuchet MS', sans-serif;
+    display: block;
+    height: 55px;
+    padding: 6px 35px 5px 28px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+hr {
+    border: solid 1px #f3f3f3;
+    width: 77%;
+    margin: 20px auto;
+}
+
+/* Content and sidebar styling */
+.site_content {
+    width: 125%;
+    max-width: 1115px;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    padding-left: 25px;
+    background-color: rgba(3, 44, 78, 0.726);
+    border-radius: 5px;
+}
+
+.sidebar_container {
+    float: right;
+    width: 250px;
+}
+
+.sidebar {
+    float: right;
+    width: 125%;
+    padding: 5%;
+    margin: 0 0 16px 0;
+    border: solid 1px #f2f2f2;
+    border-radius: 5px;
+    background-color: rgba(3, 44, 78, 0.726);
+}
+
+.sidebar h2 {
+    color: #FFFFFF;
+}
+
+.lables_passreg_text {
+    font-size: 0.7em;
+    margin-top: 3%;
+    margin-left: 2%;
+    
+}
+
+.sidebar ul li {
+    list-style-type: none;
+}
+
+.rating_sidebar {
+    float: right;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 0; /* Убираем все отступы */
+    margin: 20px 0; /* Добавляем вертикальный отступ */
+}
+
+
+/* Films block styling */
+.films_block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 770px;
+}
+
+.films_block img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+.footer {
+    width: 100%;
+    height: 90px;
+    padding: 28px 0 5px 0;
+    text-align: center;
+    background-color: #000000;
+    color: #a8aa94;
+    min-width: 900px;
+}
+
+.footer a {
+    color: #a8aa94;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #FFFFFF;
+}
+
+.posts {
+    width: 775px;
+    height: 750px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.posts h2 {
+    padding-bottom: 10px;
+}
+
+.posts p {
+    padding-bottom: 0px;
+}
+
+/* New Films and New Series Container */
+.new-content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.new-content {
+    width: 48%;
+}
+
+/* Styled for added blocks */
+.info_film_page {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    background-color: rgba(3, 44, 78, 0.8);
+    padding: 15px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: 700px;
+}
+
+.info_film_page label {
+    font-size: 1.2em;
+    color: #a8aa94;
+}
+
+.info_film_page .value {
+    font-size: 1em;
+    color: #49945A;
+    margin-right: 3%;
+}
+
+.descriptions_film {
+    background-color: rgba(3, 44, 78, 0.8);
+    padding: 15px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: 700px;
+    height:580px;
+}
+
+.descriptions_film img {
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: solid 3px #dad7d5;
+    width: 400px;
+    height: 565px;
+    object-fit: cover; /* Это свойство гарантирует, что изображение сохранит пропорции */
+}
+
+
+.reviews {
+    margin-bottom: 4%;
+    background-color: rgba(3, 44, 78, 0.8);
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.reviews .review_name {
+    background-color: #7268AD;
+    color: white;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.reviews .review_text {
+    padding: 10px;
+}
+
+.send {
+    margin-bottom: 4%;
+    background-color: rgba(3, 44, 78, 0.8);
+    padding: 15px;
+}
+
+.send input[type="text"], 
+textarea {
+    border: solid 1px #C3C3C3;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #000;
+}
+
+.send input[type="submit"] {
+    background-color: #7268AD;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Info film section styling */
+.info_film {
+    display: flex;
+    justify-content: space-between; /* Это распределит элементы сверху и снизу */
+    align-items: flex-start; /* Выравнивает текст по левому краю */
+    height: 100%; /* Увеличивает высоту, чтобы использовать все доступное пространство */
+    margin-bottom: 5%;
+    background-color: rgba(3, 44, 78, 0.8);
+    padding: 15px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: 700px;
+}
+
+.info_film img {
+    float: left;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: solid 3px #dad7d5;
+    width: 150px; /* Фиксированная ширина изображения */
+    height: auto;
+}
+
+.info_film .button {
+    background-color: rgb(0, 140, 255);
+    padding: 8px 15px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.8em;
+    cursor: pointer;
+    display: inline-block;
+    align-self: center; /* Центрирует кнопку внизу */
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
+
+.info_film .button a {
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    width: 65%;
+    border: solid 3px #f4f4f4;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: solid 2px #f4f4f4;
+}
+
+td img {
+    width: 125px;
+    vertical-align: middle;
+}
+
+.center {
+    text-align: center;
+}
+
+.rating {
+    font-weight: bold;
+}
+
+.footer p {
+    padding: 0 0 10px 0;
+}
+
+ul.menu li.selected a {
+    color: #aeb002;
+}
+
+ul.menu li a:hover {
+    color: #e4ec04;
+}
