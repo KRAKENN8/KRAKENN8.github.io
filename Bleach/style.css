@@ -1,27 +1,14 @@
-/* Global settings */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: "Nunito", serif;
     font-size: 1.2em;
-    background-color: #ffffff;
-    color: #FFFFFF;
+    background-color: #fff;
+    color: #555;
 }
 
-/* Background for the main page */
-body.home {
-    background-image: url('Other/81993.jpg');
-    background-size: cover;
-    background-attachment: fixed; /* Добавляет легкий параллакс-эффект */
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-/* Basic text styling */
 p {
     padding: 0 0 20px 0;
     line-height: 1.7em;
@@ -38,14 +25,25 @@ input[type="search"] {
 input, 
 textarea {
     outline: none;
-    border: solid 1px #ffffff;
+    border: none;
+    border: solid 1px #f2f2f2;
+}
+
+h1, h2 {
+    font: normal 170% 'Century Gothic', Arial;
+    margin: 0 0 15px 0;
+    padding: 15px 0 5px 0;
+    color: #000;
+}
+
+h2 {
+    font-size: 140%;
 }
 
 a, a:hover {
-    align-items: center;
     outline: none;
     text-decoration: underline;
-    color: #2bcaff;
+    color: #aeb002;
 }
 
 ul {
@@ -54,8 +52,17 @@ ul {
 
 ul li {
     margin: 0 0 6px 0;
-    padding: 0 0 4px 5px;
+    padding: 0 0 4px 5px; /* Fixed padding value */
     line-height: 1.5em;
+}
+
+.header {
+    background-color: darkslateblue;
+    height: 177px;
+    font-size: 0.8em;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 900px;
 }
 
 .main, 
@@ -67,252 +74,156 @@ ul li {
     margin-right: auto;
 }
 
-/* Logo section */
 .logo {
     width: 880px;
     padding-bottom: 40px;
+}
+
+.logo h1, 
+.logo h2 {
+    font: normal 300% 'Century Gothic', Arial, sans-serif; /* Capitalized font name */
+    margin: 0 0 0 9px; /* Fixed margin value */
 }
 
 .logo_text h1, 
 .logo_text h1 a, 
 .logo_text h1 a:hover {
     padding: 22px 0 0 0;
-    color: #FFFFFF;
-    font-size: 2.0em;
+    color: #fff;
     letter-spacing: 0.1em;
     text-decoration: none;
 }
 
-h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    text-align: center;
-    color: #FFFFFF; /* Цвет текста */
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Обводка (тень) */
-}
-
-h3 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    text-align: center;
-    margin-right: 345px;
-    color: #FFFFFF; /* Цвет текста */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Обводка (тень) */
-}
-
-.content-mid {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px; /* Отступ снизу для разделения от следующего блока */
-}
-
-.content-mid h3 {
-    margin: 10px 0; /* Корректировка отступов заголовка */
-}
-
 .logo_text h2 {
-    font-size: 1.5em;
+    font-size: 0.9em;
     padding: 4px 0 0 0;
-    color: #FFFFFF; /* Цвет текста */
-    text-align: center;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Обводка (тень) */
+    color: #999;
 }
 
-
-/* Menu bar styling */
 .menubar {
-    width: 1140px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
+    width: 1100px; /* или ваш желаемый размер */
+    height: 46px;
+    padding-right: 175px; /* Отступ слева для смещения текста */
 }
+
 
 ul.menu {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+    float: right;
 }
 
 ul.menu li {
-    margin: 0 10px;
+    float: left;
+    padding: 0 0 0 9px; /* Fixed padding value */
     list-style: none;
+    margin: 1px 2px 0 0;
 }
 
 ul.menu li a {
-    font: normal 175% 'Trebuchet MS', sans-serif;
+    font: normal 100% 'Trebuchet MS', sans-serif; /* Capitalized font name */
     display: block;
-    height: 55px;
+    height: 20px;
     padding: 6px 35px 5px 28px;
-    color: #FFFFFF;
+    color: #fff;
     text-decoration: none;
 }
 
-.hr2 {
-    border: solid 1px #f3f3f3;
-    width: 77%;
-    margin: 20px auto;
+ul.menu li.selected a {
+    color: #aeb002;
 }
 
+ul.menu li a:hover {
+    color: #e4ec04;
+}
 
 hr {
-    width: 57.5%; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 345px;
     border: solid 1px #f3f3f3;
-    text-align: center;
-    padding-left: 110px;
 }
 
-
-/* Content and sidebar styling */
 .site_content {
-    width: 125%;
-    max-width: 1115px;
+    width: 880px;
     overflow: hidden;
     margin: 20px auto 0 auto;
-    padding-left: 25px;
-    background-color: rgba(3, 44, 78, 0.726);
-    border-radius: 5px;
+    background-color: white;
 }
 
 .sidebar_container {
-    float: right;
-    width: 250px;
+    float: right; /* Removed extra semicolon */
+    width: 224px;
 }
 
 .sidebar {
     float: right;
-    width: 125%;
+    width: 222px;
     padding: 5%;
     margin: 0 0 16px 0;
     border: solid 1px #f2f2f2;
     border-radius: 5px;
-    background-color: rgba(3, 44, 78, 0.726);
+    background-color: #f9f9f9;
+}
+
+.btn {
+    padding: 8px;
+    background-color: white;
+    cursor: pointer;
 }
 
 .sidebar h2 {
-    color: #FFFFFF;
+    color: #136cb2;
 }
 
 .lables_passreg_text {
     font-size: 0.7em;
     margin-top: 3%;
     margin-left: 2%;
-    
+}
+
+.sidebar ul {
+    margin: 0;
 }
 
 .sidebar ul li {
     list-style-type: none;
+    margin: 0; /* Fixed margin value */
 }
 
-.rating_sidebar {
+.sidebar .rating_sidebar { /* Added a dot for the class */
     float: right;
 }
 
-.content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.content h1 {
-    margin: 0;
-    padding: 0;
-}
-
 .content {
-    padding: 0; /* Убираем все отступы */
-    margin: 20px 0; /* Добавляем вертикальный отступ */
+    text-align: left;
+    width: 620px;
+    padding: 0 0 0 5px; /* Fixed padding value */
+    float: left;
 }
 
-
-/* Films block styling */
-.films_block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    width: 770px;
-}
-
-.films_block img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    max-width: 100%;
-    margin-bottom: 10px;
-}
-
-/* Footer styling */
-.footer {
-    width: 100%;
-    height: 90px;
-    padding: 28px 0 5px 0;
-    text-align: center;
-    background-color: #000000;
-    color: #a8aa94;
-    min-width: 900px;
-}
-
-.footer a {
-    color: #a8aa94;
+.content a {
     text-decoration: none;
 }
 
-.footer a:hover {
-    color: #FFFFFF;
+.films_block {
+    margin-bottom: 5%;
 }
 
-.posts {
-    width: 775px;
-    height: 750px;
-    margin: 0px;
-    padding: 0px;
+.films_block img {
     border-radius: 5px;
+    border: solid 5px #dad7d5;
+    width: 22%;
 }
 
-.posts h2 {
-    padding-bottom: 10px;
+.posts.posts_content {
+    font-size: 0.8em;
 }
 
-.posts p {
-    padding-bottom: 0px;
-}
+/* Страница просмотра фильма */
 
-/* New Films and New Series Container */
-.new-content-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.new-content {
-    width: 48%;
-}
-
-/* Styled for added blocks */
 .info_film_page {
     margin-top: 2%;
     margin-bottom: 4%;
-    background-color: rgba(3, 44, 78, 0.8);
-    padding: 15px;
-    color: #FFFFFF;
-    border-radius: 5px;
-    width: 700px;
 }
 
 .info_film_page label {
     font-size: 1.2em;
-    color: #a8aa94;
 }
 
 .info_film_page .value {
@@ -322,122 +233,111 @@ hr {
 }
 
 .descriptions_film {
-    background-color: rgba(3, 44, 78, 0.8);
-    padding: 15px;
-    color: #FFFFFF;
-    border-radius: 5px;
-    width: 700px;
-    height:580px;
+    margin-bottom: 15%;
 }
 
 .descriptions_film img {
     float: left;
-    margin-right: 10px;
+    margin-right: 2%;
     border-radius: 5px;
-    border: solid 3px #dad7d5;
-    width: 400px;
-    height: 565px;
-    object-fit: cover; /* Это свойство гарантирует, что изображение сохранит пропорции */
+    border: solid 5px #dad7d5;
 }
-
 
 .reviews {
     margin-bottom: 4%;
-    background-color: rgba(3, 44, 78, 0.8);
-    padding: 15px;
-    color: #FFFFFF;
     font-size: 0.9em;
-    border-radius: 5px;
 }
 
 .reviews .review_name {
     background-color: #7268AD;
     color: white;
-    padding: 5px;
+    padding: 1%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .reviews .review_text {
-    padding: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
 }
 
 .send {
     margin-bottom: 4%;
-    background-color: rgba(3, 44, 78, 0.8);
-    padding: 15px;
 }
 
 .send input[type="text"], 
 textarea {
     border: solid 1px #C3C3C3;
-    margin-bottom: 10px;
-    width: 100%;
-    color: #000;
+    margin-bottom: 2%;
+}
+
+.send input[type="text"] {
+    width: 98%;
+}
+
+.send textarea {
+    width: 624px;
+    height: 200px;
 }
 
 .send input[type="submit"] {
     background-color: #7268AD;
-    padding: 10px;
+    padding: 3%;
     color: white;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-/* Info film section styling */
+.send_contact input[type="text"] {
+    width: 500px;
+}
+
+.send_contact textarea {
+    width: 516px;
+}
+
 .info_film {
-    display: flex;
-    justify-content: space-between; /* Это распределит элементы сверху и снизу */
-    align-items: flex-start; /* Выравнивает текст по левому краю */
-    height: 100%; /* Увеличивает высоту, чтобы использовать все доступное пространство */
     margin-bottom: 5%;
-    background-color: rgba(3, 44, 78, 0.8);
-    padding: 15px;
-    color: #FFFFFF;
-    border-radius: 5px;
-    width: 700px;
+    background-color: #f9f9f9;
+    padding: 5%;
+    height: 270px;
 }
 
 .info_film img {
     float: left;
-    margin-right: 15px;
+    margin-right: 2%;
     border-radius: 5px;
-    border: solid 3px #dad7d5;
-    width: 150px; /* Фиксированная ширина изображения */
-    height: auto;
+    border: solid 5px #dad7d5;
+    width: 25%;
 }
 
-.info_film .button {
-    background-color: rgb(0, 140, 255);
-    padding: 8px 15px;
+.button {
+    background-color: #7268ad;
+    padding: 2%;
     color: white;
     border-radius: 5px;
-    text-align: center;
+    float: right;
+    margin-top: 5%;
+    clear: both;
     font-size: 0.8em;
-    cursor: pointer;
-    display: inline-block;
-    align-self: center; /* Центрирует кнопку внизу */
-    margin-top: 10px; /* Отступ сверху для кнопки */
 }
 
-.info_film .button a {
+.button a {
     color: white;
-    text-decoration: none;
 }
 
 table {
-    width: 65%;
-    border: solid 3px #f4f4f4;
-    padding: 10px;
+    width: 100%;
+    border: solid 1px #f4f4f4;
 }
 
 td {
-    padding: 10px;
-    border: solid 2px #f4f4f4;
+    padding: 2%;
+    border: solid 1px #f4f4f4;
 }
 
 td img {
-    width: 125px;
+    width: 60px;
     vertical-align: middle;
 }
 
@@ -449,14 +349,174 @@ td img {
     font-weight: bold;
 }
 
+.footer {
+    width: 100%;
+    height: 100px;
+    padding: 28px 0 5px 0;
+    text-align: center;
+    background-color: darkslateblue;
+    color: #a8aa94;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 900px;
+}
+
+.footer a {
+    color: #a8aa94;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 .footer p {
     padding: 0 0 10px 0;
 }
 
-ul.menu li.selected a {
-    color: #aeb002;
-}
+/* CSS Mobile */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px) {
+    .header {
+        background-color: #257965;
+        min-width: 100%;
+        height: 20%;
+        text-align: center;
+    }
+    
+    .logo {
+        width: 100%;
+    }
+    
+    .site_content {
+        width: 100%;
+    }
+    
+    .menubar {
+        width: 100%;
+        height: 100%;
+    }
 
-ul.menu li a:hover {
-    color: #e4ec04;
-}
+    .content {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .site_content {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .sidebar_container {
+        display: none;
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+    ul.menu {
+        float: none;
+    }
+    
+    ul.menu li {
+        margin: 0;
+        padding: 0;
+        float: none;
+    }
+    
+    .logo h1 {
+        font: normal 235% 'century gothic', arial, sans-serif;
+    }
+    
+    .logo h2 {
+        font: normal 100% 'century gothic', arial, sans-serif;
+        color: white;
+    }
+    
+    .content h1, h2 {
+        font: normal 110% 'century gothic', arial;
+    }
+    
+    .films_block img {
+        width: 43%;
+    }
+    
+    .posts_content p {
+        line-height: 1.5em;
+        padding: 3%;
+        text-align: left;
+    }
+    
+    .posts p {
+        font-size: 120%;
+    }
+    
+    /* films page */
+    .info_film {
+        float: none;
+        height: 100%;
+    }
+    
+    .info_film img {
+        width: 90%;
+        margin-bottom: 5%;
+    }
+    
+    .button {
+        float: none;
+    }
+    
+    /* rating page */
+    table {
+        display: block;
+    }
+
+    th {
+        font-size: 75%;
+    }
+
+    td {
+        padding: 0;
+        margin: 0;
+        font-size: 95%;
+        text-align: left;
+    }
+
+    /* show page */
+    iframe {
+        width: 88%;
+        height: 100%;
+    }
+
+    .descriptions_film {
+        width: 90%;
+        text-align: left;
+        margin-left: 2%;
+    }
+    
+    .descriptions_film img {
+        float: none;
+        width: 73%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-left: 11%;
+        margin-bottom: 7%;
+    }
+    
+    .reviews {
+        text-align: left;
+        width: 96%;
+    }
+    
+    .send input[type="text"] {
+        width: 80%;
+    }
+
+    .send textarea {
+        width: 85%;
+    }
+}    
