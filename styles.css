@@ -1,87 +1,51 @@
+/* Reset default margins and paddings */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
-    font-family: "Nunito", serif;
-    font-size: 1.3em;
-    background-color: #ffffff;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
-    color: #FFFFFF;
+/* Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     background: url('background.jpg') center/cover no-repeat fixed;
-    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-header {
-    background-color: #1b2a34;
-    color: #ffffff;
+/* Header Styles */
+header h1 {
     font-size: 2.5em;
-    padding: 20px 0;
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Main container */
-.container {
-    background-color: rgba(27, 42, 52, 0.9);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-    margin: 10% auto; 
-}
-
+/* Main Heading */
 h2 {
     font-size: 2em;
-    margin-bottom: 20px;
-    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.my_projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.my_projects a {
-    color: rgb(255, 255, 255);
+/* List Group Item Styles */
+.list-group-item {
+    background-color: rgba(27, 42, 52, 0.9);
+    color: #FFFFFF;
     font-size: 1.5em;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid rgba(8, 85, 154);
+    border: 2px solid rgba(8, 85, 154, 0.7);
     border-radius: 8px;
+    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
-.my_projects a:hover {
-    background-color: rgba(8, 85, 154);
-    color: #ffffff;
+.list-group-item:hover {
+    background-color: rgba(8, 85, 154, 0.9);
     transform: scale(1.05);
 }
 
-footer {
-    background-color: #27353f;
-    padding: 20px;
-    font-size: 1.5em;
-    color: #ffffff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-
+/* Footer Link Styles */
 #mailme {
-    color: rgba(8, 85, 154);
-    text-decoration: none;
     font-weight: bold;
-    padding-left: 5px;
 }
 
 #mailme:hover {
