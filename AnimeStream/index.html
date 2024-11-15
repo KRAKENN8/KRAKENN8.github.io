@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Метаданные -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Stream</title>
+    <!-- Подключение внешних CSS файлов -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Navbar header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">AnimeStream</a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Popular Anime</a></li>
+                    <li><a href="#">Latest Release</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">RUS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Секция основного контента -->
+            <div class="col-md-9">
+                <div class="section-title">Popular Today</div>
+                <div class="row">
+                    <!-- Карточка аниме 1 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 1</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                    <!-- Карточка аниме 2 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 2</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                    <!-- Карточка аниме 3 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 3</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                    <!-- Карточка аниме 4 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 4</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                </div>
+
+                <!-- Удалена пагинация -->
+
+                <!-- Секция последних релизов -->
+                <div class="section-title">Latest Release</div>
+                <div class="row">
+                    <!-- Карточка аниме 5 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 5</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                    <!-- Карточка аниме 6 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 6</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                    <!-- Карточка аниме 7 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 7</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                    <!-- Карточка аниме 8 -->
+                    <div class="col-md-3 anime-card">
+                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
+                        <div class="anime-card-title">Anime Title 8</div>
+                        <div class="anime-info">Genre, Episode</div>
+                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Боковая панель -->
+            <div class="col-md-3">
+                <!-- Секция фильтров -->
+                <div class="filter-sidebar">
+                    <h6>Filter Search</h6>
+                    <select class="form-control">
+                        <option selected>Genre</option>
+                        <option value="1">Action</option>
+                        <option value="2">Adventure</option>
+                        <option value="3">Comedy</option>
+                        <option value="4">Drama</option>
+                        <option value="5">Romance</option>
+                    </select>
+                    <select class="form-control">
+                        <option selected>Season</option>
+                        <option value="1">Winter 2022</option>
+                        <option value="2">Spring 2022</option>
+                        <option value="3">Summer 2022</option>
+                    </select>
+                    <select class="form-control">
+                        <option selected>Status</option>
+                        <option value="1">Ongoing</option>
+                        <option value="2">Completed</option>
+                        <option value="3">Upcoming</option>
+                    </select>
+                    <select class="form-control">
+                        <option selected>Type</option>
+                        <option value="1">TV</option>
+                        <option value="2">Movie</option>
+                        <option value="3">OVA</option>
+                    </select>
+                    <button class="btn btn-custom btn-block">Search</button>
+                </div>
+
+                <!-- Секция Popular -->
+                <div class="filter-sidebar popular-list">
+                    <h6>Popular</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Spy x Family
+                            <span class="badge">1</span>
+                        </li>
+                        <li class="list-group-item">
+                            Kimetsu no Yaiba
+                            <span class="badge">2</span>
+                        </li>
+                        <li class="list-group-item">
+                            One Piece
+                            <span class="badge">3</span>
+                        </li>
+                        <li class="list-group-item">
+                            Attack on Titan
+                            <span class="badge">4</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Обновленная секция Ongoing -->
+                <div class="filter-sidebar ongoing-list">
+                    <h6>Ongoing</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span>Spy x Family</span>
+                            <small class="text-muted">Следующий эпизод: 20 ноября 2024</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span>One Punch Man 2nd Season</span>
+                            <small class="text-muted">Следующий эпизод: 22 ноября 2024</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span>My Hero Academia Season 6</span>
+                            <small class="text-muted">Следующий эпизод: 25 ноября 2024</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 AnimeStream. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+    </footer>
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

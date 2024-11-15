@@ -1,0 +1,124 @@
+/* Стили для навигационной панели */
+.navbar {
+    background-color: #007bff;
+    border: none;
+}
+.navbar-brand, .navbar-nav > li > a {
+    color: #fff !important;
+}
+
+/* Стили для заголовков секций */
+.section-title {
+    background-color: #4e2a85;
+    color: #fff;
+    padding: 8px;
+    font-weight: bold;
+    margin-top: 30px; /* Добавлен верхний отступ */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Убираем верхний отступ у первого заголовка секции */
+.section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* Стили для карточек аниме */
+.anime-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+}
+.anime-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.anime-card img {
+    width: 100%;
+    height: auto;
+    background-color: #ddd;
+}
+.anime-card-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.anime-info {
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Стили для боковой панели */
+.filter-sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+/* Отступы между фильтрами */
+.filter-sidebar select {
+    margin-bottom: 10px;
+}
+.filter-sidebar h6 {
+    margin-bottom: 15px;
+}
+
+/* Стили для списка Popular */
+.popular-list .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popular-list .badge {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Стили для списка Ongoing */
+.ongoing-list .list-group-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.ongoing-list .list-group-item span {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.ongoing-list .list-group-item small {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Кнопки */
+.btn-custom {
+    background-color: #007bff;
+    color: #fff;
+}
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+/* Дополнительные отступы */
+.mt-2 {
+    margin-top: 10px;
+}
+.mt-4 {
+    margin-top: 20px;
+}
+
+/* Футер */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px; /* Отступ сверху футера */
+}
+footer a {
+    color: #fff;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
