@@ -1,187 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <!-- Метаданные -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Stream</title>
-    <!-- Подключение внешних CSS файлов -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar">
         <div class="container">
-            <!-- Navbar header -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Переключить навигацию</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">AnimeStream</a>
+                <a class="navbar-brand" href="#">Anime Stream</a>
             </div>
-            <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Popular Anime</a></li>
-                    <li><a href="#">Latest Release</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">RUS</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="popular.html">Популярное Аниме</a></li>
+                    <li><a href="actual.html">Актуальное Аниме</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="index_en.html">ENG</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Основной контент -->
     <div class="container mt-4">
         <div class="row">
-            <!-- Секция основного контента -->
             <div class="col-md-9">
-                <div class="section-title">Popular Today</div>
+                <div class="section-title">Популярное Сегодня</div>
                 <div class="row">
                     <!-- Карточка аниме 1 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 1</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/1.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Блич: Тысячелетняя кровавая война — Конфликт</div>
+                            <div class="anime-info">Сёнен, Экшен, Приключения, Сверхъестественное | 7/? </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                     <!-- Карточка аниме 2 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 2</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/2.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Re:Zero. Жизнь с нуля в альтернативном мире 3</div>
+                            <div class="anime-info">Драма, Фэнтези, Триллер | 8/16 </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                     <!-- Карточка аниме 3 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 3</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/3.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Ван-Пис</div>
+                            <div class="anime-info">Сёнен, Экшен, Приключения, Фэнтези | 1122/? </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                     <!-- Карточка аниме 4 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 4</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/4.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Дандадан</div>
+                            <div class="anime-info">Сёнен, Экшен, Комедия, Сверхъестественное | 8/12 </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Удалена пагинация -->
-
-                <!-- Секция последних релизов -->
-                <div class="section-title">Latest Release</div>
+                <div class="section-title">Актуальное всегда</div>
                 <div class="row">
                     <!-- Карточка аниме 5 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 5</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/5.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Атака титанов</div>
+                            <div class="anime-info">Сёнен, Экшен, Драма, Триллер | 25/25 </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                     <!-- Карточка аниме 6 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 6</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/6.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Стальной алхимик: Братство</div>
+                            <div class="anime-info">Сёнен, Экшен, Приключения, Драма, Фэнтези | 64/64 </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                     <!-- Карточка аниме 7 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 7</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/7.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Ванпанчмен</div>
+                            <div class="anime-info">Сэйнэн, Экшен, Комедия | 12/12 </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                     <!-- Карточка аниме 8 -->
-                    <div class="col-md-3 anime-card">
-                        <img src="https://via.placeholder.com/150x200" alt="Anime Placeholder" class="img-responsive">
-                        <div class="anime-card-title">Anime Title 8</div>
-                        <div class="anime-info">Genre, Episode</div>
-                        <button class="btn btn-custom btn-block mt-2">Watch Now</button>
+                    <div class="col-md-3">
+                        <div class="anime-card">
+                            <img src="assets/img/8.jpg" alt="Постер Аниме" class="img-responsive">
+                            <div class="anime-card-title">Мастера Меча Онлайн</div>
+                            <div class="anime-info">Экшен, Приключения, Фэнтези, Романтика | 25/25 </div>
+                            <a href="#" class="btn btn-custom btn-block mt-2">Смотреть Сейчас</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Боковая панель -->
             <div class="col-md-3">
-                <!-- Секция фильтров -->
                 <div class="filter-sidebar">
-                    <h6>Filter Search</h6>
+                    <h6>Фильтр Поиска</h6>
                     <select class="form-control">
-                        <option selected>Genre</option>
-                        <option value="1">Action</option>
-                        <option value="2">Adventure</option>
-                        <option value="3">Comedy</option>
-                        <option value="4">Drama</option>
-                        <option value="5">Romance</option>
+                        <option value="" selected disabled hidden>Жанр</option>
+                        <option value="1">Экшен</option>
+                        <option value="2">Приключения</option>
+                        <option value="3">Комедия</option>
+                        <option value="4">Драма</option>
+                        <option value="5">Романтика</option>
+                        <option value="6">Триллер</option>
+                        <option value="7">Сверхъестественное</option>
                     </select>
                     <select class="form-control">
-                        <option selected>Season</option>
-                        <option value="1">Winter 2022</option>
-                        <option value="2">Spring 2022</option>
-                        <option value="3">Summer 2022</option>
+                        <option value="" selected disabled hidden>Статус</option>
+                        <option value="1">Онгоинг</option>
+                        <option value="2">Завершено</option>
+                        <option value="3">Скоро выйдет</option>
                     </select>
                     <select class="form-control">
-                        <option selected>Status</option>
-                        <option value="1">Ongoing</option>
-                        <option value="2">Completed</option>
-                        <option value="3">Upcoming</option>
-                    </select>
-                    <select class="form-control">
-                        <option selected>Type</option>
-                        <option value="1">TV</option>
-                        <option value="2">Movie</option>
+                        <option value="" selected disabled hidden>Тип</option>
+                        <option value="1">ТВ</option>
+                        <option value="2">Фильм</option>
                         <option value="3">OVA</option>
                     </select>
-                    <button class="btn btn-custom btn-block">Search</button>
+                    <button class="btn btn-custom btn-block">Поиск</button>
                 </div>
 
-                <!-- Секция Popular -->
                 <div class="filter-sidebar popular-list">
-                    <h6>Popular</h6>
+                    <h6>Популярное</h6>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            Spy x Family
-                            <span class="badge">1</span>
+                            Sousou no Frieren
+                            <span class="badge">10</span>
                         </li>
                         <li class="list-group-item">
-                            Kimetsu no Yaiba
-                            <span class="badge">2</span>
+                            Steins;Gate
+                            <span class="badge">9.5</span>
                         </li>
                         <li class="list-group-item">
-                            One Piece
-                            <span class="badge">3</span>
+                            Hunter x Hunter
+                            <span class="badge">9.3</span>
                         </li>
                         <li class="list-group-item">
-                            Attack on Titan
-                            <span class="badge">4</span>
+                            Monster
+                            <span class="badge">9</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Обновленная секция Ongoing -->
                 <div class="filter-sidebar ongoing-list">
-                    <h6>Ongoing</h6>
+                    <h6>Онгоинг</h6>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <span>Spy x Family</span>
-                            <small class="text-muted">Следующий эпизод: 20 ноября 2024</small>
+                            <span>Блич: Тысячелетняя кровавая война — Конфликт</span>
+                            <small class="text-muted">Следующий эпизод: 23 ноября 2024</small>
                         </li>
                         <li class="list-group-item">
-                            <span>One Punch Man 2nd Season</span>
-                            <small class="text-muted">Следующий эпизод: 22 ноября 2024</small>
+                            <span>Re:Zero. Жизнь с нуля в альтернативном мире 3</span>
+                            <small class="text-muted">Следующий эпизод: 27 ноября 2024</small>
                         </li>
                         <li class="list-group-item">
-                            <span>My Hero Academia Season 6</span>
-                            <small class="text-muted">Следующий эпизод: 25 ноября 2024</small>
+                            <span>Ван-Пис</span>
+                            <small class="text-muted">Следующий эпизод: 24 ноября 2024</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Дандадан</span>
+                            <small class="text-muted">Следующий эпизод: 28 ноября 2024</small>
                         </li>
                     </ul>
                 </div>
@@ -189,13 +191,11 @@
         </div>
     </div>
 
-    <!-- Футер -->
     <footer>
-        <p>&copy; 2024 AnimeStream. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+        <p>&copy; 2024 Anime Stream. Все права защищены.</p>
+        <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a> | <a href="#">Свяжитесь с нами</a></p>
     </footer>
 
-    <!-- Подключение Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 </body>
