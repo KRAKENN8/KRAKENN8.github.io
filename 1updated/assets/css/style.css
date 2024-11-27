@@ -87,7 +87,7 @@ html, body {
 }
 
 .films_block.series img:hover {
-    transform: rotate(12deg) scale(1.05); /* Rotate and slightly enlarge on hover */
+    transform: scale(0.9); 
 }
 
 .film_label {
