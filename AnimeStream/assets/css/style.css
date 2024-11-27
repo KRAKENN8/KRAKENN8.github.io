@@ -179,3 +179,25 @@ footer a:hover {
     padding: 0 10px; /* Отступы внутри группы кнопок */
 }
 
+@media (max-width: 990px) {
+    .col-md-3 {
+        width: 50%; /* Делаем ширину карточки 50% от строки */
+        flex: 0 0 50%; /* Гарантируем, что займёт ровно половину */
+        max-width: 50%;
+    }
+    .filter-sidebar {
+        display: none; /* Скрываем sidebar */
+    }
+}
+
+@media (max-width: 1200px) {
+    .filter-sidebar {
+        display: none; /* Скрываем sidebar */
+    }
+    .col-md-9 {
+        width: 100%; /* Основной контент занимает всю ширину */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+}
