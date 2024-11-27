@@ -5,6 +5,18 @@
     padding: 0;
 }
 
+/* Set full height for html and body */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper for content */
+.wrapper {
+    flex: 1; /* Makes the content area expand to fill the available space */
+}
+
 /* Body Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -21,12 +33,6 @@ header h1 {
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Main Heading */
-h2 {
-    font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
 /* List Group Item Styles */
 .list-group-item {
     background-color: rgba(27, 42, 52, 0.9);
@@ -41,6 +47,15 @@ h2 {
 .list-group-item:hover {
     background-color: rgba(8, 85, 154, 0.9);
     transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
 /* Footer Link Styles */
