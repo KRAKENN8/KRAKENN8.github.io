@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Anime Stream</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Anime Stream</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="popular.html">Популярное Сегодня</a></li>
+                    <li class="nav-item"><a class="nav-link" href="actual.html">Актуальное Всегда</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="contact.html">Контакты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_en.html">ENG</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="section-title">Контакты</div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="anime-card-title"><strong>Контакты владельца</strong></h5>
+                <div class="anime-info"><strong>Ник:</strong> Кракен</div>
+                <div class="anime-info"><strong>Email:</strong> <a href="mailto:guru@anime-stream.com">guru@anime-stream.com</a></div>
+                <div class="anime-info"><strong>Телефон:</strong> +372 1234 5678</div>
+                <div class="anime-info"><strong>Адрес:</strong> Япония, Токио, район Сибуя</div>
+            </div>
+        </div>
+
+        <div class="section-title">Отзывы пользователей</div>
+        <div class="reviews">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h6><strong>Анастасия</strong> <small class="text-muted">21 ноября 2024</small></h6>
+                    <p>Очень удобный сайт с отличным подбором аниме. Спасибо за вашу работу!</З>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h6><strong>Иван</strong> <small class="text-muted">20 ноября 2024</small></h6>
+                    <p>Удобный интерфейс, много интересных рекомендаций. Очень доволен!</З>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">Оставить комментарий</div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <form action="#" method="POST" class="comment-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше имя:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Ваш Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Введите вашу почту" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Ваш комментарий:</label>
+                        <textarea class="form-control" id="comment" name="comment" rows="5" placeholder="Введите ваш комментарий" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 Anime Stream. Все права защищены.</p>
+        <p><a href="#" class="text-white">Политика конфиденциальности</a> | <a href="#" class="text-white">Условия использования</a> | <a href="#" class="text-white">Свяжитесь с нами</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
