@@ -244,18 +244,12 @@ html {
     }
 
     @media screen and (max-width: 1440px) {
-        & {
-            padding: 0 20px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
         & li:nth-last-child(-n+6) {
             display: none;
         }
     }
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 770px) {
         & {
             margin-top: 10px;
         }
