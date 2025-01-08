@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Landing Page</title>
+  <!-- Подключаем внешний файл стилей -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Шапка сайта (Header) -->
+  <header class="header">
+    <div class="header__logo">
+      <img src="img/logo.webp" alt="Game Logo" />
+      <span class="header__tagline">World Of Warcraft</span>
+    </div>
+    <button class="header__login-btn">Войти</button>
+  </header>
+
+  <!-- Основной блок (Hero) -->
+  <section class="hero">
+    <img
+      src="img/main.jpg"
+      alt="Hero Image"
+      class="hero__image"
+    />
+  </section>
+
+  <!-- Видео или трейлер (без JavaScript) -->
+  <section class="video">
+    <div class="video__container">
+        <iframe width="880" height="460" src="https://www.youtube.com/embed/vlVSJ0AvZe0?si=mLxhV1s8bj6MLU_j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </video>
+    </div>
+  </section>
+
+  <!-- Преимущества (3 блока) -->
+  <section class="benefits">
+    <h2>Преимущества</h2>
+    <div class="benefits__items">
+      <div class="benefits__item">
+        <h3>Масштабный и увлекательный мир</h3>
+        <p>World of Warcraft предлагает игрокам огромный, детализированный мир, наполненный интересными локациями, квестами и уникальными персонажами. Игроки могут исследовать фантастические королевства, от густых лесов Эльвин до суровых земель Нортренда, и всегда находить что-то новое.</p>
+      </div>
+      <div class="benefits__item">
+        <h3>Социальное взаимодействие и совместные приключения</h3>
+        <p>Игра способствует социализации, предоставляя возможности для общения с игроками со всего мира. Гильдии, совместные рейды и PvP-баталии объединяют людей, создавая чувство команды и позволяя строить долгосрочные дружеские отношения.</p>
+      </div>
+      <div class="benefits__item">
+        <h3>Разнообразие контента для разных типов игроков</h3>
+        <p>WoW предлагает контент для всех типов игроков: увлекательные сюжетные квесты для любителей истории, сложные рейды и подземелья для тех, кто жаждет испытаний, а также арены и сражения на полях боя для поклонников PvP. Каждый найдет что-то для себя, независимо от стиля игры.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Отзывы</h2>
+  
+    <!-- Обёртка для слайдера и кнопок -->
+    <div class="testimonials__slider-container">
+  
+      <!-- Слайдер (контейнер с отзывами) -->
+      <div class="testimonials__slider" id="testimonialsSlider">
+  
+        <!-- Отзыв 1 -->
+        <div class="testimonials__item">
+          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 1" class="testimonials__avatar" />
+          <blockquote>
+            <p>«Игра потрясающая, провёл в ней уже сотни часов! Уникальный геймплей и море контента.»</p>
+            <footer>— <cite>Игрок 1</cite></footer>
+          </blockquote>
+        </div>
+  
+        <!-- Отзыв 2 -->
+        <div class="testimonials__item">
+          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 2" class="testimonials__avatar" />
+          <blockquote>
+            <p>«Самый захватывающий сюжет и отличная графика! Каждое приключение запоминающееся.»</p>
+            <footer>— <cite>Игрок 2</cite></footer>
+          </blockquote>
+        </div>
+  
+        <!-- Отзыв 3 -->
+        <div class="testimonials__item">
+          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 3" class="testimonials__avatar" />
+          <blockquote>
+            <p>«Наконец-то появилось что-то, что действительно удивляет. Великолепный мир!»</p>
+            <footer>— <cite>Игрок 3</cite></footer>
+          </blockquote>
+        </div>
+  
+        <!-- Отзыв 4 -->
+        <div class="testimonials__item">
+          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 4" class="testimonials__avatar" />
+          <blockquote>
+            <p>«Отличная физика и море возможностей в игре. Весь геймплей доставляет удовольствие.»</p>
+            <footer>— <cite>Игрок 4</cite></footer>
+          </blockquote>
+        </div>
+  
+      </div>
+  
+      <!-- Кнопки переключения -->
+      <button class="testimonials__button testimonials__button--prev" id="prevBtn" aria-label="Предыдущий отзыв">&lt;</button>
+      <button class="testimonials__button testimonials__button--next" id="nextBtn" aria-label="Следующий отзыв">&gt;</button>
+    </div>
+  </section>
+  
+
+  <!-- Особенности (3 блока) -->
+  <section class="features">
+    <h2>Особенности</h2>
+    <div class="features__items">
+      <div class="features__item">
+        <h3>Особенность 1</h3>
+        <p>Невероятные пейзажи и большие игровые миры.</p>
+      </div>
+      <div class="features__item">
+        <h3>Особенность 2</h3>
+        <p>Система прокачки персонажа с десятками навыков.</p>
+      </div>
+      <div class="features__item">
+        <h3>Особенность 3</h3>
+        <p>Уникальные PvP-сражения и клановые войны.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок подписки (Sign up) -->
+  <section class="signup">
+    <h2>Присоединяйтесь и начните играть!</h2>
+    <form class="signup__form">
+      <input type="email" placeholder="Ваш Email" required />
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </section>
+
+  <!-- Подвал (Footer) -->
+  <footer class="footer">
+    <nav class="footer__menu">
+      <a href="#">Главная</a>
+      <a href="#">Контакты</a>
+    </nav>
+    <div class="footer__social">
+      <a href="https://x.com/warcraft?mx=2">TwitterX</a>
+      <a href="https://www.instagram.com/warcraft/">Instagram</a>
+      <a href="https://www.facebook.com/Warcraft/">Facebook</a>
+      <a href="https://www.youtube.com/user/worldofwarcraft">YouTube</a>
+    </div>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
