@@ -29,76 +29,108 @@
   <!-- Видео или трейлер (без JavaScript) -->
   <section class="video">
     <div class="video__container">
-        <iframe width="880" height="460" src="https://www.youtube.com/embed/vlVSJ0AvZe0?si=mLxhV1s8bj6MLU_j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </video>
+      <iframe 
+        class="video__iframe"
+        src="https://www.youtube.com/embed/vlVSJ0AvZe0?si=mLxhV1s8bj6MLU_j" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
     </div>
   </section>
+  
+  
 
-  <!-- Преимущества (3 блока) -->
   <section class="benefits">
     <h2>Преимущества</h2>
-    <div class="benefits__items">
-      <div class="benefits__item">
-        <h3>Масштабный и увлекательный мир</h3>
-        <p>World of Warcraft предлагает игрокам огромный, детализированный мир, наполненный интересными локациями, квестами и уникальными персонажами. Игроки могут исследовать фантастические королевства, от густых лесов Эльвин до суровых земель Нортренда, и всегда находить что-то новое.</p>
+  
+    <!-- Радиокнопки (по количеству слайдов) -->
+    <input type="radio" name="benefit" id="b-1" checked>
+    <input type="radio" name="benefit" id="b-2">
+    <input type="radio" name="benefit" id="b-3">
+  
+    <!-- Внешний контейнер для слайдера и стрелок -->
+    <div class="benefits__slider-container">
+      <!-- Контейнер со слайдами -->
+      <div class="benefits__slider">
+        <!-- Слайд 1 -->
+        <div class="benefits__item">
+          <h3>Масштабный и увлекательный мир</h3>
+          <p>World of Warcraft предлагает игрокам огромный, детализированный мир, наполненный интересными локациями, квестами и уникальными персонажами. Игроки могут исследовать фантастические королевства, от густых лесов Эльвин до суровых земель Нортренда, и всегда находить что-то новое.</p>
+        </div>
+        <!-- Слайд 2 -->
+        <div class="benefits__item">
+          <h3>Социальное взаимодействие и совместные приключения</h3>
+          <p>Игра способствует социализации, предоставляя возможности для общения с игроками со всего мира. Гильдии, совместные рейды и PvP-баталии объединяют людей, создавая чувство команды и позволяя строить долгосрочные дружеские отношения.</p>
+        </div>
+        <!-- Слайд 3 -->
+        <div class="benefits__item">
+          <h3>Разнообразие контента для разных типов игроков</h3>
+          <p>WoW предлагает контент для всех типов игроков: увлекательные сюжетные квесты для любителей истории, сложные рейды и подземелья для тех, кто жаждет испытаний, а также арены и сражения на полях боя для поклонников PvP. Каждый найдет что-то для себя, независимо от стиля игры.</p>
+        </div>
       </div>
-      <div class="benefits__item">
-        <h3>Социальное взаимодействие и совместные приключения</h3>
-        <p>Игра способствует социализации, предоставляя возможности для общения с игроками со всего мира. Гильдии, совместные рейды и PvP-баталии объединяют людей, создавая чувство команды и позволяя строить долгосрочные дружеские отношения.</p>
-      </div>
-      <div class="benefits__item">
-        <h3>Разнообразие контента для разных типов игроков</h3>
-        <p>WoW предлагает контент для всех типов игроков: увлекательные сюжетные квесты для любителей истории, сложные рейды и подземелья для тех, кто жаждет испытаний, а также арены и сражения на полях боя для поклонников PvP. Каждый найдет что-то для себя, независимо от стиля игры.</p>
-      </div>
+      <!-- Кнопки (стрелки), как у testimonials -->
+      <!-- Для слайда 1 (b-1) -->
+      <label for="b-3" class="benefits__button benefits__button--prev btn-b1">&lt;</label>
+      <label for="b-2" class="benefits__button benefits__button--next btn-b1">&gt;</label>
+  
+      <!-- Для слайда 2 (b-2) -->
+      <label for="b-1" class="benefits__button benefits__button--prev btn-b2">&lt;</label>
+      <label for="b-3" class="benefits__button benefits__button--next btn-b2">&gt;</label>
+  
+      <!-- Для слайда 3 (b-3) -->
+      <label for="b-2" class="benefits__button benefits__button--prev btn-b3">&lt;</label>
+      <label for="b-1" class="benefits__button benefits__button--next btn-b3">&gt;</label>
     </div>
   </section>
 
   <section class="testimonials">
     <h2>Отзывы</h2>
-  
-    <!-- Обёртка для слайдера и кнопок -->
+    
+    <!-- Радиокнопки (по количеству слайдов) -->
+    <input type="radio" name="testimonial" id="t-1" checked>
+    <input type="radio" name="testimonial" id="t-2">
+    <input type="radio" name="testimonial" id="t-3">
+
+    <!-- Внешний контейнер для слайдера и стрелок -->
     <div class="testimonials__slider-container">
-  
-      <!-- Слайдер (контейнер с отзывами) -->
-      <div class="testimonials__slider" id="testimonialsSlider">
-  
-        <!-- Отзыв 1 -->
+      <!-- Контейнер со слайдами -->
+      <div class="testimonials__slider">
+        <!-- Слайд 1 -->
         <div class="testimonials__item">
-          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 1" class="testimonials__avatar" />
-          <blockquote>
-            <p>«Игра потрясающая, провёл в ней уже сотни часов! Уникальный геймплей и море контента.»</p>
-            <footer>— <cite>Игрок 1</cite></footer>
-          </blockquote>
+          <img src="img/1.jpg" alt="Avatar 1" />
+          <p>«WoW всё ещё удивляет! Огромный мир, интересные квесты и дружелюбное комьюнити — всегда есть, чем заняться.»</p>
+          <span>- Логика</span>
         </div>
-  
-        <!-- Отзыв 2 -->
+        <!-- Слайд 2 -->
         <div class="testimonials__item">
-          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 2" class="testimonials__avatar" />
-          <blockquote>
-            <p>«Самый захватывающий сюжет и отличная графика! Каждое приключение запоминающееся.»</p>
-            <footer>— <cite>Игрок 2</cite></footer>
-          </blockquote>
+          <img src="img/2.webp" alt="Avatar 2" />
+          <p>«Это не просто игра, а целая вселенная! Каждая новая экспансия добавляет свежие эмоции и невероятные приключения.»</p>
+          <span>- Кентафарик</span>
         </div>
-  
-        <!-- Отзыв 3 -->
+        <!-- Слайд 3 -->
         <div class="testimonials__item">
-          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 3" class="testimonials__avatar" />
-          <blockquote>
-            <p>«Наконец-то появилось что-то, что действительно удивляет. Великолепный мир!»</p>
-            <footer>— <cite>Игрок 3</cite></footer>
-          </blockquote>
+          <img src="img/3.jpg" alt="Avatar 3" />
+          <p>«Графика может и не самая современная, но здешняя атмосфера заставляет возвращаться вновь и вновь в эту игру.»</p>
+          <span>- Кракен</span>
         </div>
-  
-        <!-- Отзыв 4 -->
-        <div class="testimonials__item">
-          <img src="https://via.placeholder.com/80" alt="Аватар Игрока 4" class="testimonials__avatar" />
-          <blockquote>
-            <p>«Отличная физика и море возможностей в игре. Весь геймплей доставляет удовольствие.»</p>
-            <footer>— <cite>Игрок 4</cite></footer>
-          </blockquote>
-        </div>
-  
       </div>
+      
+      <!-- Кнопки (стрелки) -->
+      <!-- Для слайда 1 -->
+      <label for="t-3" class="testimonials__button testimonials__button--prev btn-1">&lt;</label>
+      <label for="t-2" class="testimonials__button testimonials__button--next btn-1">&gt;</label>
+      
+      <!-- Для слайда 2 -->
+      <label for="t-1" class="testimonials__button testimonials__button--prev btn-2">&lt;</label>
+      <label for="t-3" class="testimonials__button testimonials__button--next btn-2">&gt;</label>
+      
+      <!-- Для слайда 3 -->
+      <label for="t-2" class="testimonials__button testimonials__button--prev btn-3">&lt;</label>
+      <label for="t-1" class="testimonials__button testimonials__button--next btn-3">&gt;</label>
+    </div>
+  </section>
   
       <!-- Кнопки переключения -->
       <button class="testimonials__button testimonials__button--prev" id="prevBtn" aria-label="Предыдущий отзыв">&lt;</button>

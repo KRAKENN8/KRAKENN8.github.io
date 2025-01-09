@@ -78,106 +78,174 @@ p {
   .benefits {
     padding: 20px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .benefits h2 {
-    margin-bottom: 10px;
     font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #f39c12;
+    text-transform: uppercase;
   }
   
-  .benefits__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* Скрываем радиокнопки (нужны на мобильном) */
+  .benefits input[type="radio"] {
+    display: none;
+  }
+  
+  /* 2) Десктоп: 3 колонки (без слайдера) */
+  .benefits__slider-container {
+    display: flex;   /* три карточки в ряд */
     gap: 20px;
-    margin-top: 20px;
+    justify-content: center;
+    position: relative; /* кнопки скрыты */
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+  
+  .benefits__slider {
+    display: flex;
+    width: auto;       /* не фиксированная ширина */
+    transition: none;
+    transform: none;
+    gap: 25px;
   }
   
   .benefits__item {
     flex: 1 1 250px;
-    max-width: 300px;
     background-color: #363434;
-    padding: 15px;
+    color: #ccc;
     border-radius: 8px;
+    padding: 15px 45px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .benefits__item h3 {
+    color: #f39c12;
+    margin-bottom: 8px;
+  }
+  .benefits__item p {
+    font-size: 1rem;
+    line-height: 1.42312;
   }
   
-  /* СТАРЫЕ СТАТИЧЕСКИЕ ОТЗЫВЫ
-     БОЛЬШЕ НЕ ИСПОЛЬЗУЕМ, НО ЕСЛИ ОНИ ОСТАНУТСЯ — МОЖНО УДАЛИТЬ
-     .testimonials__items {...}
-     .testimonials__item {...}
-  */
-  
-  /* СТИЛИ ДЛЯ СЛАЙДЕРА ОТЗЫВОВ (CSS-ONLY) */
-  
-/* СТИЛИ ДЛЯ СЛАЙДЕРА ОТЗЫВОВ */
+  .benefits__button {
+    display: none; /* скрыты на ПК */
+  }
 
 /* Секция отзывов */
 .testimonials {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .testimonials h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-  
-  /* Обёртка для слайдера и кнопок */
-  .testimonials__slider-container {
-    position: relative; /* Для позиционирования кнопок */
-    overflow: hidden;   /* Скрываем элементы, которые выходят за границы */
-    margin: 0 auto;
-    width: 100%;
-    max-width: 600px; /* Можно изменить под свои нужды */
-  }
-  
-  /* Слайдер (контейнер) */
-  .testimonials__slider {
-    display: flex;          /* Располагаем отзывы в ряд */
-    transition: transform 0.4s ease; /* Плавный переход при переключении */
-  }
-  
-  /* Элементы отзыва */
-  .testimonials__item {
-    min-width: 100%;  /* Ширина каждого отзыва — 100% от контейнера */
-    background-color: #363434;
-    margin: 0 10px 0 0; /* Отступ между отзывами (слева направо) */
-    border-radius: 8px;
-    padding: 15px;
-  }
-  
-  .testimonials__item img {
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  /* Кнопки переключения */
-  .testimonials__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    padding: 8px 12px;
-    border-radius: 50%;
-    z-index: 10; /* Выше, чем содержимое слайдера */
-  }
-  
-  .testimonials__button--prev {
-    left: 10px;
-  }
-  
-  .testimonials__button--next {
-    right: 10px;
-  }
-  
-  /* При наведении на кнопки */
-  .testimonials__button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
+  padding: 20px;
+  text-align: center;
+  max-width: 600px; 
+  margin: 0 auto;
+}
+
+.testimonials h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #f39c12;
+  text-transform: uppercase;
+}
+
+/* Радиокнопки скрыты */
+.testimonials input[type="radio"] {
+  display: none;
+}
+
+/* Внешняя обёртка */
+.testimonials__slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* Сами слайды */
+.testimonials__slider {
+  display: flex;
+  width: 300%;
+  transition: transform 0.4s ease;
+}
+.testimonials__item {
+  flex: 0 0 33.3333%;
+  background-color: #222;
+  color: #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.testimonials__item img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 85px;
+  height: 85px;
+  border: 2px solid #555;
+}
+.testimonials__item p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+.testimonials__item span {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Кнопки */
+.testimonials__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(243, 156, 18, 0.7);
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 50%;
+  border: none;
+  display: none; 
+  z-index: 10;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+.testimonials__button:hover {
+  background-color: rgba(243, 156, 18, 0.9);
+}
+.testimonials__button--prev {
+  left: 10px;
+}
+.testimonials__button--next {
+  right: 10px;
+}
+
+/* Сдвиги */
+#t-1:checked ~ .testimonials__slider-container .testimonials__slider {
+  transform: translateX(0%);
+}
+#t-1:checked ~ .testimonials__slider-container .btn-1 {
+  display: block;
+}
+
+#t-2:checked ~ .testimonials__slider-container .testimonials__slider {
+  transform: translateX(-33.3333%);
+}
+#t-2:checked ~ .testimonials__slider-container .btn-2 {
+  display: block;
+}
+
+#t-3:checked ~ .testimonials__slider-container .testimonials__slider {
+  transform: translateX(-66.6666%);
+}
+#t-3:checked ~ .testimonials__slider-container .btn-3 {
+  display: block;
+}
 
   /* FEATURES */
   .features {
@@ -264,4 +332,197 @@ p {
   .footer__menu a:hover,
   .footer__social a:hover {
     color: #fff;
+  }
+
+  .video__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px; /* Максимальная ширина */
+    margin: 0 auto; /* Центровка контейнера */
+  }
+  
+  .video__iframe {
+    width: 100%;
+    height: auto; /* Поддерживает соотношение сторон */
+    aspect-ratio: 16 / 9; /* Обеспечивает правильное соотношение */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #000; /* Опционально */
+  }
+
+  @media (max-width: 768px) {
+  
+    /* Шапка в столбик */
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .header__logo img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 5px;
+    }
+    .header__tagline {
+      font-size: 1.1rem;
+    }
+    .header__login-btn {
+      margin-top: 5px;
+      align-self: flex-start;
+    }
+  
+    /* Hero */
+    .hero {
+      max-height: 400px;
+    }
+  
+    .video {
+      padding: 10px;
+    }
+    .video__container video {
+      max-width: 100%;
+    }
+  
+    /* === Преимущества -> Слайдер === */
+    .benefits__slider-container {
+      display: block;         /* убираем flex */
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      background-color: #222; /* общий фон */
+    }
+  
+    .benefits__slider {
+      display: flex;
+      width: 110%;         
+      transition: transform 0.4s ease;
+    }
+
+    .benefits__item {
+        flex: 0 0 94.5%;
+      }
+  
+    /* Кнопки-стрелки (видны только на мобильных) */
+    .benefits__button {
+      display: none; /* покажем при checked */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(243, 156, 18, 0.7);
+      font-size: 1.5rem;
+      padding: 8px 12px;
+      border-radius: 50%;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 10;
+    }
+    .benefits__button:hover {
+      background-color: rgba(243, 156, 18, 0.9);
+    }
+    .benefits__button--prev {
+      left: 10px;
+    }
+    .benefits__button--next {
+      right: 10px;
+    }
+  
+    /* Сдвиг при переключении (b-2 => -100%, b-3 => -200%) */
+    #b-2:checked ~ .benefits__slider-container .benefits__slider {
+      transform: translateX(-100%);
+    }
+    #b-3:checked ~ .benefits__slider-container .benefits__slider {
+      transform: translateX(-200%);
+    }
+  
+    /* Показываем соответствующие стрелки */
+    #b-1:checked ~ .benefits__slider-container .btn-b1 {
+      display: block;
+    }
+    #b-2:checked ~ .benefits__slider-container .btn-b2 {
+      display: block;
+    }
+    #b-3:checked ~ .benefits__slider-container .btn-b3 {
+      display: block;
+    }
+  
+    .testimonials {
+      max-width: 90%;
+      padding: 10px;
+    }
+  
+    .signup {
+      padding: 10px;
+    }
+    .signup h2 {
+      font-size: 1.5rem;
+    }
+    .signup__form {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .signup__form input,
+    .signup__form button {
+      width: 100%;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  /* ---------------------------------------------
+     ЕЩЁ БОЛЕЕ УЗКИЕ (max-width: 480px)
+  --------------------------------------------- */
+  @media (max-width: 480px) {
+  
+    .header__logo img {
+      width: 50px;
+      height: 50px;
+    }
+    .header__tagline {
+      font-size: 1rem;
+    }
+    .header__login-btn {
+      font-size: 0.9rem;
+    }
+  
+    .hero {
+      max-height: 300px;
+      margin-bottom: 10px;
+    }
+    .hero__image {
+      opacity: 0.9;
+    }
+  
+    /* Testimonials - делаем на всю ширину, если нужно */
+    .testimonials__slider {
+      width: 100%;
+    }
+    .testimonials__item {
+      flex: 0 0 100%;
+    }
+    #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
+      transform: translateX(-100%);
+    }
+    #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
+      transform: translateX(-200%);
+    }
+    .testimonials__button {
+      font-size: 1.2rem;
+      top: 45%;
+    }
+  
+    .signup__form {
+      gap: 8px;
+    }
+    .footer {
+      gap: 8px;
+    }
   }
