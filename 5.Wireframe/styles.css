@@ -106,7 +106,7 @@ body {
   
 .benefits__slider {
   display: flex;
-  width: auto;   /
+  width: auto;  
   transition: none;
   transform: none;
   gap: 25px;
