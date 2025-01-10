@@ -1,15 +1,28 @@
+/* Общие стили */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 h3,
 p {
-  color: #ffffff ;
+  color: #ffffff;
 }
-  
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.4;
   color: #79D14B;
   background-color: #222;
 }
-  
+
 /* HEADER */
 .header {
   display: flex;
@@ -17,25 +30,27 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #222;
+  flex-wrap: wrap;
 }
-  
+
 .header__logo {
   display: flex;
   align-items: center;
 }
-  
+
 .header__logo img {
   margin-right: 10px;
   width: 100px;
   height: 50px;
+  object-fit: contain;
 }
-  
+
 .header__tagline {
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
 }
-  
+
 .header__login-btn {
   background-color: #79D14B;
   color: #fff;
@@ -45,7 +60,7 @@ body {
   font-size: 1rem;
   border-radius: 4px;
 }
-  
+
 /* HERO */
 .hero {
   position: relative;
@@ -53,65 +68,73 @@ body {
   max-height: 680px;
   overflow: hidden;
 }
-  
+
 .hero__image {
   width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
 }
-  
+
 /* VIDEO */
 .video {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-  
-.video__container video {
-  max-width: 800px;
   width: 100%;
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-  
+
+.video__iframe {
+  width: 100%;
+  height: 900px;
+  display: block;
+}
+
 /* BENEFITS */
 .benefits {
-  padding: 20px;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  padding: 40px 20px; /* Увеличены отступы для больших экранов */
+  gap: 20px;
 }
-  
+
 .benefits h2 {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-bottom: 20px;
   font-size: 1.8rem;
-  margin-bottom: 15px;
   color: #79D14B;
   text-transform: uppercase;
 }
-  
+
+.benefits p {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .benefits input[type="radio"] {
   display: none;
 }
-  
+
 .benefits__slider-container {
-  display: flex;   
+  display: flex;
   gap: 20px;
   justify-content: center;
-  position: relative; /* кнопки скрыты */
+  position: relative;
+  overflow: hidden;
   border: none;
   box-shadow: none;
   border-radius: 0;
-  overflow: visible;
+  background-color: #222;
 }
-  
+
 .benefits__slider {
   display: flex;
-  width: auto;  
-  transition: none;
-  transform: none;
+  width: auto;
+  transition: transform 0.4s ease;
   gap: 25px;
 }
-  
+
 .benefits__item {
   flex: 1 1 250px;
   background-color: #363434;
@@ -131,16 +154,16 @@ body {
   font-size: 1rem;
   line-height: 1.42312;
 }
-  
+
 .benefits__button {
-  display: none; /* скрыты на ПК */
+  display: none;
 }
 
 /* REVIEWS */
 .testimonials {
   padding: 20px;
   text-align: center;
-  max-width: 600px; 
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -162,7 +185,7 @@ body {
   margin: 0 auto;
   border: 2px solid #333;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .testimonials__slider {
@@ -172,32 +195,36 @@ body {
 }
 
 .testimonials__item {
-  flex: 0 0 33.3333%;
+  flex: 0 0 100%;
   background-color: #363434;
   color: #ccc;
   border-radius: 8px;
-  padding: 15px;
+  padding: 15px 20px; /* Уменьшаем паддинг для лучшего размещения */
   box-sizing: border-box;
-  text-align: center;
+  text-align: left; /* Изменяем выравнивание текста */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Добавляем отступ между аватаркой и текстом */
 }
 
 .testimonials__item img {
   border-radius: 50%;
-  margin-bottom: 10px;
-  width: 85px;
-  height: 85px;
+  width: 60px; /* Уменьшаем размер аватарки для лучшего отображения */
+  height: 60px;
   border: 2px solid #555;
+  margin-left: 50px;
+  flex-shrink: 0; /* Предотвращает сжатие аватарки */
 }
 
 .testimonials__item p {
   font-size: 1rem;
-  margin-bottom: 5px;
   line-height: 1.4;
 }
 
 .testimonials__item span {
   font-style: italic;
   font-size: 0.9rem;
+  padding-right: 50px;
 }
 
 .testimonials__button {
@@ -210,17 +237,20 @@ body {
   padding: 8px 12px;
   border-radius: 50%;
   border: none;
-  display: none; 
+  display: none;
   z-index: 10;
   color: #fff;
   transition: background-color 0.3s;
 }
+
 .testimonials__button:hover {
-  background-color: #79D14B;
+  background-color: #6ecc43; /* Немного затемненный цвет при наведении */
 }
+
 .testimonials__button--prev {
   left: 10px;
 }
+
 .testimonials__button--next {
   right: 10px;
 }
@@ -228,82 +258,114 @@ body {
 #t-1:checked ~ .testimonials__slider-container .testimonials__slider {
   transform: translateX(0%);
 }
+
 #t-1:checked ~ .testimonials__slider-container .btn-1 {
   display: block;
 }
 
 #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
-  transform: translateX(-33.3333%);
+  transform: translateX(-100%);
 }
+
 #t-2:checked ~ .testimonials__slider-container .btn-2 {
   display: block;
 }
 
 #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
-  transform: translateX(-66.6666%);
+  transform: translateX(-200%);
 }
+
 #t-3:checked ~ .testimonials__slider-container .btn-3 {
   display: block;
 }
 
 /* FEATURES */
 .features {
+  display: grid;
+  justify-content: center;
+  padding: 20px 20px;
+  gap: 20px;
+}
+
+.features h2 {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #79D14B;
+  text-transform: uppercase;
+}
+
+.features__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
   padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.features__item {
+  background-color: #363434;
+  color: #ccc;
+  border-radius: 8px;
+  padding: 15px 45px;
+  box-sizing: border-box;
   text-align: center;
 }
-  
-.features h2 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
+
+.features__item h3 {
+  color: #79D14B;
+  margin-bottom: 8px;
 }
-  
-.features__items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+
+.features__item p {
+  font-size: 1rem;
+  line-height: 1.42312;
 }
-  
-.features__item {
-  flex: 1 1 250px;
-  max-width: 300px;
-  background-color: #363434;
-  padding: 15px;
-  border-radius: 8px;
-}
-  
+
 /* SIGNUP */
 .signup {
   padding: 20px;
   background-color: #222;
   text-align: center;
 }
-  
+
 .signup h2 {
   margin-bottom: 10px;
   font-size: 1.6rem;
 }
-  
+
 .signup__form {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   gap: 10px;
+  max-width: auto;
+  margin: 0 auto;
 }
-  
+
 .signup__form input {
   padding: 8px;
-  font-size: 1rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: start;
+  width: 65%;
 }
-  
+
 .signup__form button {
   background-color: #79D14B;
   color: #fff;
   border: none;
-  padding: 8px 15px;
-  font-size: 1rem;
+  padding: 10px 20px;
+  font-size: 2rem;
   cursor: pointer;
   border-radius: 4px;
+  flex-shrink: 0;
+  width: 25%;
 }
-  
+
 /* FOOTER */
 .footer {
   display: flex;
@@ -314,44 +376,61 @@ body {
   color: #ccc;
   padding: 10px 20px;
 }
-  
-.footer__menu,
-.footer__social {
+
+.footer__menu {
   display: flex;
   gap: 15px;
 }
-  
-.footer__menu a,
-.footer__social a {
+
+.footer__menu a {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s;
 }
-  
+
 .footer__menu a:hover,
 .footer__social a:hover {
   color: #fff;
 }
 
-.video__container {
+.footer__social {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  padding-right: 200px;
+}
+
+.footer__social li {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #f5f5f7;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.footer__social li a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1440px; /* Максимальная ширина */
-  margin: 0 auto; /* Центровка контейнера */
-}
-  
-.video__iframe {
-  width: 100%;
-  height: auto; /* Поддерживает соотношение сторон */
-  aspect-ratio: 16 / 9; /* Обеспечивает правильное соотношение */
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  background-color: #000; /* Опционально */
+  height: 100%;
 }
 
-@media (max-width: 768px) {
+.footer__social li a img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Планшеты и небольшие экраны */
+@media (max-width: 1024px) {
+  .signup__form {
+    max-width: 500px;
+  }
+}
+
+/* Мобильные устройства и планшеты */
+@media (max-width: 880px) {
   /* HEADER */
   .header {
     flex-direction: column;
@@ -367,33 +446,35 @@ body {
   .header__tagline {
     font-size: 1.1rem;
   }
+
   .header__login-btn {
     margin-top: 5px;
     align-self: flex-start;
   }
-  
+
   /* HERO */
   .hero {
     max-height: 400px;
   }
-  
+
+  /* VIDEO */
   .video {
     padding: 10px;
   }
 
-  .video__container video {
-    max-width: 100%;
+  .video__iframe {
+    height: 500px; /* Уменьшение высоты видео на планшетах */
   }
-  
+
   /* BENEFITS */
   .benefits__slider-container {
-    display: block;         /* убираем flex */
+    display: block;
     position: relative;
     overflow: hidden;
     border: 2px solid #333;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    background-color: #222; /* общий фон */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: #222;
   }
   
   .benefits__slider {
@@ -403,7 +484,7 @@ body {
   }
 
   .benefits__item {
-      flex: 0 0 94.5%;
+      flex: 0 0 95.5%;
     }
   
   .benefits__button {
@@ -450,12 +531,35 @@ body {
   #b-3:checked ~ .benefits__slider-container .btn-b3 {
     display: block;
   }
-  
+
+  /* TESTIMONIALS */
   .testimonials {
     max-width: 90%;
     padding: 10px;
   }
-  
+
+  .testimonials__slider {
+    width: 100%;
+  }
+
+  .testimonials__item {
+    flex: 0 0 100%;
+  }
+
+  #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
+    transform: translateX(-100%);
+  }
+
+  #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
+    transform: translateX(-200%);
+  }
+
+  .testimonials__button {
+    font-size: 1.2rem;
+    top: 45%;
+  }
+
+  /* SIGNUP */
   .signup {
     padding: 10px;
   }
@@ -472,17 +576,36 @@ body {
   .signup__form input,
   .signup__form button {
     width: 100%;
+    font-size: 1rem;
   }
-  
+
+  /* FEATURES */
+  .features__items {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    padding: 10px;
+  }
+
+  /* FOOTER */
   .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    flex-direction: row; /* Изменяем на row для горизонтального расположения */
+    justify-content: space-between; /* Распределяем элементы по краям */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    gap: 10px; /* Добавляем небольшой отступ между элементами */
+  }
+
+  .footer__social {
+    padding-right: 0; /* Убираем padding-right: 200px; */
+  }
+
+  .footer__menu {
+    justify-content: flex-end; /* Выравниваем меню по правому краю */
+    width: auto; /* Можно оставить auto или установить конкретную ширину при необходимости */
   }
 }
 
+/* Мобильные устройства с очень маленьким экраном */
 @media (max-width: 480px) {
-  
+  /* HEADER */
   .header__logo img {
     width: 50px;
     height: 50px;
@@ -495,7 +618,8 @@ body {
   .header__login-btn {
     font-size: 0.9rem;
   }
-  
+
+  /* HERO */
   .hero {
     max-height: 300px;
     margin-bottom: 10px;
@@ -504,7 +628,8 @@ body {
   .hero__image {
     opacity: 0.9;
   }
-  
+
+  /* TESTIMONIALS */
   .testimonials__slider {
     width: 100%;
   }
@@ -516,6 +641,7 @@ body {
   #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
     transform: translateX(-100%);
   }
+
   #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
     transform: translateX(-200%);
   }
@@ -524,11 +650,18 @@ body {
     font-size: 1.2rem;
     top: 45%;
   }
-  
+
+  /* SIGNUP */
   .signup__form {
     gap: 8px;
   }
 
+  .signup__form input,
+  .signup__form button {
+    font-size: 0.9rem;
+  }
+
+  /* FOOTER */
   .footer {
     gap: 8px;
   }
