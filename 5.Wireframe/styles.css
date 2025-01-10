@@ -296,7 +296,7 @@ p {
   }
   
   .signup__form button {
-    background-color: #27ae60;
+    background-color: #79D14B;
     color: #fff;
     border: none;
     padding: 8px 15px;
@@ -411,7 +411,7 @@ p {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(243, 156, 18, 0.7);
+      background-color: #79D14B;
       font-size: 1.5rem;
       padding: 8px 12px;
       border-radius: 50%;
@@ -422,7 +422,7 @@ p {
       z-index: 10;
     }
     .benefits__button:hover {
-      background-color: rgba(243, 156, 18, 0.9);
+      background-color: #79D14B;
     }
     .benefits__button--prev {
       left: 10px;
