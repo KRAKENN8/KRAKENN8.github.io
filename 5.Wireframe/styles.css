@@ -1,79 +1,117 @@
-/* Общие стили */
+/* Общие стили сброса */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /** Устанавливаем box-sizing для всех элементов, чтобы padding и border учитывались в общей ширине/высоте */
 }
 
 body,
 html {
-  margin: 0;
-  padding: 0;
-}
-
-h3,
-p {
-  color: #ffffff;
+  margin: 0; /** Убираем отступы браузера */
+  padding: 0; /** Убираем внутренние отступы браузера */
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.4;
-  color: #79D14B;
-  background-color: #222;
+  font-family: Arial, sans-serif; /** Основной шрифт для сайта */
+  line-height: 1.4; /** Высота строки для удобства чтения */
+  background-color: var(--bg-color); /** Фон страницы через переменную */
+  color: var(--text-color); /** Общий цвет текста через переменную */
+  transition: background-color 0.3s, color 0.3s; /** Плавное изменение цвета и фона при переключении темы */
+}
+
+/* Определение CSS-переменных для тёмной темы (по умолчанию) */
+:root {
+  --bg-color: #222; /** Фон страницы в темной теме */
+  --heading-color: #79D14B;   /** Цвет заголовков h2 в темной теме – зелёный */
+  --text-color: #ffffff;      /** Цвет основного текста (например, p) – белый */
+  --header-bg: #222; /** Фон шапки */
+  --card-bg: #363434; /** Фон карточек (benefits, testimonials, features) */
+  --card-text-color: #ffffff; /** Цвет текста внутри карточек */
+  --button-bg: #79D14B; /** Фон кнопок */
+  --button-text-color: #ffffff; /** Цвет текста кнопок */
+  --footer-bg: #222; /** Фон подвала */
+}
+
+/* Параметры для светлой темы */
+.light-theme {
+  --bg-color: #ffffff; /** Фон страницы */
+  --heading-color: #000000;   /** Цвет заголовков в светлой теме – чёрный */
+  --text-color: #ffffff; /** Здесь сохранён белый, но можно менять при необходимости */
+  --header-bg: #ffffff; /** Фон шапки */
+  --card-bg: #363434; /** Фон карточек (остается прежним, если требуется изменить – можно задать другой цвет) */
+  --card-text-color: #000000; /** Цвет текста внутри карточек – чёрный */
+  --button-bg: #f0f0f0; /** Фон кнопок */
+  --button-text-color: #000000; /** Цвет текста кнопок */
+  --footer-bg: #f5f5f5; /** Фон подвала */
+}
+
+/* Заголовки и абзацы */
+/** Заголовкам h2 задаем цвет через var(--heading-color) */
+h2 {
+  color: var(--heading-color);
+}
+
+/** Заголовкам h3 задаем цвет через var(--text-color) – здесь можно менять, если необходимо */
+h3 {
+  color: var(--text-color);
+}
+
+/** Абзацам задаем цвет основного текста */
+p {
+  color: var(--text-color);
 }
 
 /* HEADER */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #222;
-  flex-wrap: wrap;
+  display: flex; /** Используем flexbox для выравнивания элементов */
+  align-items: center; /** Центрирование по вертикали */
+  justify-content: space-between; /** Распределение пространства между элементами */
+  padding: 10px 20px; /** Внутренние отступы */
+  background-color: var(--header-bg); /** Фон шапки через переменную */
+  flex-wrap: wrap; /** Позволяет элементам переходить на новую строку при необходимости */
 }
 
 .header__logo {
-  display: flex;
-  align-items: center;
+  display: flex; /** Логотип и текст располагаются в строку */
+  align-items: center; /** Выравнивание по центру */
 }
 
 .header__logo img {
-  margin-right: 10px;
-  width: 100px;
-  height: 50px;
-  object-fit: contain;
+  margin-right: 10px; /** Отступ справа между логотипом и текстом */
+  width: 100px; /** Ширина логотипа */
+  height: 50px; /** Высота логотипа */
+  object-fit: contain; /** Сохранение пропорций изображения */
 }
 
 .header__tagline {
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
+  color: var(--text-color); /** Цвет текста слогана через переменную */
+  font-size: 1.2rem; /** Размер шрифта */
+  font-weight: bold; /** Жирное начертание */
 }
 
 .header__login-btn {
-  background-color: #79D14B;
-  color: #fff;
-  border: none;
-  padding: 8px 15px;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 4px;
+  background-color: var(--button-bg); /** Фон кнопки через переменную */
+  color: var(--button-text-color); /** Цвет текста кнопки через переменную */
+  border: none; /** Убираем стандартную границу */
+  padding: 8px 15px; /** Внутренние отступы кнопки */
+  cursor: pointer; /** Курсор-рука при наведении */
+  font-size: 1rem; /** Размер шрифта кнопки */
+  border-radius: 4px; /** Скругление углов кнопки */
 }
 
 /* HERO */
 .hero {
-  position: relative;
-  width: 100%;
-  max-height: 680px;
-  overflow: hidden;
+  position: relative; /** Позиционирование для возможного размещения внутренних элементов */
+  width: 100%; /** Занимает всю ширину экрана */
+  max-height: 680px; /** Максимальная высота блока */
+  overflow: hidden; /** Скрытие элементов, выходящих за пределы блока */
 }
 
 .hero__image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  width: 100%; /** Изображение растягивается на всю ширину */
+  height: auto; /** Автоматическая высота для сохранения пропорций */
+  display: block; /** Убираем пробелы вокруг изображения */
+  object-fit: cover; /** Изображение обрезается для полного покрытия блока */
 }
 
 /* VIDEO */
@@ -85,35 +123,36 @@ body {
 }
 
 .video__iframe {
-  width: 100%;
-  height: 900px;
+  width: 100%; /** Ширина видео по всей ширине родительского элемента */
+  height: 900px; /** Фиксированная высота для iframe */
   display: block;
 }
 
 /* BENEFITS */
 .benefits {
-  display: grid;
-  justify-content: center;
-  padding: 40px 20px; /* Увеличены отступы для больших экранов */
-  gap: 20px;
+  display: grid; /** Используем CSS Grid для компоновки */
+  justify-content: center; /** Центрирование содержимого */
+  padding: 40px 20px; /** Внешние отступы */
+  gap: 20px; /** Расстояние между элементами сетки */
 }
 
 .benefits h2 {
-  grid-column: 1 / -1;
-  justify-self: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  color: #79D14B;
-  text-transform: uppercase;
+  grid-column: 1 / -1; /** Заголовок занимает всю ширину сетки */
+  justify-self: center; /** Центрирование заголовка */
+  margin-bottom: 20px; /** Отступ снизу */
+  font-size: 1.8rem; /** Размер шрифта */
+  /** Заголовок наследует цвет из var(--heading-color) через правило для h2 выше */
+  text-transform: uppercase; /** Преобразование букв в верхний регистр */
 }
 
 .benefits p {
   padding-left: 50px;
   padding-right: 50px;
+  color: var(--text-color); /** Текст абзацев через переменную */
 }
 
 .benefits input[type="radio"] {
-  display: none;
+  display: none; /** Радиокнопки скрыты, используются для управления слайдером */
 }
 
 .benefits__slider-container {
@@ -125,41 +164,42 @@ body {
   border: none;
   box-shadow: none;
   border-radius: 0;
-  background-color: #222;
+  background-color: var(--header-bg); /** Фон контейнера через переменную */
 }
 
 .benefits__slider {
   display: flex;
   width: auto;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease; /** Плавное перемещение при смене слайда */
   gap: 25px;
 }
 
 .benefits__item {
-  flex: 1 1 250px;
-  background-color: #363434;
-  color: #ccc;
-  border-radius: 8px;
-  padding: 15px 45px;
+  flex: 1 1 250px; /** Элемент растягивается, но не меньше 250px */
+  background-color: var(--card-bg); /** Фон карточки через переменную */
+  color: var(--card-text-color); /** Цвет текста внутри карточки через переменную */
+  border-radius: 8px; /** Скругление углов */
+  padding: 15px 45px; /** Внутренние отступы */
   box-sizing: border-box;
-  text-align: center;
+  text-align: center; /** Центрирование текста */
 }
 
 .benefits__item h3 {
-  color: #79D14B;
+  color: var(--text-color); /** Заголовок h3 получает цвет через переменную */
   margin-bottom: 8px;
 }
 
 .benefits__item p {
   font-size: 1rem;
   line-height: 1.42312;
+  color: var(--text-color); /** Текст абзацев внутри карточки через переменную */
 }
 
 .benefits__button {
-  display: none;
+  display: none; /** Кнопки управления слайдером скрыты по умолчанию */
 }
 
-/* REVIEWS */
+/* TESTIMONIALS */
 .testimonials {
   padding: 20px;
   text-align: center;
@@ -170,7 +210,7 @@ body {
 .testimonials h2 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #79D14B;
+  /** Заголовки отзывов наследуют цвет var(--heading-color) через правило для h2 */
   text-transform: uppercase;
 }
 
@@ -183,48 +223,52 @@ body {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
-  border: 2px solid #333;
+  border: 2px solid #333; /** Жёсткая рамка, можно заменить на переменную, если потребуется */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  background-color: var(--header-bg); /** Фон контейнера отзывов через переменную */
 }
 
 .testimonials__slider {
   display: flex;
-  width: 300%;
+  width: 300%; /** Три слайда занимают в три раза больше ширины контейнера */
   transition: transform 0.4s ease;
 }
 
 .testimonials__item {
   flex: 0 0 100%;
-  background-color: #363434;
-  color: #ccc;
+  background-color: var(--card-bg); /** Фон карточки отзыва через переменную */
+  color: var(--card-text-color); /** Текст внутри карточки через переменную – белый в тёмной теме */
   border-radius: 8px;
-  padding: 15px 20px; /* Уменьшаем паддинг для лучшего размещения */
+  padding: 15px 20px;
   box-sizing: border-box;
-  text-align: left; /* Изменяем выравнивание текста */
+  text-align: left;
   display: flex;
   align-items: center;
-  gap: 15px; /* Добавляем отступ между аватаркой и текстом */
+  gap: 15px;
 }
 
 .testimonials__item img {
   border-radius: 50%;
-  width: 60px; /* Уменьшаем размер аватарки для лучшего отображения */
-  height: 60px;
+  width: 100px;
+  height: 100px;
   border: 2px solid #555;
   margin-left: 50px;
-  flex-shrink: 0; /* Предотвращает сжатие аватарки */
+  flex-shrink: 0;
 }
 
+/** Параграфы и подписи в отзывах – белые в тёмной теме */
 .testimonials__item p {
   font-size: 1rem;
   line-height: 1.4;
+  color: var(--text-color);
 }
 
 .testimonials__item span {
   font-style: italic;
   font-size: 0.9rem;
   padding-right: 50px;
+  color: var(--text-color);
 }
 
 .testimonials__button {
@@ -232,19 +276,19 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  background-color: #79D14B;
+  background-color: var(--button-bg);
   font-size: 1.5rem;
   padding: 8px 12px;
   border-radius: 50%;
   border: none;
   display: none;
   z-index: 10;
-  color: #fff;
+  color: var(--button-text-color);
   transition: background-color 0.3s;
 }
 
 .testimonials__button:hover {
-  background-color: #6ecc43; /* Немного затемненный цвет при наведении */
+  background-color: #6ecc43; /** При наведении фон кнопки меняется */
 }
 
 .testimonials__button--prev {
@@ -255,6 +299,7 @@ body {
   right: 10px;
 }
 
+/** Переключение слайдов в testimonials по радио-кнопкам */
 #t-1:checked ~ .testimonials__slider-container .testimonials__slider {
   transform: translateX(0%);
 }
@@ -292,7 +337,7 @@ body {
   justify-self: center;
   margin-bottom: 20px;
   font-size: 1.8rem;
-  color: #79D14B;
+  /** Заголовки features наследуют цвет var(--heading-color) */
   text-transform: uppercase;
 }
 
@@ -306,8 +351,8 @@ body {
 }
 
 .features__item {
-  background-color: #363434;
-  color: #ccc;
+  background-color: var(--card-bg); /** Фон карточки через переменную */
+  color: var(--card-text-color); /** Цвет текста карточки через переменную */
   border-radius: 8px;
   padding: 15px 45px;
   box-sizing: border-box;
@@ -315,25 +360,28 @@ body {
 }
 
 .features__item h3 {
-  color: #79D14B;
+  color: var(--text-color); /** Здесь можно изменить цвет заголовка, если нужно – сейчас наследуется var(--text-color) */
   margin-bottom: 8px;
 }
 
 .features__item p {
   font-size: 1rem;
   line-height: 1.42312;
+  color: var(--text-color);
 }
 
 /* SIGNUP */
 .signup {
   padding: 20px;
-  background-color: #222;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   text-align: center;
 }
 
 .signup h2 {
   margin-bottom: 10px;
   font-size: 1.6rem;
+  color: var(--text-color);
 }
 
 .signup__form {
@@ -348,22 +396,24 @@ body {
 
 .signup__form input {
   padding: 8px;
-  font-size: 2rem;
-  display: flex;
-  justify-content: start;
+  font-size: 1rem;
   width: 65%;
 }
 
 .signup__form button {
-  background-color: #79D14B;
-  color: #fff;
+  background-color: var(--card-bg); /** Кнопка оформлена с использованием фона карточки */
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
   border-radius: 4px;
   flex-shrink: 0;
   width: 25%;
+}
+
+.signup__form button:hover {
+  background-color: #e0e0e0;
 }
 
 /* FOOTER */
@@ -372,8 +422,8 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #222;
-  color: #ccc;
+  background-color: var(--footer-bg);
+  color: var(--text-color);
   padding: 10px 20px;
 }
 
@@ -383,14 +433,14 @@ body {
 }
 
 .footer__menu a {
-  color: #ccc;
+  color: var(--heading-color); /** Ссылки в меню оформлены через var(--heading-color) */
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer__menu a:hover,
 .footer__social a:hover {
-  color: #fff;
+  color: #555;
 }
 
 .footer__social {
@@ -422,16 +472,81 @@ body {
   height: 22px;
 }
 
+/* MODAL (МОДАЛЬНОЕ ОКНО) */
+.modal {
+  display: none; /** Модальное окно скрыто по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /** Окно занимает всю ширину экрана */
+  height: 100%; /** Окно занимает всю высоту экрана */
+  background-color: rgba(0, 0, 0, 0.7); /** Полупрозрачный чёрный фон для затемнения заднего плана */
+  justify-content: center; /** Центрирование модального окна по горизонтали */
+  align-items: center; /** Центрирование модального окна по вертикали */
+  z-index: 1000; /** Высокий приоритет отображения */
+}
+
+.modal__content {
+  background-color: var(--bg-color); /** Фон модального окна. В светлой теме он останется белым, а в тёмной можно изменить через переменную, если потребуется */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal__form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--card-text-color); /** Цвет меток через переменную */
+}
+
+.modal__form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal__actions button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal__actions button[type="submit"] {
+  background-color: #79d14b;
+  color: white;
+}
+
+.modal__actions button[type="button"] {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* Медиа-запросы для адаптивности */
+
 /* Планшеты и небольшие экраны */
 @media (max-width: 1024px) {
   .signup__form {
-    max-width: 500px;
+    max-width: 500px; /** Ограничение ширины формы подписки */
   }
 }
 
 /* Мобильные устройства и планшеты */
 @media (max-width: 880px) {
-  /* HEADER */
   .header {
     flex-direction: column;
     align-items: flex-start;
@@ -452,21 +567,18 @@ body {
     align-self: flex-start;
   }
 
-  /* HERO */
   .hero {
     max-height: 400px;
   }
 
-  /* VIDEO */
   .video {
     padding: 10px;
   }
 
   .video__iframe {
-    height: 500px; /* Уменьшение высоты видео на планшетах */
+    height: 500px; /** Уменьшение высоты видео для мобильных устройств */
   }
 
-  /* BENEFITS */
   .benefits__slider-container {
     display: block;
     position: relative;
@@ -474,7 +586,7 @@ body {
     border: 2px solid #333;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    background-color: #222;
+    background-color: var(--header-bg);
   }
   
   .benefits__slider {
@@ -484,20 +596,21 @@ body {
   }
 
   .benefits__item {
-      flex: 0 0 95.5%;
-    }
+    flex: 0 0 95.5%;
+    color: var(--text-color);
+  }
   
   .benefits__button {
-    display: none; /* покажем при checked */
+    display: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #79D14B;
+    background-color: var(--button-bg);
     font-size: 1.5rem;
     padding: 8px 12px;
     border-radius: 50%;
     border: none;
-    color: #fff;
+    color: var(--button-text-color);
     cursor: pointer;
     transition: background-color 0.3s;
     z-index: 10;
@@ -532,7 +645,6 @@ body {
     display: block;
   }
 
-  /* TESTIMONIALS */
   .testimonials {
     max-width: 90%;
     padding: 10px;
@@ -559,7 +671,6 @@ body {
     top: 45%;
   }
 
-  /* SIGNUP */
   .signup {
     padding: 10px;
   }
@@ -579,33 +690,30 @@ body {
     font-size: 1rem;
   }
 
-  /* FEATURES */
   .features__items {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     padding: 10px;
   }
 
-  /* FOOTER */
   .footer {
-    flex-direction: row; /* Изменяем на row для горизонтального расположения */
-    justify-content: space-between; /* Распределяем элементы по краям */
-    align-items: center; /* Выравниваем по центру по вертикали */
-    gap: 10px; /* Добавляем небольшой отступ между элементами */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
   }
 
   .footer__social {
-    padding-right: 0; /* Убираем padding-right: 200px; */
+    padding-right: 0;
   }
 
   .footer__menu {
-    justify-content: flex-end; /* Выравниваем меню по правому краю */
-    width: auto; /* Можно оставить auto или установить конкретную ширину при необходимости */
+    justify-content: flex-end;
+    width: auto;
   }
 }
 
 /* Мобильные устройства с очень маленьким экраном */
 @media (max-width: 480px) {
-  /* HEADER */
   .header__logo img {
     width: 50px;
     height: 50px;
@@ -619,7 +727,6 @@ body {
     font-size: 0.9rem;
   }
 
-  /* HERO */
   .hero {
     max-height: 300px;
     margin-bottom: 10px;
@@ -629,7 +736,6 @@ body {
     opacity: 0.9;
   }
 
-  /* TESTIMONIALS */
   .testimonials__slider {
     width: 100%;
   }
@@ -651,7 +757,6 @@ body {
     top: 45%;
   }
 
-  /* SIGNUP */
   .signup__form {
     gap: 8px;
   }
@@ -661,7 +766,6 @@ body {
     font-size: 0.9rem;
   }
 
-  /* FOOTER */
   .footer {
     gap: 8px;
   }

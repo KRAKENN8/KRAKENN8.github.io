@@ -14,6 +14,7 @@
       <img src="img/logo.webp" alt="Game Logo" />
       <span class="header__tagline">World Of Warcraft</span>
     </div>
+    <button id="themeToggle" class="header__login-btn">Сменить тему</button>
     <button class="header__login-btn">Войти</button>
   </header>
 
@@ -163,6 +164,25 @@
     </form>
   </section>
 
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <h2>Введите данные</h2>
+      <form id="modalForm" class="modal__form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required />
+  
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+  
+        <div class="modal__actions">
+          <button type="submit">Отправить</button>
+          <button type="button" id="closeModal">Закрыть</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
   <!-- Подвал (Footer) -->
   <footer class="footer">
     <nav class="footer__menu">
@@ -192,5 +212,8 @@
       </li>
   </ul>
   </footer>
+
+  <script src="js/button.js" defer></script>
+  <script src="js/submit.js" defer></script>
 </body>
 </html>
