@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Game Landing Page</title>
-  <!-- Подключаем внешний файл стилей -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -36,11 +38,41 @@
       allowfullscreen>
     </iframe>
   </section>
-  
+
+  <!-- Карусель -->
+<section class="carousel">
+  <div class="carousel__container" id="carouselContainer">
+    <div class="carousel__slide">
+      <img src="img/screenshot/screenshot1.jpg" alt="Карусель 1" class="carousel__image" />
+    </div>
+    <div class="carousel__slide">
+      <img src="img/screenshot/screenshot2.jpg" alt="Карусель 2" class="carousel__image" />
+    </div>
+    <div class="carousel__slide">
+      <img src="img/screenshot/screenshot3.jpg" alt="Карусель 3" class="carousel__image" />
+    </div>
+    <div class="carousel__slide">
+      <img src="img/screenshot/screenshot4.jpg" alt="Карусель 4" class="carousel__image" />
+    </div>
+    <div class="carousel__slide">
+      <img src="img/screenshot/screenshot5.jpg" alt="Карусель 5" class="carousel__image" />
+    </div>
+  </div>
+  <!-- Точки-индикаторы -->
+  <div class="carousel__dots" id="carouselDots">
+    <span class="carousel__dot active" data-slide="0"></span>
+    <span class="carousel__dot" data-slide="1"></span>
+    <span class="carousel__dot" data-slide="2"></span>
+    <span class="carousel__dot" data-slide="3"></span>
+    <span class="carousel__dot" data-slide="4"></span>
+  </div>
+</section>
+
+
   <section class="benefits">
     <h2>Преимущества</h2>
   
-    <!-- Радиокнопки (по количеству слайдов) -->
+    <!-- Кнопки (по количеству слайдов) -->
     <input type="radio" name="benefit" id="b-1" checked>
     <input type="radio" name="benefit" id="b-2">
     <input type="radio" name="benefit" id="b-3">
@@ -94,19 +126,19 @@
       <div class="testimonials__slider">
         <!-- Слайд 1 -->
         <div class="testimonials__item">
-          <img src="img/1.jpg" alt="Avatar 1" />
+          <img src="img/avatar/1.jpg" alt="Avatar 1" />
           <p>«WoW всё ещё удивляет! Огромный мир, интересные квесты и дружелюбное комьюнити — всегда есть, чем заняться.»</p>
           <span>- Логика</span>
         </div>
         <!-- Слайд 2 -->
         <div class="testimonials__item">
-          <img src="img/2.webp" alt="Avatar 2" />
+          <img src="img/avatar/2.webp" alt="Avatar 2" />
           <p>«Это не просто игра, а целая вселенная! Каждая новая экспансия добавляет свежие эмоции и невероятные приключения.»</p>
           <span>- Кентафарик</span>
         </div>
         <!-- Слайд 3 -->
         <div class="testimonials__item">
-          <img src="img/3.jpg" alt="Avatar 3" />
+          <img src="img/avatar/3.jpg" alt="Avatar 3" />
           <p>«Графика может и не самая современная, но здешняя атмосфера заставляет возвращаться вновь и вновь в эту игру.»</p>
           <span>- Кракен</span>
         </div>
@@ -151,11 +183,63 @@
       <p>В WoW мир живёт своей жизнью: игровые события, такие как вторжения, мировые боссы и праздники, синхронизированы с реальным временем. Это создаёт уникальную атмосферу, где игроки могут участвовать в динамических событиях, происходящих одновременно для всех пользователей.</p>
     </div>
   </div>
+  </section>
+
+<!-- Карточки товаров/услуг (Products) -->
+<!-- Карточки товаров/услуг (Products) -->
+<section class="products">
+  <h2>Наши предложения</h2>
+  <div class="products__container">
+    <div class="product__card">
+      <img src="img/products/1.jpeg" alt="Product 1" class="product__image" />
+      <h3 class="product__title">Позолоченный брутозавр торговца</h3>
+      <p class="product__description">Стоимость: 80 евро</p>
+      <h3 class="product__title">Осталось:</h3>
+      <div class="product__quantity">
+        <div class="quantity__bar"></div>
+        <span class="quantity__number">0</span>
+      </div>
+    </div>
+    <div class="product__card">
+      <img src="img/products/2.jpg" alt="Product 2" class="product__image" />
+      <h3 class="product__title">Набор транспорта «30-летие Warcraft»</h3>
+      <p class="product__description">Стоимость: 70 евро</p>
+      <h3 class="product__title">Осталось:</h3>
+      <div class="product__quantity">
+        <div class="quantity__bar"></div>
+        <span class="quantity__number">0</span>
+      </div>
+    </div>
+    <div class="product__card">
+      <img src="img/products/3.jpeg" alt="Product 3" class="product__image" />
+      <h3 class="product__title">Комплект питомцев «Закадычные враги»</h3>
+      <p class="product__description">Стоимость: 60 евро</p>
+      <h3 class="product__title">Осталось:</h3>
+      <div class="product__quantity">
+        <div class="quantity__bar"></div>
+        <span class="quantity__number">0</span>
+      </div>
+    </div>
+    <div class="product__card">
+      <img src="img/products/4.jpeg" alt="Product 4" class="product__image" />
+      <h3 class="product__title">Инкогнито, загадочный скверноцикл 20-й годовщины</h3>
+      <p class="product__description">Стоимость: 50 евро</p>
+      <h3 class="product__title">Осталось:</h3>
+      <div class="product__quantity">
+        <div class="quantity__bar"></div>
+        <span class="quantity__number">0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="products__button-container">
+    <button class="products__see-all-btn">Увидеть все предложения</button>
+  </div>
 </section>
 
 
 
-  <!-- Блок подписки (Sign up) -->
+  <!-- Sign up -->
   <section class="signup">
     <h2>Присоединяйтесь и начните играть!</h2>
     <form class="signup__form">
@@ -181,9 +265,8 @@
       </form>
     </div>
   </div>
-  
 
-  <!-- Подвал (Footer) -->
+  <!-- Footer -->
   <footer class="footer">
     <nav class="footer__menu">
       <a href="#">Главная</a>
@@ -192,22 +275,22 @@
     <ul class="footer__social">
       <li>
           <a href="https://x.com/warcraft?mx=2" class="footer__link">
-              <img src="img/x.png" alt="TwitterX link">
+              <img src="img/socials/x.png" alt="TwitterX link">
           </a>
       </li>
       <li>
           <a href="https://www.instagram.com/warcraft/" class="footer__link">
-              <img src="img/instagram.png" alt="Instagram link">
+              <img src="img/socials/instagram.png" alt="Instagram link">
           </a>
       </li>
       <li>
           <a href="https://www.facebook.com/Warcraft/" class="footer__link">
-              <img src="img/facebook.png" alt="Facebook link">
+              <img src="img/socials/facebook.png" alt="Facebook link">
           </a>
       </li>
       <li>
           <a href="https://www.youtube.com/user/worldofwarcraft" class="footer__link">
-              <img src="img/youtube.webp" alt="YouTube link">
+              <img src="img/socials/youtube.webp" alt="YouTube link">
           </a>
       </li>
   </ul>
@@ -215,5 +298,7 @@
 
   <script src="js/button.js" defer></script>
   <script src="js/submit.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/quantity.js" defer></script>
 </body>
 </html>
