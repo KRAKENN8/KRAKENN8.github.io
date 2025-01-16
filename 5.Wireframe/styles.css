@@ -84,7 +84,7 @@ p {
 }
 
 .header__tagline {
-  color: var(--text-color); /** Цвет текста слогана через переменную */
+  color: var(--card-text-color); /** Цвет текста слогана через переменную */
   font-size: 1.2rem; /** Размер шрифта */
   font-weight: bold; /** Жирное начертание */
 }
