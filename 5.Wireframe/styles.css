@@ -1,772 +1,772 @@
 /* Общие стили сброса */
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /** Устанавливаем box-sizing для всех элементов, чтобы padding и border учитывались в общей ширине/высоте */
+*,                   /* Применяем правило ко всем элементам */
+*::before,           /* Применяем правило к псевдоэлементу ::before каждого элемента */
+*::after {           /* Применяем правило к псевдоэлементу ::after каждого элемента */
+  box-sizing: border-box; /* Устанавливаем модель коробки, в которой padding и border включаются в общую ширину и высоту элемента */
 }
 
 body,
-html {
-  margin: 0; /** Убираем отступы браузера */
-  padding: 0; /** Убираем внутренние отступы браузера */
+html {                /* Для элементов <body> и <html> */
+  margin: 0;         /* Убираем стандартные отступы браузера */
+  padding: 0;        /* Убираем стандартные внутренние отступы браузера */
 }
 
-body {
-  font-family: Arial, sans-serif; /** Основной шрифт для сайта */
-  line-height: 1.4; /** Высота строки для удобства чтения */
-  background-color: var(--bg-color); /** Фон страницы через переменную */
-  color: var(--text-color); /** Общий цвет текста через переменную */
-  transition: background-color 0.3s, color 0.3s; /** Плавное изменение цвета и фона при переключении темы */
+body {                /* Правила для элемента body */
+  font-family: Arial, sans-serif; /* Устанавливаем основной шрифт сайта */
+  line-height: 1.4;   /* Задаем высоту строки для удобного чтения */
+  background-color: var(--bg-color); /* Фон страницы берется из CSS-переменной --bg-color */
+  color: var(--text-color); /* Общий цвет текста берется из переменной --text-color */
+  transition: background-color 0.3s, color 0.3s; /* Плавно изменяем фон и цвет при смене темы в течение 0.3 секунды */
 }
 
 /* Определение CSS-переменных для тёмной темы (по умолчанию) */
-:root {
-  --bg-color: #222; /** Фон страницы в темной теме */
-  --heading-color: #79D14B;   /** Цвет заголовков h2 в темной теме – зелёный */
-  --text-color: #ffffff;      /** Цвет основного текста (например, p) – белый */
-  --header-bg: #222; /** Фон шапки */
-  --card-bg: #363434; /** Фон карточек (benefits, testimonials, features) */
-  --card-text-color: #ffffff; /** Цвет текста внутри карточек */
-  --button-bg: #79D14B; /** Фон кнопок */
-  --button-text-color: #ffffff; /** Цвет текста кнопок */
-  --footer-bg: #222; /** Фон подвала */
+:root {               /* Корневой элемент, где объявлены переменные для темной темы */
+  --bg-color: #222;              /* Фон страницы в тёмной теме */
+  --heading-color: #79D14B;       /* Цвет заголовков h2 в тёмной теме – зелёный */
+  --text-color: #ffffff;          /* Цвет основного текста – белый */
+  --header-bg: #222;              /* Фон шапки сайта в тёмной теме */
+  --card-bg: #363434;             /* Фон карточек (например, benefits, testimonials, features) */
+  --card-text-color: #ffffff;     /* Цвет текста внутри карточек – белый */
+  --button-bg: #79D14B;           /* Фон кнопок – зелёный */
+  --button-text-color: #ffffff;   /* Цвет текста кнопок – белый */
+  --footer-bg: #222;              /* Фон подвала в тёмной теме */
 }
 
 /* Параметры для светлой темы */
-.light-theme {
-  --bg-color: #ffffff; /** Фон страницы */
-  --heading-color: #000000;   /** Цвет заголовков в светлой теме – чёрный */
-  --text-color: #ffffff; /** Здесь сохранён белый, но можно менять при необходимости */
-  --header-bg: #ffffff; /** Фон шапки */
-  --card-bg: #363434; /** Фон карточек (остается прежним, если требуется изменить – можно задать другой цвет) */
-  --card-text-color: #000000; /** Цвет текста внутри карточек – чёрный */
-  --button-bg: #f0f0f0; /** Фон кнопок */
-  --button-text-color: #000000; /** Цвет текста кнопок */
-  --footer-bg: #f5f5f5; /** Фон подвала */
+.light-theme {        /* Класс, который применяется для светлой темы */
+  --bg-color: #ffffff;            /* Фон страницы – белый */
+  --heading-color: #000000;       /* Цвет заголовков – чёрный */
+  --text-color: #ffffff;          /* Цвет основного текста (оставлен белым, но его можно изменить по необходимости) */
+  --header-bg: #ffffff;           /* Фон шапки – белый */
+  --card-bg: #363434;             /* Фон карточек (если не требуется менять, оставлен прежним) */
+  --card-text-color: #000000;     /* Цвет текста карточек – чёрный */
+  --button-bg: #f0f0f0;           /* Фон кнопок – светло-серый */
+  --button-text-color: #000000;   /* Цвет текста кнопок – чёрный */
+  --footer-bg: #f5f5f5;           /* Фон подвала – светло-серый */
 }
 
 /* Заголовки и абзацы */
 /** Заголовкам h2 задаем цвет через var(--heading-color) */
 h2 {
-  color: var(--heading-color);
+  color: var(--heading-color);    /* Устанавливаем цвет заголовков h2 в соответствии с переменной */
 }
 
 /** Заголовкам h3 задаем цвет через var(--text-color) – здесь можно менять, если необходимо */
 h3 {
-  color: var(--text-color);
+  color: var(--text-color);         /* Устанавливаем цвет заголовков h3 согласно переменной */
 }
 
 /** Абзацам задаем цвет основного текста */
 p {
-  color: var(--text-color);
+  color: var(--text-color);         /* Устанавливаем цвет абзацев согласно переменной */
 }
 
 /* HEADER */
-.header {
-  display: flex; /** Используем flexbox для выравнивания элементов */
-  align-items: center; /** Центрирование по вертикали */
-  justify-content: space-between; /** Распределение пространства между элементами */
-  padding: 10px 20px; /** Внутренние отступы */
-  background-color: var(--header-bg); /** Фон шапки через переменную */
-  flex-wrap: wrap; /** Позволяет элементам переходить на новую строку при необходимости */
+.header {                        /* Стили для шапки сайта */
+  display: flex;                 /* Применяем Flexbox для выравнивания элементов */
+  align-items: center;           /* Выравнивание элементов по вертикали */
+  justify-content: space-between;/* Распределение пространства между элементами по горизонтали */
+  padding: 10px 20px;            /* Внутренние отступы сверху/снизу 10px, слева/справа 20px */
+  background-color: var(--header-bg); /* Фон шапки берется из переменной */
+  flex-wrap: wrap;               /* Позволяем элементам переходить на новую строку, если не помещаются */
 }
 
-.header__logo {
-  display: flex; /** Логотип и текст располагаются в строку */
-  align-items: center; /** Выравнивание по центру */
+.header__logo {                  /* Контейнер для логотипа и текста логотипа */
+  display: flex;                 /* Располагаем элементы в строку */
+  align-items: center;           /* Центрируем содержимое по вертикали */
 }
 
-.header__logo img {
-  margin-right: 10px; /** Отступ справа между логотипом и текстом */
-  width: 100px; /** Ширина логотипа */
-  height: 50px; /** Высота логотипа */
-  object-fit: contain; /** Сохранение пропорций изображения */
+.header__logo img {              /* Стили для изображения логотипа */
+  margin-right: 10px;            /* Отступ справа между логотипом и текстом */
+  width: 100px;                 /* Ширина логотипа */
+  height: 50px;                 /* Высота логотипа */
+  object-fit: contain;          /* Изображение масштабируется с сохранением пропорций, не обрезаясь */
 }
 
-.header__tagline {
-  color: var(--card-text-color); /** Цвет текста слогана через переменную */
-  font-size: 1.2rem; /** Размер шрифта */
-  font-weight: bold; /** Жирное начертание */
+.header__tagline {               /* Слоган (текст рядом с логотипом) */
+  color: var(--text-color);      /* Цвет текста берется из переменной */
+  font-size: 1.2rem;             /* Размер шрифта слогана */
+  font-weight: bold;             /* Делаем текст жирным */
 }
 
-.header__login-btn {
-  background-color: var(--button-bg); /** Фон кнопки через переменную */
-  color: var(--button-text-color); /** Цвет текста кнопки через переменную */
-  border: none; /** Убираем стандартную границу */
-  padding: 8px 15px; /** Внутренние отступы кнопки */
-  cursor: pointer; /** Курсор-рука при наведении */
-  font-size: 1rem; /** Размер шрифта кнопки */
-  border-radius: 4px; /** Скругление углов кнопки */
+.header__login-btn {             /* Кнопка для входа в систему */
+  background-color: var(--button-bg);  /* Фон кнопки через переменную */
+  color: var(--button-text-color);       /* Цвет текста кнопки через переменную */
+  border: none;                 /* Убираем стандартную границу кнопки */
+  padding: 8px 15px;            /* Внутренние отступы кнопки */
+  cursor: pointer;              /* Меняем курсор на "руку" при наведении */
+  font-size: 1rem;              /* Размер шрифта кнопки */
+  border-radius: 4px;           /* Скругляем углы кнопки */
 }
 
 /* HERO */
-.hero {
-  position: relative; /** Позиционирование для возможного размещения внутренних элементов */
-  width: 100%; /** Занимает всю ширину экрана */
-  max-height: 680px; /** Максимальная высота блока */
-  overflow: hidden; /** Скрытие элементов, выходящих за пределы блока */
+.hero {                          /* Блок "Hero" – главный визуальный блок на странице */
+  position: relative;           /* Относительное позиционирование (для возможного позиционирования вложенных элементов) */
+  width: 100%;                  /* Занимает всю ширину экрана */
+  max-height: 680px;            /* Максимальная высота блока */
+  overflow: hidden;             /* Скрываем излишки содержимого, выходящие за пределы блока */
 }
 
-.hero__image {
-  width: 100%; /** Изображение растягивается на всю ширину */
-  height: auto; /** Автоматическая высота для сохранения пропорций */
-  display: block; /** Убираем пробелы вокруг изображения */
-  object-fit: cover; /** Изображение обрезается для полного покрытия блока */
+.hero__image {                  /* Стили для изображения в блоке Hero */
+  width: 100%;                  /* Изображение занимает всю ширину контейнера */
+  height: auto;                 /* Автоматическая высота для сохранения пропорций изображения */
+  display: block;               /* Убираем возможные пробелы вокруг изображения */
+  object-fit: cover;            /* Изображение обрезается так, чтобы полностью заполнить блок, сохраняя пропорции */
 }
 
 /* VIDEO */
-.video {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.video {                        /* Контейнер для блока с видео */
+  width: 100%;                  /* Занимает всю ширину родительского элемента */
+  margin: 0;                   /* Нет внешних отступов */
+  padding: 0;                  /* Нет внутренних отступов */
+  overflow: hidden;             /* Скрываем содержимое, выходящее за пределы контейнера */
 }
 
-.video__iframe {
-  width: 100%; /** Ширина видео по всей ширине родительского элемента */
-  height: 900px; /** Фиксированная высота для iframe */
-  display: block;
+.video__iframe {                /* Стили для iframe, содержащего видео */
+  width: 100%;                  /* Ширина iframe равна 100% от родительского элемента */
+  height: 900px;                /* Фиксированная высота для iframe */
+  display: block;               /* Отображаем как блочный элемент */
 }
 
 /* BENEFITS */
-.benefits {
-  display: grid; /** Используем CSS Grid для компоновки */
-  justify-content: center; /** Центрирование содержимого */
-  padding: 40px 20px; /** Внешние отступы */
-  gap: 20px; /** Расстояние между элементами сетки */
+.benefits {                      /* Контейнер для секции "Преимущества" */
+  display: grid;                /* Используем CSS Grid для расположения элементов */
+  justify-content: center;      /* Центрируем содержимое по горизонтали */
+  padding: 40px 20px;           /* Внутренние отступы: 40px сверху/снизу, 20px слева/справа */
+  gap: 20px;                    /* Расстояние между ячейками сетки */
 }
 
-.benefits h2 {
-  grid-column: 1 / -1; /** Заголовок занимает всю ширину сетки */
-  justify-self: center; /** Центрирование заголовка */
-  margin-bottom: 20px; /** Отступ снизу */
-  font-size: 1.8rem; /** Размер шрифта */
-  /** Заголовок наследует цвет из var(--heading-color) через правило для h2 выше */
-  text-transform: uppercase; /** Преобразование букв в верхний регистр */
+.benefits h2 {                   /* Заголовок секции benefits */
+  grid-column: 1 / -1;          /* Заголовок занимает всю ширину сетки */
+  justify-self: center;         /* Центрирование заголовка внутри сетки */
+  margin-bottom: 20px;          /* Отступ снизу */
+  font-size: 1.8rem;            /* Размер шрифта заголовка */
+  /* Заголовок наследует цвет из var(--heading-color) через правило для h2 выше */
+  text-transform: uppercase;    /* Преобразуем текст в верхний регистр */
 }
 
-.benefits p {
-  padding-left: 50px;
-  padding-right: 50px;
-  color: var(--text-color); /** Текст абзацев через переменную */
+.benefits p {                    /* Абзацы внутри секции benefits */
+  padding-left: 50px;           /* Отступ слева */
+  padding-right: 50px;          /* Отступ справа */
+  color: var(--text-color);     /* Цвет текста согласно переменной */
 }
 
-.benefits input[type="radio"] {
-  display: none; /** Радиокнопки скрыты, используются для управления слайдером */
+.benefits input[type="radio"] { /* Скрываем радиокнопки, которые используются для слайдера */
+  display: none;                /* Радиокнопки не отображаются */
 }
 
-.benefits__slider-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  background-color: var(--header-bg); /** Фон контейнера через переменную */
+.benefits__slider-container {    /* Контейнер для слайдера преимуществ */
+  display: flex;                /* Используем Flexbox для распределения внутренних элементов */
+  gap: 20px;                    /* Задаём промежуток между элементами */
+  justify-content: center;      /* Центрируем слайдер по горизонтали */
+  position: relative;           /* Относительное позиционирование для возможного расположения абсолютных элементов внутри */
+  overflow: hidden;             /* Скрываем содержимое, выходящее за пределы контейнера */
+  border: none;                 /* Убираем рамку */
+  box-shadow: none;             /* Убираем тень */
+  border-radius: 0;             /* Без скругления углов */
+  background-color: var(--header-bg); /* Фон контейнера берется из переменной */
 }
 
-.benefits__slider {
-  display: flex;
-  width: auto;
-  transition: transform 0.4s ease; /** Плавное перемещение при смене слайда */
-  gap: 25px;
+.benefits__slider {              /* Контейнер самого слайдера */
+  display: flex;                /* Располагаем слайды в одну строку */
+  width: auto;                  /* Автоматическая ширина */
+  transition: transform 0.4s ease;  /* Плавное изменение позиции слайдера при переключении */
+  gap: 25px;                    /* Промежуток между слайдами */
 }
 
-.benefits__item {
-  flex: 1 1 250px; /** Элемент растягивается, но не меньше 250px */
-  background-color: var(--card-bg); /** Фон карточки через переменную */
-  color: var(--card-text-color); /** Цвет текста внутри карточки через переменную */
-  border-radius: 8px; /** Скругление углов */
-  padding: 15px 45px; /** Внутренние отступы */
-  box-sizing: border-box;
-  text-align: center; /** Центрирование текста */
+.benefits__item {                /* Отдельный элемент (карточка) в слайдере преимуществ */
+  flex: 1 1 250px;              /* Элемент может расширяться и сжиматься, но минимальная ширина 250px */
+  background-color: var(--card-bg); /* Фон карточки через переменную */
+  color: var(--card-text-color);    /* Цвет текста внутри карточки */
+  border-radius: 8px;           /* Скругленные углы карточки */
+  padding: 15px 45px;           /* Внутренние отступы: 15px по вертикали, 45px по горизонтали */
+  box-sizing: border-box;       /* Включаем padding и border в общую ширину/высоту */
+  text-align: center;           /* Центрируем текст внутри карточки */
 }
 
-.benefits__item h3 {
-  color: var(--text-color); /** Заголовок h3 получает цвет через переменную */
-  margin-bottom: 8px;
+.benefits__item h3 {             /* Заголовок h3 в карточке преимуществ */
+  color: var(--text-color);     /* Устанавливаем цвет заголовка по переменной */
+  margin-bottom: 8px;           /* Отступ снизу */
 }
 
-.benefits__item p {
-  font-size: 1rem;
-  line-height: 1.42312;
-  color: var(--text-color); /** Текст абзацев внутри карточки через переменную */
+.benefits__item p {              /* Абзац внутри карточки преимуществ */
+  font-size: 1rem;              /* Размер шрифта */
+  line-height: 1.42312;         /* Межстрочный интервал */
+  color: var(--text-color);     /* Цвет текста, заданный через переменную */
 }
 
-.benefits__button {
-  display: none; /** Кнопки управления слайдером скрыты по умолчанию */
+.benefits__button {              /* Кнопки управления слайдером (если используются) */
+  display: none;                /* Скрываем кнопки по умолчанию */
 }
 
 /* TESTIMONIALS */
-.testimonials {
-  padding: 20px;
-  text-align: center;
-  max-width: 2000px;
-  margin: 0 auto;
+.testimonials {                  /* Контейнер для секции "Отзывы" */
+  padding: 20px;                /* Внутренние отступы */
+  text-align: center;           /* Центрируем текст */
+  max-width: 2000px;            /* Максимальная ширина контейнера */
+  margin: 0 auto;               /* Центрируем контейнер по горизонтали с автоматическими отступами */
 }
 
-.testimonials h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  /** Заголовки отзывов наследуют цвет var(--heading-color) через правило для h2 */
-  text-transform: uppercase;
+.testimonials h2 {               /* Заголовок секции отзывов */
+  font-size: 1.8rem;            /* Размер шрифта */
+  margin-bottom: 15px;          /* Отступ снизу */
+  /* Заголовки отзывов наследуют цвет var(--heading-color) через правило для h2 */
+  text-transform: uppercase;    /* Приводим текст к верхнему регистру */
 }
 
-.testimonials input[type="radio"] {
-  display: none;
+.testimonials input[type="radio"] {  /* Радиокнопки для переключения слайдов в отзывах */
+  display: none;                /* Скрываем радиокнопки */
 }
 
-.testimonials__slider-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
-  border: 2px solid #333; /** Жёсткая рамка, можно заменить на переменную, если потребуется */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  background-color: var(--header-bg); /** Фон контейнера отзывов через переменную */
+.testimonials__slider-container {  /* Контейнер для слайдера отзывов */
+  position: relative;           /* Относительное позиционирование для вложенных абсолютных элементов */
+  overflow: hidden;             /* Скрываем содержимое, выходящее за пределы */
+  width: 100%;                  /* Контейнер занимает 100% ширины родителя */
+  margin: 0 auto;               /* Центрируем контейнер */
+  border: 2px solid #333;       /* Жёсткая рамка – 2px, темно-серая, можно заменить на переменную */
+  border-radius: 8px;           /* Скругление углов контейнера */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Тень для создания эффекта подъёма */
+  background-color: var(--header-bg); /* Фон контейнера берется из переменной */
 }
 
-.testimonials__slider {
-  display: flex;
-  width: 300%; /** Три слайда занимают в три раза больше ширины контейнера */
-  transition: transform 0.4s ease;
+.testimonials__slider {         /* Контейнер самого слайдера отзывов */
+  display: flex;                /* Располагаем слайды в строку */
+  width: 300%;                  /* Три слайда занимают в сумме 300% ширины контейнера */
+  transition: transform 0.4s ease; /* Плавное переключение слайдов по оси X */
 }
 
-.testimonials__item {
-  flex: 0 0 100%;
-  background-color: var(--card-bg); /** Фон карточки отзыва через переменную */
-  color: var(--card-text-color); /** Текст внутри карточки через переменную – белый в тёмной теме */
-  border-radius: 8px;
-  padding: 15px 20px;
-  box-sizing: border-box;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.testimonials__item {           /* Отдельный отзыв */
+  flex: 0 0 100%;               /* Каждый слайд занимает 100% ширины контейнера, не сжимаясь и не растягиваясь */
+  background-color: var(--card-bg); /* Фон карточки отзыва через переменную */
+  color: var(--card-text-color);    /* Текст внутри отзыва через переменную */
+  border-radius: 8px;           /* Скругление углов карточки */
+  padding: 15px 20px;           /* Внутренние отступы карточки: 15px по вертикали, 20px по горизонтали */
+  box-sizing: border-box;       /* Включаем padding и border в общую ширину/высоту */
+  text-align: left;             /* Выравнивание текста влево */
+  display: flex;                /* Используем Flexbox для выравнивания содержимого внутри карточки */
+  align-items: center;          /* Центрирование содержимого по вертикали */
+  gap: 15px;                   /* Расстояние между элементами внутри отзыва */
 }
 
-.testimonials__item img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #555;
-  margin-left: 50px;
-  flex-shrink: 0;
+.testimonials__item img {       /* Стили для изображения (аватар) в отзыве */
+  border-radius: 50%;           /* Преобразуем изображение в круг (скругление 50%) */
+  width: 100px;                /* Ширина изображения */
+  height: 100px;               /* Высота изображения */
+  border: 2px solid #555;       /* Рамка вокруг изображения, 2px, темно-серая */
+  margin-left: 50px;            /* Отступ слева от изображения */
+  flex-shrink: 0;              /* Запрещаем сжатию изображения при уменьшении ширины */
 }
 
 /** Параграфы и подписи в отзывах – белые в тёмной теме */
-.testimonials__item p {
-  font-size: 1rem;
-  line-height: 1.4;
-  color: var(--text-color);
+.testimonials__item p {         /* Абзацы внутри карточки отзыва */
+  font-size: 1rem;              /* Размер шрифта */
+  line-height: 1.4;             /* Межстрочный интервал */
+  color: var(--text-color);     /* Цвет текста через переменную */
 }
 
-.testimonials__item span {
-  font-style: italic;
-  font-size: 0.9rem;
-  padding-right: 50px;
-  color: var(--text-color);
+.testimonials__item span {      /* Элемент span для подписи (например, имя автора отзыва) */
+  font-style: italic;           /* Курсивное начертание */
+  font-size: 0.9rem;            /* Размер шрифта */
+  padding-right: 50px;          /* Отступ справа */
+  color: var(--text-color);     /* Цвет текста из переменной */
 }
 
-.testimonials__button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  background-color: var(--button-bg);
-  font-size: 1.5rem;
-  padding: 8px 12px;
-  border-radius: 50%;
-  border: none;
-  display: none;
-  z-index: 10;
-  color: var(--button-text-color);
-  transition: background-color 0.3s;
+.testimonials__button {         /* Кнопки управления слайдером отзывов */
+  position: absolute;           /* Абсолютное позиционирование внутри контейнера */
+  top: 50%;                   /* Располагаем по центру по вертикали */
+  transform: translateY(-50%);  /* Центрируем элемент по вертикали с поправкой */
+  cursor: pointer;              /* Курсор указателя при наведении */
+  background-color: var(--button-bg); /* Фон кнопки из переменной */
+  font-size: 1.5rem;            /* Размер шрифта для иконок в кнопке */
+  padding: 8px 12px;            /* Внутренние отступы кнопки */
+  border-radius: 50%;           /* Кнопка округлая */
+  border: none;                 /* Убираем стандартную рамку */
+  display: none;                /* Скрываем кнопку по умолчанию */
+  z-index: 10;                  /* Обеспечиваем позиционирование поверх других элементов */
+  color: var(--button-text-color); /* Цвет текста/иконки из переменной */
+  transition: background-color 0.3s; /* Плавное изменение фона при наведении */
 }
 
-.testimonials__button:hover {
-  background-color: #6ecc43; /** При наведении фон кнопки меняется */
+.testimonials__button:hover {   /* Стили для кнопки при наведении */
+  background-color: #6ecc43;      /* Меняем фон кнопки на более светлый зеленый при наведении */
 }
 
-.testimonials__button--prev {
-  left: 10px;
+.testimonials__button--prev {   /* Дополнительный класс для кнопки "предыдущий слайд" */
+  left: 10px;                   /* Располагаем кнопку слева, на расстоянии 10px от края */
 }
 
-.testimonials__button--next {
-  right: 10px;
+.testimonials__button--next {   /* Дополнительный класс для кнопки "следующий слайд" */
+  right: 10px;                  /* Располагаем кнопку справа, на расстоянии 10px от края */
 }
 
 /** Переключение слайдов в testimonials по радио-кнопкам */
 #t-1:checked ~ .testimonials__slider-container .testimonials__slider {
-  transform: translateX(0%);
+  transform: translateX(0%);    /* Если радиокнопка с id t-1 выбрана, слайдер смещается на 0% */
 }
 
 #t-1:checked ~ .testimonials__slider-container .btn-1 {
-  display: block;
+  display: block;               /* Отображаем кнопку, связанную с первым слайдом, если выбрана t-1 */
 }
 
 #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
-  transform: translateX(-100%);
+  transform: translateX(-100%); /* Если выбрана радиокнопка t-2, смещаем слайдер на -100% */
 }
 
 #t-2:checked ~ .testimonials__slider-container .btn-2 {
-  display: block;
+  display: block;               /* Отображаем кнопку для второго слайда */
 }
 
 #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
-  transform: translateX(-200%);
+  transform: translateX(-200%); /* Если выбрана t-3, смещаем слайдер на -200% */
 }
 
 #t-3:checked ~ .testimonials__slider-container .btn-3 {
-  display: block;
+  display: block;               /* Отображаем кнопку для третьего слайда */
 }
 
 /* FEATURES */
-.features {
-  display: grid;
-  justify-content: center;
-  padding: 20px 20px;
-  gap: 20px;
+.features {                    /* Секция "Функции" или "Возможности" */
+  display: grid;              /* Используем CSS Grid для макета */
+  justify-content: center;    /* Центрируем контент по горизонтали */
+  padding: 20px 20px;         /* Внутренние отступы */
+  gap: 20px;                  /* Расстояние между элементами сетки */
 }
 
-.features h2 {
-  grid-column: 1 / -1;
-  justify-self: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  /** Заголовки features наследуют цвет var(--heading-color) */
-  text-transform: uppercase;
+.features h2 {                 /* Заголовок секции features */
+  grid-column: 1 / -1;        /* Заголовок занимает всю ширину сетки */
+  justify-self: center;       /* Центрируем заголовок в своей ячейке */
+  margin-bottom: 20px;        /* Отступ снизу */
+  font-size: 1.8rem;          /* Размер шрифта заголовка */
+  /* Заголовки features наследуют цвет из var(--heading-color) */
+  text-transform: uppercase;  /* Текст в верхнем регистре */
 }
 
-.features__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 20px;
-  margin: 0;
-  box-sizing: border-box;
+.features__items {             /* Контейнер для набора карточек features */
+  display: grid;              /* Применяем CSS Grid для размещения карточек */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Автоматически подбираем количество колонок с минимальной шириной 250px */
+  gap: 25px;                  /* Промежуток между карточками */
+  padding: 20px;              /* Внутренние отступы контейнера */
+  margin: 0;                  /* Нет внешних отступов */
+  box-sizing: border-box;     /* Учет внутренних отступов в общей ширине */
 }
 
-.features__item {
-  background-color: var(--card-bg); /** Фон карточки через переменную */
-  color: var(--card-text-color); /** Цвет текста карточки через переменную */
-  border-radius: 8px;
-  padding: 15px 45px;
-  box-sizing: border-box;
-  text-align: center;
+.features__item {              /* Отдельная карточка из секции features */
+  background-color: var(--card-bg); /* Фон карточки через переменную */
+  color: var(--card-text-color);    /* Цвет текста карточки через переменную */
+  border-radius: 8px;           /* Скругленные углы карточки */
+  padding: 15px 45px;           /* Внутренние отступы карточки */
+  box-sizing: border-box;       /* Включаем padding в размеры */
+  text-align: center;           /* Центрируем текст внутри карточки */
 }
 
-.features__item h3 {
-  color: var(--text-color); /** Здесь можно изменить цвет заголовка, если нужно – сейчас наследуется var(--text-color) */
-  margin-bottom: 8px;
+.features__item h3 {           /* Заголовок h3 внутри карточки features */
+  color: var(--text-color);     /* Цвет заголовка согласно переменной (здесь можно изменить, если нужно) */
+  margin-bottom: 8px;           /* Отступ снизу */
 }
 
-.features__item p {
-  font-size: 1rem;
-  line-height: 1.42312;
-  color: var(--text-color);
+.features__item p {            /* Абзац внутри карточки features */
+  font-size: 1rem;              /* Размер шрифта */
+  line-height: 1.42312;         /* Межстрочный интервал */
+  color: var(--text-color);     /* Цвет текста через переменную */
 }
 
 /* SIGNUP */
-.signup {
-  padding: 20px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  text-align: center;
+.signup {                     /* Секция подписки на рассылку или регистрацию */
+  padding: 20px;              /* Внутренние отступы */
+  background-color: var(--bg-color); /* Фон секции из переменной */
+  color: var(--text-color);   /* Цвет текста через переменную */
+  text-align: center;         /* Центрирование содержимого */
 }
 
-.signup h2 {
-  margin-bottom: 10px;
-  font-size: 1.6rem;
-  color: var(--heading-color);
+.signup h2 {                  /* Заголовок секции подписки */
+  margin-bottom: 10px;        /* Отступ снизу */
+  font-size: 1.6rem;          /* Размер шрифта */
+  color: var(--heading-color);/* Цвет заголовка через переменную */
 }
 
-.signup__form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
-  max-width: auto;
-  margin: 0 auto;
+.signup__form {               /* Форма подписки */
+  display: flex;              /* Располагаем поля и кнопку в строку */
+  justify-content: space-between; /* Распределяем пространство между элементами формы */
+  align-items: center;        /* Центрируем элементы по вертикали */
+  width: 100%;                /* Форма занимает всю ширину родительского блока */
+  gap: 10px;                  /* Промежуток между элементами */
+  max-width: auto;            /* Максимальная ширина - автоматически */
+  margin: 0 auto;             /* Центрируем форму */
 }
 
-.signup__form input {
-  padding: 8px;
-  font-size: 1rem;
-  width: 65%;
+.signup__form input {         /* Поля ввода в форме подписки */
+  padding: 8px;               /* Внутренний отступ */
+  font-size: 1rem;            /* Размер шрифта текста ввода */
+  width: 65%;                 /* Поле занимает 65% ширины формы */
 }
 
-.signup__form button {
-  background-color: var(--card-bg); /** Кнопка оформлена с использованием фона карточки */
-  color: var(--text-color);
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  flex-shrink: 0;
-  width: 25%;
+.signup__form button {        /* Кнопка отправки в форме подписки */
+  background-color: var(--card-bg); /* Фон кнопки соответствует цвету карточки */
+  color: var(--text-color);   /* Цвет текста кнопки через переменную */
+  border: none;               /* Без стандартной рамки */
+  padding: 10px 20px;         /* Внутренние отступы кнопки */
+  font-size: 1rem;            /* Размер шрифта кнопки */
+  cursor: pointer;            /* Курсор в виде руки при наведении */
+  border-radius: 4px;         /* Скругляем углы */
+  flex-shrink: 0;             /* Запрещаем сжиматься кнопке при уменьшении размера */
+  width: 25%;                 /* Кнопка занимает 25% ширины формы */
 }
 
-.signup__form button:hover {
-  background-color: #e0e0e0;
+.signup__form button:hover {   /* Стили для кнопки при наведении */
+  background-color: #e0e0e0;     /* Меняем фон на светло-серый при наведении */
 }
 
 /* FOOTER */
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--footer-bg);
-  color: var(--text-color);
-  padding: 10px 20px;
+.footer {                      /* Секция подвала сайта */
+  display: flex;               /* Применяем Flexbox для расположения элементов */
+  flex-wrap: wrap;             /* Разрешаем перенос элементов на новую строку */
+  align-items: center;         /* Центрируем элементы по вертикали */
+  justify-content: space-between; /* Распределяем пространство между элементами */
+  background-color: var(--footer-bg); /* Фон подвала через переменную */
+  color: var(--text-color);    /* Цвет текста через переменную */
+  padding: 10px 20px;          /* Внутренние отступы подвала */
 }
 
-.footer__menu {
-  display: flex;
-  gap: 15px;
+.footer__menu {                /* Меню в подвале */
+  display: flex;               /* Располагаем пункты меню в строку */
+  gap: 15px;                   /* Промежуток между ссылками в меню */
 }
 
-.footer__menu a {
-  color: var(--heading-color); /** Ссылки в меню оформлены через var(--heading-color) */
-  text-decoration: none;
-  transition: color 0.3s;
+.footer__menu a {              /* Стили для ссылок в меню подвала */
+  color: var(--heading-color); /* Цвет ссылок через переменную – здесь используется цвет заголовков */
+  text-decoration: none;       /* Убираем стандартное подчеркивание ссылок */
+  transition: color 0.3s;       /* Плавное изменение цвета при наведении */
 }
 
 .footer__menu a:hover,
-.footer__social a:hover {
-  color: #555;
+.footer__social a:hover {      /* При наведении на ссылки в меню или социальных сетях */
+  color: #555;                 /* Цвет изменяется на темно-серый */
 }
 
-.footer__social {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  padding-right: 200px;
+.footer__social {              /* Блок для иконок социальных сетей в подвале */
+  display: flex;               /* Располагаем иконки в строку */
+  gap: 30px;                   /* Промежуток между иконками */
+  list-style: none;            /* Убираем стандартные маркеры списка */
+  padding: 0;                  /* Нет внутренних отступов */
+  padding-right: 200px;        /* Отступ справа для выравнивания */
 }
 
-.footer__social li {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #f5f5f7;
-  background: transparent;
-  border-radius: 50%;
+.footer__social li {           /* Элементы списка для каждой социальной сети */
+  width: 32px;                 /* Фиксированная ширина иконки */
+  height: 32px;                /* Фиксированная высота иконки */
+  border: 1px solid #f5f5f7;    /* Граница вокруг иконки */
+  background: transparent;     /* Прозрачный фон */
+  border-radius: 50%;           /* Круглая форма элемента */
 }
 
-.footer__social li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+.footer__social li a {         /* Ссылка внутри элемента списка социальных сетей */
+  display: flex;               /* Используем Flexbox для центрирования содержимого */
+  justify-content: center;     /* Центрируем содержимое по горизонтали */
+  align-items: center;         /* Центрируем содержимое по вертикали */
+  width: 100%;                 /* Ссылка занимает всю ширину родителя */
+  height: 100%;                /* Ссылка занимает всю высоту родителя */
 }
 
-.footer__social li a img {
-  width: 22px;
-  height: 22px;
+.footer__social li a img {     /* Изображение (иконка) внутри ссылки социальных сетей */
+  width: 22px;                /* Ширина иконки */
+  height: 22px;               /* Высота иконки */
 }
 
 /* MODAL (МОДАЛЬНОЕ ОКНО) */
-.modal {
-  display: none; /** Модальное окно скрыто по умолчанию */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /** Окно занимает всю ширину экрана */
-  height: 100%; /** Окно занимает всю высоту экрана */
-  background-color: rgba(0, 0, 0, 0.7); /** Полупрозрачный чёрный фон для затемнения заднего плана */
-  justify-content: center; /** Центрирование модального окна по горизонтали */
-  align-items: center; /** Центрирование модального окна по вертикали */
-  z-index: 1000; /** Высокий приоритет отображения */
+.modal {                        /* Контейнер модального окна */
+  display: none;                /* Скрываем модальное окно по умолчанию */
+  position: fixed;              /* Фиксированное позиционирование, чтобы окно оставалось на экране */
+  top: 0;                       /* Привязываем верхнюю границу к верху экрана */
+  left: 0;                      /* Привязываем левую границу к левому краю экрана */
+  width: 100%;                  /* Окно занимает 100% ширины экрана */
+  height: 100%;                 /* Окно занимает 100% высоты экрана */
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон для затемнения заднего плана */
+  justify-content: center;      /* Центрируем содержимое по горизонтали */
+  align-items: center;          /* Центрируем содержимое по вертикали */
+  z-index: 1000;                /* Очень высокий индекс, чтобы окно было поверх остальных элементов */
 }
 
-.modal__content {
-  background-color: var(--bg-color); /** Фон модального окна. В светлой теме он останется белым, а в тёмной можно изменить через переменную, если потребуется */
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
+.modal__content {               /* Контейнер для содержимого модального окна */
+  background-color: var(--bg-color); /* Фон окна берется из переменной (для светлой/тёмной темы) */
+  padding: 20px;                /* Внутренние отступы содержимого */
+  border-radius: 8px;           /* Скругление углов модального окна */
+  text-align: center;           /* Центрирование текста внутри модального окна */
+  max-width: 400px;             /* Максимальная ширина окна */
+  width: 90%;                  /* Ширина окна занимает 90% от родительского элемента (обычно экрана) */
 }
 
-.modal__form label {
-  display: block;
-  margin-top: 10px;
-  font-size: 1rem;
-  color: var(--card-text-color); /** Цвет меток через переменную */
+.modal__form label {            /* Стили для меток (label) внутри формы модального окна */
+  display: block;              /* Выводим метки на отдельных строках */
+  margin-top: 10px;            /* Отступ сверху */
+  font-size: 1rem;             /* Размер шрифта метки */
+  color: var(--card-text-color); /* Цвет метки через переменную */
 }
 
-.modal__form input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+.modal__form input {            /* Стили для полей ввода внутри формы модального окна */
+  width: 100%;                 /* Поле ввода занимает всю ширину контейнера */
+  padding: 8px;                /* Внутренний отступ */
+  margin-top: 5px;             /* Небольшой отступ сверху */
+  margin-bottom: 15px;         /* Отступ снизу */
+  border: 1px solid #ccc;      /* Серая граница */
+  border-radius: 4px;          /* Скругление углов поля ввода */
+  font-size: 1rem;             /* Размер шрифта в поле ввода */
 }
 
-.modal__actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+.modal__actions {              /* Контейнер для кнопок действий (например, отправить или отменить) в модальном окне */
+  display: flex;               /* Располагаем кнопки в строку */
+  justify-content: space-between; /* Распределяем кнопки по сторонам */
+  gap: 10px;                  /* Промежуток между кнопками */
 }
 
-.modal__actions button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.modal__actions button {       /* Стили для кнопок в модальном окне */
+  padding: 10px 20px;          /* Внутренние отступы кнопок */
+  font-size: 1rem;             /* Размер шрифта в кнопках */
+  border: none;                /* Убираем стандартные рамки */
+  border-radius: 4px;          /* Скругляем углы кнопок */
+  cursor: pointer;             /* Изменяем курсор на указатель при наведении */
 }
 
-.modal__actions button[type="submit"] {
-  background-color: #79d14b;
-  color: white;
+.modal__actions button[type="submit"] { /* Стили для кнопки отправки формы */
+  background-color: #79d14b;  /* Фон кнопки (зелёный) */
+  color: white;               /* Цвет текста кнопки – белый */
 }
 
-.modal__actions button[type="button"] {
-  background-color: #ccc;
-  color: #333;
+.modal__actions button[type="button"] { /* Стили для кнопки отмены/другой действий */
+  background-color: #ccc;     /* Светло-серый фон */
+  color: #333;                /* Тёмно-серый цвет текста */
 }
 
 /* Медиа-запросы для адаптивности */
 
 /* Планшеты и небольшие экраны */
-@media (max-width: 1024px) {
-  .signup__form {
-    max-width: 500px; /** Ограничение ширины формы подписки */
+@media (max-width: 1024px) {   /* Если ширина экрана меньше или равна 1024px */
+  .signup__form {             /* Стили для формы подписки */
+    max-width: 500px;         /* Ограничиваем максимальную ширину формы до 500px */
   }
 }
 
 /* Мобильные устройства и планшеты */
-@media (max-width: 880px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 880px) {   /* Если ширина экрана меньше или равна 880px */
+  .header {                   /* Шапка сайта */
+    flex-direction: column;   /* Располагаем элементы шапки вертикально */
+    align-items: flex-start;  /* Выравниваем элементы по левому краю */
   }
 
-  .header__logo img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 5px;
+  .header__logo img {         /* Логотип */
+    width: 60px;              /* Уменьшаем ширину до 60px */
+    height: 60px;             /* Уменьшаем высоту до 60px */
+    margin-bottom: 5px;       /* Отступ снизу для разделения логотипа и текста */
   }
 
-  .header__tagline {
-    font-size: 1.1rem;
+  .header__tagline {          /* Слоган */
+    font-size: 1.1rem;        /* Уменьшаем размер шрифта */
   }
 
-  .header__login-btn {
-    margin-top: 5px;
-    align-self: flex-start;
+  .header__login-btn {        /* Кнопка входа */
+    margin-top: 5px;          /* Добавляем отступ сверху */
+    align-self: flex-start;   /* Выравниваем кнопку по левому краю */
   }
 
-  .hero {
-    max-height: 400px;
+  .hero {                     /* Блок Hero */
+    max-height: 400px;        /* Уменьшаем максимальную высоту до 400px */
   }
 
-  .video {
-    padding: 10px;
+  .video {                    /* Блок видео */
+    padding: 10px;            /* Добавляем отступы вокруг видео */
   }
 
-  .video__iframe {
-    height: 500px; /** Уменьшение высоты видео для мобильных устройств */
+  .video__iframe {            /* iframe с видео */
+    height: 500px;            /* Уменьшаем высоту iframe до 500px для мобильных устройств */
   }
 
-  .benefits__slider-container {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #333;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    background-color: var(--header-bg);
+  .benefits__slider-container { /* Контейнер слайдера в секции преимуществ */
+    display: block;           /* Изменяем дисплей на блоковый */
+    position: relative;       /* Относительное позиционирование */
+    overflow: hidden;         /* Скрываем выходящий за пределы контент */
+    border: 2px solid #333;   /* Рамка вокруг контейнера */
+    border-radius: 8px;       /* Скругление углов контейнера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Тень для эффекта подъёма */
+    background-color: var(--header-bg); /* Фон контейнера через переменную */
   }
   
-  .benefits__slider {
-    display: flex;
-    width: 110%;         
-    transition: transform 0.4s ease;
+  .benefits__slider {         /* Слайдер преимуществ */
+    display: flex;            /* Располагаем слайды в строку */
+    width: 110%;              /* Ширина слайдера немного больше 100% для эффекта скролла */
+    transition: transform 0.4s ease; /* Плавное смещение слайдера */
   }
 
-  .benefits__item {
-    flex: 0 0 95.5%;
-    color: var(--text-color);
+  .benefits__item {           /* Карточка в слайдере */
+    flex: 0 0 95.5%;          /* Элемент занимает 95.5% ширины, что позволяет показывать один слайд за раз */
+    color: var(--text-color); /* Устанавливаем цвет текста согласно переменной */
   }
   
-  .benefits__button {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--button-bg);
-    font-size: 1.5rem;
-    padding: 8px 12px;
-    border-radius: 50%;
-    border: none;
-    color: var(--button-text-color);
-    cursor: pointer;
-    transition: background-color 0.3s;
-    z-index: 10;
+  .benefits__button {         /* Кнопки переключения слайдера преимуществ */
+    display: none;            /* По умолчанию скрываем кнопки */
+    position: absolute;       /* Абсолютное позиционирование внутри контейнера слайдера */
+    top: 50%;                 /* Центрируем кнопки по вертикали */
+    transform: translateY(-50%); /* Смещаем на 50% вверх для точного центрирования */
+    background-color: var(--button-bg); /* Фон кнопок через переменную */
+    font-size: 1.5rem;        /* Размер шрифта/иконки кнопки */
+    padding: 8px 12px;        /* Внутренние отступы кнопки */
+    border-radius: 50%;       /* Делаем кнопку круглой */
+    border: none;             /* Убираем стандартную рамку */
+    color: var(--button-text-color); /* Цвет текста кнопки через переменную */
+    cursor: pointer;          /* Изменяем курсор на указатель при наведении */
+    transition: background-color 0.3s; /* Плавное изменение фона при наведении */
+    z-index: 10;              /* Вывод кнопок поверх слайдера */
   }
 
-  .benefits__button:hover {
-    background-color: #79D14B;
+  .benefits__button:hover {   /* При наведении на кнопку слайдера */
+    background-color: #79D14B; /* Фон меняется на зелёный (тот же, что и в переменной, если такое требование) */
   }
 
-  .benefits__button--prev {
-    left: 10px;
+  .benefits__button--prev {   /* Кнопка переключения на предыдущий слайд */
+    left: 10px;               /* Располагаем кнопку слева на 10px от края */
   }
-  .benefits__button--next {
-    right: 10px;
+  .benefits__button--next {   /* Кнопка переключения на следующий слайд */
+    right: 10px;              /* Располагаем кнопку справа на 10px от края */
   }
   
   #b-2:checked ~ .benefits__slider-container .benefits__slider {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Если выбран радио-инпут b-2, слайдер смещается на -100% */
   }
 
   #b-3:checked ~ .benefits__slider-container .benefits__slider {
-    transform: translateX(-200%);
+    transform: translateX(-200%); /* Если выбран b-3, слайдер смещается на -200% */
   }
   
   #b-1:checked ~ .benefits__slider-container .btn-b1 {
-    display: block;
+    display: block;           /* Отображаем кнопку, связанную с первым слайдом, если выбран b-1 */
   }
   #b-2:checked ~ .benefits__slider-container .btn-b2 {
-    display: block;
+    display: block;           /* Отображаем кнопку для второго слайда */
   }
   #b-3:checked ~ .benefits__slider-container .btn-b3 {
-    display: block;
+    display: block;           /* Отображаем кнопку для третьего слайда */
   }
 
-  .testimonials {
-    max-width: 90%;
-    padding: 10px;
+  .testimonials {             /* Секция отзывов */
+    max-width: 90%;           /* Ограничиваем максимальную ширину контейнера отзывов */
+    padding: 10px;            /* Уменьшаем внутренние отступы */
   }
 
-  .testimonials__slider {
-    width: 100%;
+  .testimonials__slider {     /* Слайдер отзывов */
+    width: 100%;              /* Ширина слайдера соответствует 100% контейнера */
   }
 
-  .testimonials__item {
-    flex: 0 0 100%;
+  .testimonials__item {       /* Отдельный отзыв */
+    flex: 0 0 100%;           /* Каждый отзыв занимает 100% ширины контейнера */
   }
 
   #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Если выбран радио-инпут t-2, смещаем слайдер отзывов на -100% */
   }
 
   #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
-    transform: translateX(-200%);
+    transform: translateX(-200%); /* Если выбран t-3, смещаем слайдер отзывов на -200% */
   }
 
-  .testimonials__button {
-    font-size: 1.2rem;
-    top: 45%;
+  .testimonials__button {     /* Кнопки переключения слайдов в отзывах */
+    font-size: 1.2rem;        /* Уменьшаем размер шрифта/иконки кнопок */
+    top: 45%;                 /* Чуть смещаем вертикальное положение кнопок */
   }
 
-  .signup {
-    padding: 10px;
+  .signup {                   /* Секция подписки */
+    padding: 10px;            /* Уменьшаем внутренние отступы */
   }
 
-  .signup h2 {
-    font-size: 1.5rem;
+  .signup h2 {                /* Заголовок секции подписки */
+    font-size: 1.5rem;        /* Уменьшаем размер шрифта */
   }
 
-  .signup__form {
-    flex-direction: column;
-    gap: 10px;
+  .signup__form {             /* Форма подписки */
+    flex-direction: column;   /* Располагаем элементы формы вертикально */
+    gap: 10px;                /* Промежуток между элементами формы */
   }
 
   .signup__form input,
-  .signup__form button {
-    width: 100%;
-    font-size: 1rem;
+  .signup__form button {      /* Поля ввода и кнопка формы подписки */
+    width: 100%;              /* Заставляем занимать всю ширину родительского контейнера */
+    font-size: 1rem;          /* Размер шрифта устанавливаем равным 1rem */
   }
 
-  .features__items {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    padding: 10px;
+  .features__items {          /* Контейнер для карточек features */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Меняем правило для колонок: минимальная ширина карточки 500px */
+    padding: 10px;            /* Уменьшаем внутренние отступы */
   }
 
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+  .footer {                   /* Подвал сайта */
+    flex-direction: row;      /* Располагаем элементы подвала в строку */
+    justify-content: space-between;  /* Выравниваем элементы с распределением пространства */
+    align-items: center;      /* Центрируем элементы по вертикали */
+    gap: 10px;                /* Добавляем промежуток между элементами */
   }
 
-  .footer__social {
-    padding-right: 0;
+  .footer__social {           /* Секция социальных иконок */
+    padding-right: 0;         /* Убираем дополнительный отступ справа */
   }
 
-  .footer__menu {
-    justify-content: flex-end;
-    width: auto;
+  .footer__menu {             /* Меню подвала */
+    justify-content: flex-end; /* Выравниваем ссылки по правому краю */
+    width: auto;              /* Ширина определяется автоматически */
   }
 }
 
 /* Мобильные устройства с очень маленьким экраном */
-@media (max-width: 480px) {
-  .header__logo img {
-    width: 50px;
-    height: 50px;
+@media (max-width: 480px) {    /* Если ширина экрана меньше или равна 480px */
+  .header__logo img {         /* Изображение логотипа в шапке */
+    width: 50px;              /* Уменьшаем ширину до 50px */
+    height: 50px;             /* Уменьшаем высоту до 50px */
   }
 
-  .header__tagline {
-    font-size: 1rem;
+  .header__tagline {          /* Слоган */
+    font-size: 1rem;          /* Уменьшаем размер шрифта до 1rem */
   }
 
-  .header__login-btn {
-    font-size: 0.9rem;
+  .header__login-btn {        /* Кнопка входа */
+    font-size: 0.9rem;        /* Уменьшаем размер шрифта для кнопки */
   }
 
-  .hero {
-    max-height: 300px;
-    margin-bottom: 10px;
+  .hero {                     /* Блок Hero */
+    max-height: 300px;        /* Ограничиваем максимальную высоту до 300px */
+    margin-bottom: 10px;      /* Добавляем небольшой отступ снизу */
   }
 
-  .hero__image {
-    opacity: 0.9;
+  .hero__image {              /* Изображение в блоке Hero */
+    opacity: 0.9;             /* Немного понижаем непрозрачность для визуального эффекта */
   }
 
-  .testimonials__slider {
-    width: 100%;
+  .testimonials__slider {     /* Слайдер отзывов */
+    width: 100%;              /* Ширина слайдера 100% от контейнера */
   }
 
-  .testimonials__item {
-    flex: 0 0 100%;
+  .testimonials__item {       /* Отдельный отзыв */
+    flex: 0 0 100%;           /* Отзыв занимает 100% ширины */
   }
 
   #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* При выборе t-2 сдвигаем слайдер на -100% */
   }
 
   #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
-    transform: translateX(-200%);
+    transform: translateX(-200%); /* При выборе t-3 сдвигаем слайдер на -200% */
   }
 
-  .testimonials__button {
-    font-size: 1.2rem;
-    top: 45%;
+  .testimonials__button {     /* Кнопки в слайдере отзывов */
+    font-size: 1.2rem;        /* Размер шрифта кнопок – 1.2rem */
+    top: 45%;                 /* Позиция кнопок по вертикали чуть сдвинута к центру */
   }
 
-  .signup__form {
-    gap: 8px;
+  .signup__form {             /* Форма подписки */
+    gap: 8px;                 /* Промежуток между элементами формы уменьшаем до 8px */
   }
 
   .signup__form input,
-  .signup__form button {
-    font-size: 0.9rem;
+  .signup__form button {      /* Поля ввода и кнопка в форме подписки */
+    font-size: 0.9rem;        /* Уменьшаем размер шрифта до 0.9rem */
   }
 
-  .footer {
-    gap: 8px;
+  .footer {                   /* Подвал сайта */
+    gap: 8px;                 /* Промежуток между элементами подвала уменьшаем до 8px */
   }
 }
