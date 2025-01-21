@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots = document.querySelectorAll('.carousel__dot');
     const totalSlides = slides.length;
     let currentIndex = 0;
-    const slideInterval = 5000; // Интервал переключения в миллисекундах
+    const slideInterval = 4000; // Интервал переключения в миллисекундах
   
     // Обновляем активное состояние точек
     const updateDots = () => {
