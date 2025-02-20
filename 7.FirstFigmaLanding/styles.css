@@ -262,21 +262,18 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 1919px) {
-  .keywords {
-    display: none;
-  }
+@media (max-width: 1820px) {
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   .reviews-section h2 {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 1919px) {
+  .keywords {
+    display: none;
   }
 }
