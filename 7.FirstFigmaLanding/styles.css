@@ -27,34 +27,34 @@ body {
 
 .title {
   position: absolute;
-  left: 2.3%;
+  left: 2.5%;
   top: 7%;
-  width: 52%;
-  font-size: 13.3vw;
+  width: 50%;
+  font-size: 13.5vw;
 }
 
 .dev {
   position: absolute;
-  left: 21.7%;
+  left: 21%;
   top: 30%;
-  width: 31.3%;
-  font-size: 3.3vw;
+  width: 31.5%;
+  font-size: 3.5vw;
 }
 
 .published {
   position: absolute;
   left: 23.8%;
   top: 37%;
-  width: 31.3%;
-  font-size: 3.3vw;
+  width: 31.5%;
+  font-size: 3.5vw;
 }
 
 .and-playism {
   position: absolute;
   left: 29.4%;
   top: 43%;
-  width: 31.3%;
-  font-size: 3.3vw;
+  width: 31.5%;
+  font-size: 3.5vw;
   text-align: right;
 }
 
@@ -62,8 +62,8 @@ body {
   position: absolute;
   left: 21.7%;
   top: 50%;
-  width: 31.3%;
-  font-size: 3.3vw;
+  width: 31.5%;
+  font-size: 3.5vw;
 }
 
 .keywords {
