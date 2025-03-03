@@ -45,6 +45,27 @@ body {
   line-height: 1.2;
 }
 
+.lang-button {
+  font-family: 'Squada One', sans-serif;
+  display: inline-block;
+  font-size: 40px;
+  padding: 10px 20px;
+  background-color: #FFF;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lang-button:hover {
+  background-color: #B87839;
+  color: #FFF;
+}
+
+
+
 /* Секция Services */
 .services-section {
   padding: 50px 0;
@@ -57,23 +78,24 @@ body {
   margin-bottom: 50px;
 }
 
+/* По умолчанию на широком экране: 4 колонки */
 .services-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 20px; /* Уменьшаем промежуток между элементами */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
 }
 
 .service-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 45%; /* Устанавливаем максимальную ширину, чтобы два элемента влезали в строку */
+  max-width: 45%;
 }
 
 .service-icon {
-  width: 250px;
-  height: 250px; /* Уменьшаем размер иконки */
+  width: 400px;
+  height: 400px; 
   border-radius: 50%;
   background-color: #B87839;
   display: flex;
@@ -179,6 +201,13 @@ body {
   text-align: center;
 }
 
+.buy-button:hover {
+  background-color: #9e6331;
+  color: #FFF;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 /* Секция Reviews */
 .reviews-section {
   padding: 50px 0;
@@ -255,7 +284,6 @@ body {
   background-color: #B87839;
   width: 100%;
   max-width: 1600px;
-  height: 350px;
   display: flex;
   flex-direction: row-reverse;
   border-radius: 55px;
@@ -267,7 +295,7 @@ body {
 
 .news-image {
   width: 450px;
-  height: 250px;
+  height: 250px; 
   object-fit: cover;
   border-radius: 55px;
   margin-right: 50px;
@@ -364,46 +392,49 @@ body {
 }
 
 .contact-form {
-    width: 100%;
-    max-width: 1000px;
-    text-align: left;
-  }
+  width: 100%;
+  max-width: 1000px;
+  text-align: left;
+}
   
-  .contact-form h3 {
-    font-size: 128px;
-    color: #B87839;
-    margin-bottom: 20px;
-  }
+.contact-form h3 {
+  font-size: 128px;
+  color: #B87839;
+  margin-bottom: 20px;
+}
   
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 2px solid #B87839;
-    border-radius: 15px;
-    background-color: #333;
-    color: #FFFFFF;
-    font-size: 40px;
-  }
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Squada One', sans-serif;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #B87839;
+  border-radius: 15px;
+  background-color: #333;
+  color: #FFFFFF;
+  font-size: 40px;
+}
 
-  .contact-form textarea {
-    resize: vertical;
-  }
+.contact-form textarea {
+  resize: vertical;
+}
   
-  .submit-button {
-    font-size: 40px;
-    background-color: #B87839;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 40px;
-    cursor: pointer;
-  }
+.submit-button {
+  font-family: 'Squada One', sans-serif;
+  font-size: 40px;
+  background-color: #B87839;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 40px;
+  cursor: pointer;
+}
   
-  .submit-button:hover {
-    background-color: #9e6331;
-  }
+.submit-button:hover {
+  background-color: #9e6331;
+  transition: background-color 0.3s;
+}
 
 /* Footer */
 .footer {
@@ -411,19 +442,23 @@ body {
   color: #FFFFFF;
   text-align: center;
   display: flex;
-  justify-content: center; /* Выравнивание по центру */
+  justify-content: center;
   padding: 20px;
   font-size: 32px;
   margin-top: 50px;
-  width: 100%; /* Растягиваем футер на всю ширину */
+  width: 100%;
   position: relative;
 }
 
-/* Адаптивность для экранов до 1200px */
-@media (max-width: 1200px) {
+/* Адаптивность для экранов до 1700px */
+@media (max-width: 1700px) {
   .contact-container {
     flex-direction: column;
     gap: 30px;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-info,
@@ -450,12 +485,8 @@ body {
     font-size: 100px;
   }
 
-  .services-container {
-    gap: 50px;
-  }
-
   .service-item {
-    max-width: 250px;
+    max-width: 100%;
   }
 
   .subscription-title {
@@ -553,9 +584,8 @@ body {
   }
 
   .services-container {
+    grid-template-columns: 1fr;
     gap: 20px;
-    flex-direction: column;
-    align-items: center;
   }
 
   .service-item {
