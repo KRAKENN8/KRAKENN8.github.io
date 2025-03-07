@@ -12,6 +12,67 @@ body {
   background-color: #100F13;
 }
 
+/* Основные стили для header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #100F13;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 64px;
+  color: #B87839;
+  font-family: 'Squada One', sans-serif;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.lang-button {
+  font-family: 'Squada One', sans-serif;
+  font-size: 40px;
+  padding: 10px 20px;
+  background-color: #FFF;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lang-button:hover {
+  background-color: #B87839;
+  color: #FFF;
+}
+
+.details-button {
+  font-family: 'Squada One', sans-serif;
+  font-size: 40px;
+  padding: 10px 20px;
+  background-color: #B87839;
+  color: #FFF;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button:hover {
+  background-color: #9e6331;
+  color: #FFF;
+}
+
 /* Блок с фоном и контентом */
 .hero-section {
   width: 100%;
@@ -183,6 +244,7 @@ body {
   font-size: 40px;
   color: #FFFFFF;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .buy-button {
@@ -244,7 +306,7 @@ body {
   height: 255px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .review-name {
@@ -473,24 +535,32 @@ body {
 
 /* Адаптивность для экранов до 768px */
 @media (max-width: 768px) {
+  .services-title {
+    font-size: 64px;
+  }
+
+  .subscription-title {
+    font-size: 64px;
+  }
+
+  .reviews-title {
+    font-size: 64px;
+  }
+
+  .news-title {
+    font-size: 64px;
+  }
+
   .contact-title {
-    font-size: 80px;
+    font-size: 64px;
   }
 
   .footer {
     font-size: 24px;
   }
 
-  .services-title {
-    font-size: 100px;
-  }
-
   .service-item {
     max-width: 100%;
-  }
-
-  .subscription-title {
-    font-size: 100px;
   }
 
   .subscription-card {
@@ -550,6 +620,14 @@ body {
   .contact-info,
   .contact-form {
     width: 90%;
+  }
+
+  .contact-info h3 {
+    font-size: 64px;
+  }
+
+  .contact-map h3 {
+    font-size: 64px;
   }
 
   .social-icon {
