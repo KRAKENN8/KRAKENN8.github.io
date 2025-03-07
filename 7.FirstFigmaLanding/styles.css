@@ -4,6 +4,55 @@
   padding: 0;
 }
 
+
+/* Шапка */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* фиксированная высота */
+  background-color: #000C1A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+
+/* Логотип или название */
+.header-logo h2 {
+  color: #ffffff;
+  margin: 20px;
+  font-size: 48px;
+}
+
+/* Навигация в шапке */
+.header-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 32px;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover {
+  color: #e20016;
+}
+
+/* Кнопка переключения языка можно выделить отдельным классом */
+.language-toggle {
+  border: 2px solid #e20016;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-toggle:hover {
+  background-color: #e20016;
+  color: #ffffff;
+}
+
 body {
   font-family: 'Odibee Sans', sans-serif;
   margin: 0;
@@ -30,46 +79,46 @@ body {
   left: 2.5%;
   top: 7%;
   width: 50%;
-  font-size: 13.5vw;
+  font-size: min(15vw, 256px);
 }
 
 .dev {
   position: absolute;
-  left: 21%;
+  left: 12.5%;
   top: 30%;
-  width: 31.5%;
-  font-size: 3.5vw;
+  width: 45.5%;
+  font-size: min(5vw, 64px);
 }
 
 .published {
   position: absolute;
-  left: 23.8%;
+  left: 14.5%;
   top: 37%;
-  width: 31.5%;
-  font-size: 3.5vw;
+  width: 45.5%;
+  font-size: min(4.5vw, 64px);
 }
 
 .and-playism {
   position: absolute;
-  left: 29.4%;
+  left: 29.5%;
   top: 43%;
-  width: 31.5%;
-  font-size: 3.5vw;
+  width: 35.5%;
+  font-size: min(4.5vw, 64px);
   text-align: right;
 }
 
 .release {
   position: absolute;
-  left: 21.7%;
-  top: 50%;
-  width: 31.5%;
-  font-size: 3.5vw;
+  left: 12.5%;
+  top: 49%;
+  width: 47.5%;
+  font-size: min(4.5vw, 64px);
 }
 
 .keywords {
   left: 0;
   top: 1005px;
-  min-width: 1920px;
+  width: 100%;
   height: 75px;
   font-size: 30px;
   background-color: rgba(31, 41, 51, 0.77);
@@ -83,17 +132,17 @@ body {
 }
 
 .features-content {
-  max-width: 1200px;
+  padding: 10px 200px;
   margin: 0 auto;
 }
 
 .features-content h2 {
-  font-size: 64px;
+  font-size: 96px;
   margin-bottom: 20px;
 }
 
 .features-content p {
-  font-size: 24px;
+  font-size: 36px;
   line-height: 1.5;
   margin-bottom: 15px;
 }
@@ -130,7 +179,7 @@ body {
 }
 
 .screenshots-header h2 {
-  font-size: 64px;
+  font-size: 256px;
   color: #fff;
   margin: 0 20px;
 }
@@ -139,7 +188,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -158,7 +207,7 @@ body {
 }
 
 .reviews-section h2 {
-  font-size: 64px;
+  font-size: 256px;
   color: #fff;
   margin-bottom: 40px;
 }
@@ -166,7 +215,7 @@ body {
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 20px;
   max-width: auto;
   margin: 0 auto;
 }
@@ -179,14 +228,14 @@ body {
 .review-circle {
   background-color: #000C1A;
   color: #ffffff;
-  width: 425px;
-  height: 425px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
@@ -218,30 +267,33 @@ body {
 }
 
 .social-icons img {
-  width: 32px;
+  width: 50px;
   height: auto;
-  margin-right: 8px;
+  margin: 0px 15px;
 }
 
 .footer-text {
-  font-size: 14px;
-  width: 700px;
+  font-size: 32px;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 976px) {
   .buttons-container {
     display: none;
   }
   .features-section {
-    padding: 20px 10px;
+    padding: 10px 10px;
+  }
+  .features-content {
+    padding: 10px 50px;
   }
   .features-content h2 {
     font-size: 32px;
   }
   .features-content p {
-    font-size: 16px;
+    font-size: 18px;
   }
   .trailer-section {
     padding: 20px 0;
@@ -251,13 +303,27 @@ body {
     gap: 10px;
   }
   .screenshots-header h2 {
-    font-size: 36px;
+    font-size: 64px;
+  }
+  .reviews-section h2 {
+    font-size: 64px;
+  }
+  .review-circle {
+    width: 300px;
+    height: 300px;
+  }
+  .review-circle p {
+    width: 220px;
+    font-size: 18px;
+  }
+  .review-circle span {
+    font-size: 16px;
   }
   .footer-text {
-    font-size: 10px;
+    font-size: 16px;
   }
   .social-icons img {
-    width: 24px;
+    width: 25px;
     margin: 0 4px;
   }
 }
@@ -266,9 +332,6 @@ body {
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-  .reviews-section h2 {
-    font-size: 36px;
   }
 }
 
