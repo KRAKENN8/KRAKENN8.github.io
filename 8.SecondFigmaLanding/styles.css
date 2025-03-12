@@ -19,10 +19,7 @@ body {
   align-items: center;
   padding: 20px;
   background-color: #100F13;
-}
-
-.header-left {
-  flex: 1;
+  height: 100px;
 }
 
 .header-title {
@@ -42,6 +39,8 @@ body {
   font-family: 'Squada One', sans-serif;
   font-size: 40px;
   padding: 10px 20px;
+  width: 140px;
+  text-align: center;
   background-color: #FFF;
   color: #000;
   border: none;
@@ -60,6 +59,7 @@ body {
   font-family: 'Squada One', sans-serif;
   font-size: 40px;
   padding: 10px 20px;
+  width: 200px;
   background-color: #B87839;
   color: #FFF;
   border: none;
@@ -69,7 +69,7 @@ body {
 }
 
 .details-button:hover {
-  background-color: #9e6331;
+  background-color: #B87839;
   color: #FFF;
 }
 
@@ -103,7 +103,6 @@ body {
 .hero-text {
   font-size: 64px;
   color: #FFFFFF;
-  line-height: 1.2;
 }
 
 .lang-button {
@@ -124,8 +123,6 @@ body {
   background-color: #B87839;
   color: #FFF;
 }
-
-
 
 /* Секция Services */
 .services-section {
@@ -213,7 +210,6 @@ body {
 }
 
 .card-list {
-  list-style: disc outside;
   margin-bottom: 20px;
   margin-left: 25px;
 }
@@ -222,7 +218,6 @@ body {
   font-size: 40px;
   color: #FFFFFF;
   margin: 10px 0;
-  line-height: 1.2;
 }
 
 .card-read-more {
@@ -264,7 +259,7 @@ body {
 }
 
 .buy-button:hover {
-  background-color: #9e6331;
+  background-color: #B87839;
   color: #FFF;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -318,7 +313,6 @@ body {
 .review-text {
   font-size: 40px;
   color: #FFFFFF;
-  line-height: 1.1;
   margin-bottom: 20px;
 }
 
@@ -431,14 +425,14 @@ body {
   margin-top: 20px;
 }
 
-.social-icon {
+.social-link {
   font-size: 40px;
   color: #3D86BB;
   margin-right: 20px;
   text-decoration: none;
 }
 
-.social-icon:hover {
+.social-link:hover {
   color: #B87839;
 }
 
@@ -461,16 +455,42 @@ body {
   display: block;
 }
 
+/* Контейнер, объединяющий блок с фото и формой */
+.contact-lower-container {
+  display: flex;               /* Размещаем блоки в одну линию */
+  justify-content: space-between;
+  gap: 40px;                   /* Отступ между блоками */
+  margin-top: 40px;            /* Отступ сверху, если нужно */
+}
+
+/* Блок с фото */
+.building-info {
+  flex: 1;                     /* Пусть блок занимает доступное пространство */
+  text-align: left;          /* Центровка заголовка и картинки */
+}
+
+.building-info h3 {
+  font-size: 128px;
+  color: #B87839;
+  margin-bottom: 20px;
+}
+
+.building-photo {
+  max-width: 100%;            /* Чтобы картинка не вылезала за контейнер */
+  height: auto;
+}
+
 .contact-form {
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   text-align: left;
+  flex: 1;
 }
   
 .contact-form h3 {
   font-size: 128px;
   color: #B87839;
-  margin-bottom: 20px;
+  text-align: left; /* Align the header left */
 }
   
 .contact-form input,
@@ -502,7 +522,7 @@ body {
 }
   
 .submit-button:hover {
-  background-color: #9e6331;
+  background-color: #B87839;
   transition: background-color 0.3s;
 }
 
@@ -520,8 +540,62 @@ body {
   position: relative;
 }
 
+/* Стили модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* Затемнение фона */
+}
+
+.modal-content {
+  background-color: #B87839;
+  margin: 15% auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  position: relative;
+}
+
+.modal label {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal button {
+  font-size: 32px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.modal input {
+  font-size: 24px;
+  border-radius: 15px;
+}
+
 /* Адаптивность для экранов до 1700px */
 @media (max-width: 1700px) {
+  .hero-section {
+    background: url('img/background/MobileBackground.jfif') no-repeat center center/cover;
+  }
+
   .services-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -544,54 +618,78 @@ body {
 
 /* Адаптивность для экранов до 768px */
 @media (max-width: 768px) {
+  /* Services */
   .services-title {
     font-size: 64px;
   }
 
+  .service-icon {
+    width: 255px;
+    height: 255px;
+  }
+
+  .service-text {
+    font-size: 32px;
+  }
+
+  /* Subscription options */
   .subscription-title {
     font-size: 64px;
   }
 
+  .subscription-card {
+    width: 340px;
+  }
+
+  .card-title {
+    font-size: 32px;
+  }
+
+  .card-list li,
+  .card-list p {
+    font-size: 24px;
+  }
+
+  .card-price {
+    font-size: 24px;
+  }
+
+  .buy-button {
+    font-size: 32px;
+    width: 100px;
+    height: 50px;
+  }
+
+  /* Reviews */
   .reviews-title {
     font-size: 64px;
   }
 
-  .news-title {
-    font-size: 64px;
+  .review-card {
+    width: 300px;
+    height: 500px;
   }
 
-  .contact-title {
-    font-size: 64px;
+  .review-avatar {
+    width: 200px;
+    height: 200px;
   }
 
-  .footer {
+  .review-name {
+    font-size: 32px;
+  }
+
+  .review-text {
     font-size: 24px;
   }
 
-  .service-item {
-    max-width: 100%;
-  }
-
-  .subscription-card {
-    width: 450px;
-    padding: 20px;
-  }
-
-  .card-title {
-    font-size: 48px;
-  }
-
-  .card-list li {
-    font-size: 36px;
-  }
-
-  .review-card {
-    width: 350px;
-    height: 700px;
+  /* News */
+  .news-title {
+    font-size: 64px;
   }
 
   .news-title {
-    font-size: 100px;
+    font-size: 64px;
   }
 
   .news-item {
@@ -600,20 +698,26 @@ body {
   }
 
   .news-image {
-    width: 300px;
-    height: 200px;
+    display: none;
   }
 
   .news-heading {
-    font-size: 48px;
+    font-size: 64px;
+    padding-bottom: 10px;
   }
 
   .news-text {
-    font-size: 32px;
+    font-size: 24px;
+    padding-bottom: 10px;
   }
 
   .news-date {
-    font-size: 48px;
+    font-size: 32px;
+  }
+
+  /* Contact Us */
+  .contact-title {
+    font-size: 64px;
   }
 
   .contact-container {
@@ -623,22 +727,31 @@ body {
   }
 
   .contact-info h3 {
-    font-size: 48px;
+    font-size: 64px;
   }
 
   .contact-map h3 {
-    font-size: 48px;
+    font-size: 64px;
   }
 
   .contact-map iframe {
-    height: 250px; /* Adjust iframe height for smaller screens */
+    height: 400px; /* Adjust iframe height for smaller screens */
   }
 
-  .social-icon {
-    font-size: 30px;
+  .building-info h3 {
+    font-size: 64px;
   }
 
+  .contact-form h3 {
+    font-size: 64px;
+  }
+
+  /* Footer */
   .footer {
-    font-size: 20px;
+    font-size: 24px;
+  }
+
+  .contact-lower-container {
+    flex-direction: column;    /* Размещаем блоки друг под другом на узких экранах */
   }
 }

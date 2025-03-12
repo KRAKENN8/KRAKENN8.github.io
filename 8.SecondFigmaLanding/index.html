@@ -203,12 +203,15 @@
         <p><strong>Address:</strong> Sakala tn, 10141 Tallinn, Estonia</p>
         <p><strong>Email:</strong> contact@teachton.ee</p>
         <p><strong>Phone:</strong> +372 123 4567</p>
+        <p><strong>Backup phone:</strong> +372 7654 321</p>
+        <p><strong>Director:</strong> Mart Mets</p>
+        <p><strong>Date of foundation:</strong> 01.09.2020</p>
   
         <!-- Социальные сети -->
         <div class="social-media">
-          <a href="#" class="social-icon">Facebook</a>
-          <a href="#" class="social-icon">Instagram</a>
-          <a href="#" class="social-icon">Twitter</a>
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
         </div>
       </div>
   
@@ -220,22 +223,54 @@
           width="600" height="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
-  
-    <!-- Форма для связи -->
-    <div class="contact-form">
-      <h3>Send Us a Message</h3>
-      <form action="#" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="submit-button">Send Message</button>
-      </form>
-    </div>
+
+    <!-- Контейнер, который объединяет фото здания и форму -->
+<div class="contact-lower-container">
+
+  <!-- Блок с фото здания -->
+  <div class="building-info">
+    <h3>Our Building</h3>
+    <img src="img/build/Sakala11-5.jpg" alt="Our building" class="building-photo">
+  </div>
+
+  <!-- Форма для связи -->
+  <div class="contact-form">
+    <h3>Send Message</h3>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </div>
   </section>
 
 
   <footer class="footer">
     <p>&copy; 2025 TeachTon. All rights reserved. Unauthorized reproduction, distribution, or transmission of any part of this publication is strictly prohibited. All trademarks and copyrights are the property of their respective owners.</p>
   </footer>
+
+  <!-- Модальное окно для ввода данных покупки -->
+  <div id="modalBuy" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <form id="buyForm">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+        
+        <label for="card">Credit Card:</label><br>
+        <input type="text" id="card" name="card" required><br><br>
+        
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
