@@ -321,7 +321,6 @@ body {
   }
   .screenshots-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
   }
   .screenshots-header h2 {
     font-size: 64px;
