@@ -55,7 +55,6 @@
 
 body {
   font-family: 'Odibee Sans', sans-serif;
-  margin: 0;
 }
 
 .hero {
@@ -79,46 +78,46 @@ body {
   left: 2.5%;
   top: 7%;
   width: 50%;
-  font-size: min(15vw, 256px);
+  font-size: 13.5vw;
 }
 
 .dev {
   position: absolute;
-  left: 12.5%;
+  left: 21%;
   top: 30%;
-  width: 45.5%;
-  font-size: min(5vw, 64px);
+  width: 31.5%;
+  font-size: 3.5vw;
 }
 
 .published {
   position: absolute;
-  left: 14.5%;
+  left: 23.8%;
   top: 37%;
-  width: 45.5%;
-  font-size: min(4.5vw, 64px);
+  width: 31.5%;
+  font-size: 3.5vw;
 }
 
 .and-playism {
   position: absolute;
-  left: 29.5%;
+  left: 29.4%;
   top: 43%;
-  width: 35.5%;
-  font-size: min(4.5vw, 64px);
+  width: 31.5%;
+  font-size: 3.5vw;
   text-align: right;
 }
 
 .release {
   position: absolute;
-  left: 12.5%;
-  top: 49%;
-  width: 47.5%;
-  font-size: min(4.5vw, 64px);
+  left: 21.7%;
+  top: 50%;
+  width: 37.5%;
+  font-size: 3.5vw;
 }
 
 .keywords {
   left: 0;
   top: 1005px;
-  width: 100%;
+  min-width: 1920px;
   height: 75px;
   font-size: 30px;
   background-color: rgba(31, 41, 51, 0.77);
@@ -132,19 +131,18 @@ body {
 }
 
 .features-content {
-  padding: 10px 200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .features-content h2 {
-  font-size: 96px;
+  font-size: 64px;
   margin-bottom: 20px;
 }
 
 .features-content p {
-  font-size: 36px;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .trailer-container {
@@ -175,20 +173,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .screenshots-header h2 {
   font-size: 256px;
   color: #fff;
-  margin: 0 20px;
+  margin-bottom: 20px;
 }
 
 .screenshots-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -215,7 +212,7 @@ body {
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 25px;
   max-width: auto;
   margin: 0 auto;
 }
@@ -228,22 +225,20 @@ body {
 .review-circle {
   background-color: #000C1A;
   color: #ffffff;
-  width: 450px;
-  height: 450px;
+  width: 425px;
+  height: 425px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .review-circle p {
-  width: 350px;
-  font-size: 24px;
-  line-height: 1.4;
-  margin-bottom: 10px;
+  width: 275px;
+  font-size: 30px;
 }
 
 .review-circle span {
@@ -267,33 +262,30 @@ body {
 }
 
 .social-icons img {
-  width: 50px;
+  width: 100px;
   height: auto;
-  margin: 0px 15px;
+  margin-right: 8px;
 }
 
 .footer-text {
   font-size: 32px;
-  width: 80%;
+  width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
 
-@media (max-width: 976px) {
+@media (max-width: 768px) {
   .buttons-container {
     display: none;
   }
   .features-section {
-    padding: 10px 10px;
-  }
-  .features-content {
-    padding: 10px 50px;
+    padding: 20px 10px;
   }
   .features-content h2 {
     font-size: 32px;
   }
   .features-content p {
-    font-size: 18px;
+    font-size: 16px;
   }
   .trailer-section {
     padding: 20px 0;
@@ -308,30 +300,31 @@ body {
   .reviews-section h2 {
     font-size: 64px;
   }
-  .review-circle {
-    width: 300px;
-    height: 300px;
-  }
-  .review-circle p {
-    width: 220px;
-    font-size: 18px;
-  }
-  .review-circle span {
-    font-size: 16px;
-  }
   .footer-text {
+    width: 500px;
     font-size: 16px;
   }
   .social-icons img {
     width: 25px;
-    margin: 0 4px;
   }
 }
 
 @media (max-width: 1820px) {
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  }
+
+  .review-circle {
+    width: 300px;
+    height: 300px;
+  }
+  .review-circle p {
+    width: 275px;
+    font-size: 18px;
+  }
+  
+  .review-circle span {
+    font-size: 16px;
   }
 }
 
