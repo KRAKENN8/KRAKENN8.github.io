@@ -7,7 +7,6 @@
 
 /* Шапка */
 .site-header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -117,7 +116,7 @@ body {
 .keywords {
   left: 0;
   top: 1005px;
-  min-width: 1920px;
+  width: 100%;
   height: 75px;
   font-size: 30px;
   background-color: rgba(31, 41, 51, 0.77);
@@ -255,6 +254,13 @@ body {
   flex-wrap: wrap;
 }
 
+.footer-text {
+  font-size: 32px;
+  width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .social-icons {
   display: flex;
   align-items: center;
@@ -267,11 +273,34 @@ body {
   margin-right: 8px;
 }
 
-.footer-text {
-  font-size: 32px;
-  width: 1400px;
-  margin: 0 auto;
-  text-align: center;
+
+@media (max-width: 1820px) {
+  .keywords {
+    display: none;
+  }
+  
+  .screenshots-header h2 {
+    font-size: 128px;
+  }
+  .reviews-section h2 {
+    font-size: 128px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review-circle {
+    width: 300px;
+    height: 300px;
+  }
+  .review-circle p {
+    width: 275px;
+    font-size: 18px;
+  }
+  
+  .review-circle span {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -309,27 +338,6 @@ body {
   }
 }
 
-@media (max-width: 1820px) {
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (max-width: 666px) {
 
-  .review-circle {
-    width: 300px;
-    height: 300px;
-  }
-  .review-circle p {
-    width: 275px;
-    font-size: 18px;
-  }
-  
-  .review-circle span {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1919px) {
-  .keywords {
-    display: none;
-  }
 }
