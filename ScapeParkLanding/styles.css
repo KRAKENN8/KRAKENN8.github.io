@@ -1,0 +1,107 @@
+/* Importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cygre:wght@400&family=Onest:wght@400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Onest', sans-serif;
+    background-color: #1E2932;
+    color: #FFFFFF;
+}
+
+.main-section {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Cygre', sans-serif;
+    font-size: 356px; /* Растягиваем заголовок на всю ширину экрана */
+    color: #313A42;
+    margin: 0;
+    letter-spacing: -5px; /* Немного уменьшили межбуквенное расстояние для растяжения */
+}
+
+.subheadings {
+    display: flex; /* Горизонтальное расположение блоков */
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.subheading-first, .subheading-second, .subheading-three {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: left;
+    width: 400px;
+    margin: 0 20px;
+}
+
+.content {
+    margin-top: 250px;
+    position: relative; /* Для абсолютного позиционирования task-header */
+}
+
+.task-header {
+    font-family: 'Cygre', sans-serif;
+    font-size: 16px;
+    color: #747E87;
+    width: 1100px;
+    margin: 0 auto;
+    right: 0;
+    margin-bottom: 15px;
+    padding-right: 60px;
+    position: absolute;
+    text-align: left; /* Выравнивание текста по правому краю */
+}
+
+.task-description {
+    font-size: 26px;
+    color: #FFFFFF;
+    width: 1100px;
+    margin: 0 auto;
+    position: absolute; /* Позиционируем текст рядом с заголовком */
+    top: 40px; /* Откорректировать по вертикали, если нужно */
+    right: 0;
+    padding-right: 60px;
+    text-align: left; /* Выравнивание текста по правому краю */
+}
+
+/* Добавляем стили для нижней части */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 450px; /* Опускаем блок ниже */
+    padding: 20px;
+    background-image: url('img/background/background.jpeg'); /* Фон только в bottom-section */
+    background-size: cover;
+    background-position: center;
+    height: 1000px; /* Устанавливаем высоту для блока */
+    position: relative; /* Для позиционирования изображений внутри */
+}
+
+/* Используем flexbox для распределения элементов */
+.bottom-section > * {
+    margin-bottom: 200px;
+}
+
+.phone, .table {
+    max-width: 800px; /* Ограничиваем размеры изображений */
+    max-height: 400px;
+    object-fit: contain; /* Сохраняем пропорции изображений */
+}
+
+/* Размещаем телефон */
+.phone {
+    position: relative;
+    top: -40px; /* Поднимаем телефон выше */
+    /* Чтобы сдвигать влево, используйте отрицательное значение, например: left: -10%; */
+}
+
+/* Размещаем планшет */
+.table {
+    position: relative;
+    top: -40px; /* Поднимаем планшет выше */
+    right: 10%; /* Сдвигаем планшет влево */
+    /* Чтобы сдвигать вправо, используйте отрицательное значение, например: right: -10%; */
+}
