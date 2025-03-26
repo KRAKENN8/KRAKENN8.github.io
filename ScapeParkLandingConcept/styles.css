@@ -1,0 +1,501 @@
+/* Подключаем Google Fonts (с Cygre для заголовков и Onest для основного текста) */
+@import url('https://fonts.googleapis.com/css2?family=Cygre:wght@400&family=Onest:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общие стили для документа */
+body {
+  font-family: 'Onest', sans-serif; /* Основной текст – Onest */
+  color: #fff;
+  background-color: #1E2932; /* Тёмный фон всей страницы */
+  line-height: 1.5;
+}
+
+/* ====================== */
+/* Hero Section (первый блок) */
+/* ====================== */
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1320px;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.hero-title {
+    font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+    font-size: 64px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+
+.hero-description {
+  font-size: 32px;
+  line-height: 1.6;
+}
+
+.hero-image-container {
+  max-width: 1320px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ====================== */
+/* Investment Section (второй блок) */
+/* ====================== */
+.investment-section {
+  width: 100%;
+  padding: 20px 20px;
+  background-color: #fff; /* Белый фон */
+}
+
+.investment-container {
+  display: flex;
+  flex-wrap: wrap; /* Для адаптива */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px; /* Расстояние между элементами */
+}
+
+/* Текст внутри .investment-section делаем тёмным */
+.investment-section * {
+  color: #1E2932;
+}
+
+.investment-left {
+  flex: 1 1 300px;
+}
+
+.investment-title {
+  font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.investment-subtitle {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.investment-highlights p {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.investment-image-container {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.investment-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.investment-right {
+  flex: 1 1 300px;
+  text-align: right;
+}
+
+.cta-text {
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* Кнопка (Consultation) */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1E2932; 
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2E3A46;
+}
+
+.cta-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+/* ====================== */
+/* Profitable Investment Section (третий блок) */
+/* ====================== */
+.profitable-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #1E2932; /* Тёмный фон, как в hero */
+  position: relative;
+  background: url('img/background/background.jpeg') no-repeat center center/cover;
+}
+
+.profitable-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.profitable-title {
+  font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.profitable-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Карточка */
+.profitable-item {
+  flex: 1 1 200px; 
+  background-color: rgba(2, 2, 2, 0.5);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.profitable-item h3 {
+  font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.profitable-item p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.profitable-item.cta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profitable-item.cta-item .cta-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+/* ====================== */
+/* Photo Gallery (четвёртый блок) */
+/* ====================== */
+.gallery-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #1E2932;
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 660px;
+  display: block;
+  border-radius: 8px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.next-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.slider-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+/* ====================== */
+/* Benefits Section (новый блок) */
+/* ====================== */
+.benefits-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #1E2932;
+  color: #fff;
+}
+
+.benefits-title {
+  font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background-color: #2E3A46;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.benefit-item h3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.benefit-item-photo {
+  background-color: #2E3A46;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.benefit-item-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.cta-item {
+  background-color: #fff;
+  color: #1E2932;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-item p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cta-button {
+  background-color: #1E2932;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2E3A46;
+}
+
+.cta-button img {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+/* ====================== */
+/* Views from each suite (новый блок) */
+/* ====================== */
+.views-section {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background: url('img/background/background2.jpeg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+}
+
+.views-overlay {
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.views-title {
+  font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.views-description {
+  font-family: 'Onest', sans-serif; /* Основной текст – Onest */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* ====================== */
+/* Benefits 3x3 (перестроенный) */
+/* ====================== */
+.benefits3-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #1E2932;
+  color: #fff;
+}
+
+.benefits3-title {
+  font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
+  font-size: 2rem;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+.benefits3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 1px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #2E3A46;
+}
+
+.benefits3-cell {
+  background-color: #1E2932;
+  padding: 20px;
+}
+
+.text-cell h3 {
+  font-family: 'Cygre', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.text-cell p {
+  font-family: 'Onest', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.big-image {
+  grid-column: 1 / span 3;
+}
+
+.big-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+  .benefits3-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+  }
+}
+
+@media (max-width: 576px) {
+  .benefits3-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+  }
+}
+
+@media (max-width: 992px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
