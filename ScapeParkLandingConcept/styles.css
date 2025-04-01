@@ -12,7 +12,6 @@ body {
   font-family: 'Onest', sans-serif; /* Основной текст – Onest */
   color: #fff;
   background-color: #1E2932; /* Тёмный фон всей страницы */
-  line-height: 1.5;
 }
 
 /* ====================== */
@@ -32,9 +31,9 @@ body {
 }
 
 .hero-title {
+    padding: 40px 0px;
     font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
     font-size: 64px;
-    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +41,6 @@ body {
 
 .hero-description {
   font-size: 32px;
-  line-height: 1.6;
 }
 
 .hero-image-container {
@@ -88,18 +86,17 @@ body {
 .investment-title {
   font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
   font-size: 40px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .investment-subtitle {
   font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .investment-highlights p {
   font-size: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .investment-image-container {
@@ -120,9 +117,8 @@ body {
 }
 
 .cta-text {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   font-size: 20px;
-  line-height: 1.4;
 }
 
 /* Кнопка (Consultation) */
@@ -166,7 +162,7 @@ body {
 
 .profitable-title {
   font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
-  font-size: 3rem;
+  font-size: 40px;
   margin-bottom: 40px;
   color: #fff;
 }
@@ -195,8 +191,7 @@ body {
 }
 
 .profitable-item p {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 16px;
 }
 
 .profitable-item.cta-item {
@@ -207,8 +202,8 @@ body {
 }
 
 .profitable-item.cta-item .cta-icon {
-  width: 32px;
-  height: 32px;
+  width: 55px;
+  height: 55px;
   margin-bottom: 10px;
 }
 
@@ -224,7 +219,7 @@ body {
 
 .gallery-title {
   font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
-  font-size: 2rem;
+  font-size: 40px;
   color: #fff;
   margin-bottom: 40px;
 }
@@ -251,7 +246,7 @@ body {
   width: 100%;
   max-height: 660px;
   display: block;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .slide.active {
@@ -266,9 +261,9 @@ body {
   background-color: rgba(0,0,0,0.5);
   color: #fff;
   border: none;
-  font-size: 2rem;
-  padding: 0 12px;
-  border-radius: 4px;
+  font-size: 40px;
+  padding: 0 20px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -308,7 +303,7 @@ body {
 
 .benefits-title {
   font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
-  font-size: 2rem;
+  font-size: 40px;
   margin-bottom: 40px;
   text-align: left;
   max-width: 1200px;
@@ -325,26 +320,29 @@ body {
 
 .benefit-item {
   background-color: #2E3A46;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 20px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .benefit-item h3 {
-  font-size: 1.2rem;
-  line-height: 1.4;
+  font-size: 20px;
 }
 
 .benefit-item-photo {
   background-color: #2E3A46;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
 }
 
 .benefit-item-photo img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  border-radius: 10px;
   display: block;
 }
 
@@ -358,17 +356,18 @@ body {
 }
 
 .cta-item p {
-  margin-bottom: 16px;
-  font-size: 1rem;
+  margin-bottom: 15px;
+  font-size: 16px;
   text-align: center;
 }
 
 .cta-button {
   background-color: #1E2932;
   color: #fff;
+  height: 60px;
   text-decoration: none;
-  border-radius: 6px;
-  padding: 12px 20px;
+  border-radius: 10px;
+  padding: 20px 20px;
   display: inline-flex;
   align-items: center;
   transition: background-color 0.3s ease;
@@ -381,7 +380,7 @@ body {
 .cta-button img {
   width: 20px;
   height: 20px;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 /* ====================== */
@@ -390,7 +389,7 @@ body {
 .views-section {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  min-height: 55vh;
   background: url('img/background/background2.jpeg') no-repeat center center / cover;
   display: flex;
   align-items: center;
@@ -407,15 +406,14 @@ body {
 
 .views-title {
   font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
-  font-size: 2rem;
+  font-size: 40px;
   color: #fff;
   margin-bottom: 20px;
 }
 
 .views-description {
   font-family: 'Onest', sans-serif; /* Основной текст – Onest */
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -431,7 +429,7 @@ body {
 
 .benefits3-title {
   font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
-  font-size: 2rem;
+  font-size: 40px;
   margin-bottom: 40px;
   max-width: 1200px;
   margin: 0 auto 40px auto;
@@ -454,15 +452,14 @@ body {
 
 .text-cell h3 {
   font-family: 'Cygre', sans-serif;
-  font-size: 1.2rem;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .text-cell p {
   font-family: 'Onest', sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
+  font-size: 16px;
+  }
 
 .big-image {
   grid-column: 1 / span 3;
@@ -472,30 +469,59 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
-@media (max-width: 992px) {
-  .benefits3-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, auto);
+@media (max-width: 1000px) {
+  .investment-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .investment-left,
+  .investment-right,
+  .investment-image-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .investment-right {
+    text-align: center;
+  }
+
+  .cta-button {
+    justify-content: center;
+  }
+
 }
 
-@media (max-width: 576px) {
-  .benefits3-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, auto);
-  }
-}
+@media (max-width: 600px) {
 
-@media (max-width: 992px) {
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .investment-title {
+    font-size: 28px;
   }
-}
-@media (max-width: 576px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
+
+  .investment-subtitle,
+  .investment-highlights p,
+  .cta-text {
+    font-size: 16px;
   }
+
+  .cta-button {
+    padding: 16px 16px;
+    font-size: 18px;
+  }
+
+  .cta-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .benefits3-section .benefits3-grid .text-cell h3 {
+    font-size: 16px;
+  }
+
+  .benefits3-section .benefits3-grid .text-cell p { font-size: 16px; }
+  .benefits3-section .benefits3-grid .text-cell p { font-size: 10px; }
 }
