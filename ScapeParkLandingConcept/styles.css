@@ -164,7 +164,7 @@ body {
   font-family: 'Cygre', sans-serif; /* Заголовки – Cygre */
   font-size: 40px;
   margin-bottom: 40px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .profitable-items {
@@ -473,6 +473,18 @@ body {
 }
 
 @media (max-width: 1000px) {
+  .profitable-title {
+    text-shadow:
+      -2px -2px 0 #000,
+       2px -2px 0 #000,
+      -2px  2px 0 #000,
+       2px  2px 0 #000,
+      -2px  0px 0 #000,
+       2px  0px 0 #000,
+       0px -2px 0 #000,
+       0px  2px 0 #000;
+  }
+
   .investment-container {
     flex-direction: column;
     align-items: center;
@@ -494,9 +506,15 @@ body {
     justify-content: center;
   }
 
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
 
   .investment-title {
     font-size: 28px;
@@ -516,6 +534,14 @@ body {
   .cta-icon {
     width: 18px;
     height: 18px;
+  }
+
+  .benefits3-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .big-image {
+    grid-column: 1 / span 1;
   }
 
   .benefits3-section .benefits3-grid .text-cell h3 {
