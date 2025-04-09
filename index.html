@@ -1,56 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minu portfell!</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Kraken portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font (Nunito) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Функция для динамической анимации раскрытия/сжатия карточки
+    function toggleFolder(folderElem) {
+      const content = folderElem.querySelector('.folder-content');
+      if (folderElem.classList.contains('open')) {
+        // Сжатие: устанавливаем текущую высоту, затем переводим в 0
+        content.style.height = content.scrollHeight + "px"; // фиксируем текущую высоту
+        // Принудительный reflow:
+        content.offsetHeight; 
+        content.style.height = "0px";
+        content.style.opacity = 0;
+        content.addEventListener("transitionend", function handler() {
+          folderElem.classList.remove("open");
+          content.style.height = ""; // удаляем inline-стиль, чтобы не мешал адаптиву
+          content.removeEventListener("transitionend", handler);
+        });
+      } else {
+        // Раскрытие: добавляем класс, затем устанавливаем высоту до scrollHeight
+        folderElem.classList.add('open');
+        content.style.height = content.scrollHeight + "px";
+        content.style.opacity = 1;
+        content.addEventListener("transitionend", function handler() {
+          // После завершения анимации сбрасываем высоту,
+          // чтобы при динамическом изменении контента карточка могла адаптироваться
+          content.style.height = "auto";
+          content.removeEventListener("transitionend", handler);
+        });
+      }
+    }
+  </script>
 </head>
 <body>
-    <div class="wrapper">
-        <header class="bg-dark text-white text-center py-4">
-            <h1>Ma olen algaja, kuid võimekas veebiarendaja!</h1>
-        </header>
-
-        <!-- Main Content -->
-        <main class="container my-5">
-            <h1 class="text-center mb-4">Minu teosed</h1>
+  <div class="wrapper">
+    <header class="bg-dark text-white text-center py-4">
+      <h1>Welcome! I'm KRAKEN (GitHub: KRAKENN8).</h1>
+      <p>I’m an emerging designer and web developer with a passion for creating engaging digital experiences. This portfolio showcases my journey—from innovative Figma designs to fully developed HTML pages. Browse through the projects below to see my evolving skills in action and gain insight into my creative process.</p>
+    </header>
+    
+    <main class="container my-5">
+      <h2 class="text-center mb-4">My Works</h2>
+      <div class="folder-container">
+        
+        <!-- ПАПКА 1: Websites -->
+        <div class="folder" onclick="toggleFolder(this)">
+          <h3>Websites</h3>
+          <div class="folder-content">
             <div class="list-group">
-                <a href="1.KinoBaza/index.html" class="list-group-item list-group-item-action">KinoBaza veebisait</a>
-                <a href="2.BleachPortal/index.html" class="list-group-item list-group-item-action">BleachPortal Veebisait</a>
-                <a href="1.KinoBazaBootStrap/index.html" class="list-group-item list-group-item-action">KinoBaza Bootstrap v3.3.5 Veebisait</a>
-                <a href="3.AnimeStreamBootStrap3.3.5/index.html" class="list-group-item list-group-item-action">AnimeStream Bootstrap v3.3.5 Veebisait</a>
-                <a href="3.AnimeStreamBootStrap5.3.0/index.html" class="list-group-item list-group-item-action">AnimeStream Bootstrap v5.3.0 Veebisait</a>
-                <a href="4.Landing/index.html" class="list-group-item list-group-item-action">Landing Veebisait</a>
-                <a href="4.LandingGame/index.html" class="list-group-item list-group-item-action">Landing Milk outside... Veebisait</a>
-                <a href="5.Wireframe/index.html" class="list-group-item list-group-item-action">Wireframe Veebisait</a>
-                <a href="6.LandingPrototype/index.html" class="list-group-item list-group-item-action">LandingPrototype Veebisait</a>
-                <a href="6.LandingFull/index.html" class="list-group-item list-group-item-action">LandingFull Veebisait</a>
-                <a href="7.FirstFigmaLanding/index.html" class="list-group-item list-group-item-action">First Figma Landing Veebisait</a>
-                <a href="8.SecondFigmaLanding/index_est.html" class="list-group-item list-group-item-action">Second Figma Landing Veebisait</a>
-                <a href="9.ScapeParkLanding/index.html" class="list-group-item list-group-item-action">ScapePark Landing Veebisait</a>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/NU1hiytiHrZjNMDchUCk2g/second-lesson?node-id=1-2&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/GeFR8QeO1B8JnrIB2AVSeu/Food-Wishes?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/d6XRxLf38VHfImq53i0wiD/TableProject?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/proto/d6XRxLf38VHfImq53i0wiD/TableProject?node-id=2-281&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A281&show-proto-sidebar=1&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/Gaat8L8byrePNnHgVqSLvd/TravelProject?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/proto/Gaat8L8byrePNnHgVqSLvd/TravelProject?node-id=2-140&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A140&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/yZY1bvkmhhgzlnUADLAsCm/HTML%2FCSS?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/qmZewURHfW5Xc3sf0X2Qbk/FirstLanding?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/wANDXK3GG2QS3gM0MlGRCw/SecondLanding?embed-host=share" allowfullscreen></iframe>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1200" height="450" src="https://embed.figma.com/design/ogFBvUQXyv5dpQgPvwzVsP/ScapeParkLanding?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+              <!-- Ниже ссылки, которые уже были -->
+              <a href="1.KinoBaza/index.html" class="list-group-item list-group-item-action" target="_blank">
+                1. KinoBaza Veebisait
+              </a>
+              <a href="1.KinoBazaBootStrap/index.html" class="list-group-item list-group-item-action" target="_blank">
+                1. KinoBaza Bootstrap v3.3.5 Veebisait
+              </a>
+              <a href="2.BleachPortal/index.html" class="list-group-item list-group-item-action" target="_blank">
+                2. BleachPortal Veebisait
+              </a>
+              <a href="3.AnimeStreamBootStrap3.3.5/index.html" class="list-group-item list-group-item-action" target="_blank">
+                3. AnimeStream Bootstrap v3.3.5 Veebisait
+              </a>
+              <a href="3.AnimeStreamBootStrap5.3.0/index.html" class="list-group-item list-group-item-action" target="_blank">
+                3. AnimeStream Bootstrap v5.3.0 Veebisait
+              </a>
+              <a href="4.Landing/index.html" class="list-group-item list-group-item-action" target="_blank">
+                4. Landing Veebisait
+              </a>
+              <a href="4.LandingGame/index.html" class="list-group-item list-group-item-action" target="_blank">
+                4. Landing Milk outside... Veebisait
+              </a>
+              <a href="5.Wireframe/index.html" class="list-group-item list-group-item-action" target="_blank">
+                5. Wireframe Veebisait
+              </a>
+              <a href="6.LandingPrototype/index.html" class="list-group-item list-group-item-action" target="_blank">
+                6. LandingPrototype Veebisait
+              </a>
+              <a href="6.LandingFull/index.html" class="list-group-item list-group-item-action" target="_blank">
+                6. LandingFull Veebisait
+              </a>
+              <a href="7.FirstFigmaLanding/index.html" class="list-group-item list-group-item-action" target="_blank">
+                7. First Figma Landing Veebisait
+              </a>
+              <a href="8.SecondFigmaLanding/index_est.html" class="list-group-item list-group-item-action" target="_blank">
+                8. Second Figma Landing Veebisait
+              </a>
+              <a href="9.ScapeParkLanding/index.html" class="list-group-item list-group-item-action" target="_blank">
+                9. ScapePark Landing Veebisait
+              </a>
             </div>
-        </main>
-    </div>
-
+          </div>
+        </div>
+        
+        <!-- ПАПКА 2: Landing Projects -->
+        <div class="folder" onclick="toggleFolder(this)">
+          <h3>Figma Landing Designs</h3>
+          <div class="folder-content">
+            <button class="btn">
+              <a 
+                href="https://embed.figma.com/design/yZY1bvkmhhgzlnUADLAsCm/HTML%2FCSS?node-id=0-1&embed-host=share"
+                target="_blank">
+                1. LandingPrototype & LandingFull Veebisait
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/design/qmZewURHfW5Xc3sf0X2Qbk/FirstLanding?node-id=0-1&embed-host=share"
+                target="_blank">
+                2. First Figma Landing
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/design/wANDXK3GG2QS3gM0MlGRCw/SecondLanding?embed-host=share"
+                target="_blank">
+                3. Second Figma Landing
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/design/ogFBvUQXyv5dpQgPvwzVsP/ScapeParkLanding?node-id=0-1&embed-host=share"
+                target="_blank">
+                4. ScapePark Landing
+              </a>
+            </button>
+          </div>
+        </div>
+        
+        <!-- ПАПКА 3: Other Figma Designs -->
+        <div class="folder" onclick="toggleFolder(this)">
+          <h3>Figma Designs and Prototypes</h3>
+          <div class="folder-content">
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/design/NU1hiytiHrZjNMDchUCk2g/second-lesson?node-id=1-2&embed-host=share"
+                target="_blank">
+                1. Second Lesson Design
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/design/GeFR8QeO1B8JnrIB2AVSeu/Food-Wishes?node-id=0-1&embed-host=share"
+                target="_blank">
+                2. Food-Wishes Design
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/design/d6XRxLf38VHfImq53i0wiD/TableProject?node-id=0-1&embed-host=share"
+                target="_blank">
+                3. TableProject Design
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/proto/d6XRxLf38VHfImq53i0wiD/TableProject?node-id=2-281&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A281&show-proto-sidebar=1&embed-host=share"
+                target="_blank">
+                4. TableProject Prototype
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/design/Gaat8L8byrePNnHgVqSLvd/TravelProject?node-id=0-1&embed-host=share"
+                target="_blank">
+                5. TravelProject Design
+              </a>
+            </button>
+            <button class="btn">
+              <a
+                href="https://embed.figma.com/proto/Gaat8L8byrePNnHgVqSLvd/TravelProject?node-id=2-140&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A140&embed-host=share"
+                target="_blank">
+                6. TravelProject Prototype
+              </a>
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+    
     <footer class="bg-dark text-white text-center py-3">
-        Valmis koostööks —
-        <a id="mailme" href="mailto:ivanpetrovyrok@gmail.com" class="text-info">Kirjuta mulle</a>
+      Ready for collaboration! —
+      <a id="mailme" href="mailto:ivanpetrovyrok@gmail.com" class="text-info">Write to me</a>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+  
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Дополнительный скрипт -->
+  <script src="js/script.js"></script>
 </body>
 </html>

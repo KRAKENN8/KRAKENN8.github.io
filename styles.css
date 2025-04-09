@@ -1,76 +1,119 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-html, body {
-    height: 100%;
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .wrapper {
     display: flex;
     flex-direction: column;
-}
-
-.wrapper {
-    flex: 1; 
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: url('background.jpg') center/cover no-repeat fixed;
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-header h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
-}
-
-.list-group-item {
-    background-color: rgba(27, 42, 52, 0.9);
-    color: #FFFFFF;
-    font-size: 1.5em;
-    border: 2px solid rgba(8, 85, 154, 0.7);
+    min-height: 100vh;
+  }
+  
+  header {
+    margin-bottom: 30px;
+  }
+  
+  /* Контейнер карточек */
+  .folder-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Стилизация карточки */
+  .folder {
+    background-color: #333333;
     border-radius: 8px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
+    padding: 15px;
+    width: 350px;
 
-.list-group-item:hover {
-    background-color: rgba(8, 85, 154, 0.9);
-    transform: scale(1.05);
-}
-
-iframe {
-    width: 100%;
-    max-width: 1200px;
-    height: 450px;
-    display: block;
-    margin: 2rem auto;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
     transition: transform 0.3s ease;
   }
-
-  iframe:hover {
-    transform: scale(1.00);
+  
+  .folder:hover {
+    transform: scale(1.02);
   }
-
-footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    flex-shrink: 0; 
-}
-
-#mailme {
+  
+  /* Заголовок карточки */
+  .folder h3 {
+    font-size: 1.2rem;
     font-weight: bold;
-}
-
-#mailme:hover {
-    color: #FFFFFF;
-}
+    margin: 0;
+  }
+  
+  /* Содержимое карточки, анимация по изменению высоты и прозрачности.
+     Высота управляется динамически через JS */
+  .folder-content {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.5s ease, opacity 0.5s ease;
+    margin-top: 15px;
+  }
+  
+  /* Для раскрытой карточки класс "open" устанавливает прозрачность,
+     а высота определяется через JS (и сбрасывается в auto после анимации) */
+  .folder.open .folder-content {
+    opacity: 1;
+  }
+  
+  /* Стилизация списка ссылок (.list-group-item) — одинаковый вес шрифта, как у кнопок */
+  .list-group-item {
+    font-weight: 600;
+    background-color: #444444;
+    border: none;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+  }
+  
+  .list-group-item:hover {
+    background-color: #555555;
+  }
+  
+  /* Стили для кнопок с figma-проектами */
+  .btn {
+    font-weight: 600;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .btn a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .btn:hover {
+    background-color: #555555;
+    transform: translateY(-3px);
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: auto;
+  }
+  
+  /* Адаптивная верстка */
+  @media (max-width: 576px) {
+    .folder {
+      width: 90%;
+    }
+  }
+  
