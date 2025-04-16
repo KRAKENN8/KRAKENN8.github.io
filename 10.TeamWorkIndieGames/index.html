@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <title>IndieCrate - Main</title>
+</head>
+<body>
+  <header id="site-header">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="img/icon/icon.png" alt="Icon" class="logo-icon" />
+        <h1>IndieCrate</h1>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html">All Games</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-btn">
+              <img src="img/icon/market.png" alt="Cart" class="cart-icon" />
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to the World of Indie Games</h2>
+        <p>Discover unique and creative projects from independent developers.</p>
+        <a href="#" class="btn">View Games</a>
+      </div>
+    </section>
+
+    <section class="products">
+      <h2>Recommended Releases</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="img/picture/hollowknight.jpg" alt="Hollow Knight" class="product-image" />
+          <h3 class="product-title">Hollow Knight</h3>
+          <p class="developer">Developer: Team Cherry</p>
+          <p class="release-date">Release Date: 02/24/2017</p>
+          <p class="price">Price: $14.99</p>
+          <p class="short-description">
+            Explore the mysterious world of Hallownest in this immersive Metroidvania adventure.
+          </p>
+          <div class="product-buttons">
+            <button class="add-to-cart"
+                    data-title="Hollow Knight"
+                    data-developer="Team Cherry"
+                    data-release="02/24/2017"
+                    data-price="$14.99"
+                    data-description="Explore the mysterious world of Hallownest in this immersive Metroidvania adventure.">
+              Add to Cart
+            </button>
+            <button class="details-btn" onclick="location.href='#'">Details</button>
+            <button class="favorite" title="Add to Favorites"></button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="img/picture/celeste.jpg" alt="Celeste" class="product-image" />
+          <h3 class="product-title">Celeste</h3>
+          <p class="developer">Developer: Matt Makes Games</p>
+          <p class="release-date">Release Date: 01/25/2018</p>
+          <p class="price">Price: $19.99</p>
+          <p class="short-description">
+            Climb the mountain and overcome your inner demons in this challenging platformer.
+          </p>
+          <div class="product-buttons">
+            <button class="add-to-cart"
+                    data-title="Celeste"
+                    data-developer="Matt Makes Games"
+                    data-release="01/25/2018"
+                    data-price="$19.99"
+                    data-description="Climb the mountain and overcome your inner demons in this challenging platformer.">
+              Add to Cart
+            </button>
+            <button class="details-btn" onclick="location.href='#'">Details</button>
+            <button class="favorite" title="Add to Favorites"></button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="img/picture/undertale.jpg" alt="Undertale" class="product-image" />
+          <h3 class="product-title">Undertale</h3>
+          <p class="developer">Developer: Toby Fox</p>
+          <p class="release-date">Release Date: 09/15/2015</p>
+          <p class="price">Price: $9.99</p>
+          <p class="short-description">
+            Embark on a unique RPG journey where your choices affect the fate of all.
+          </p>
+          <div class="product-buttons">
+            <button class="add-to-cart"
+                    data-title="Undertale"
+                    data-developer="Toby Fox"
+                    data-release="09/15/2015"
+                    data-price="$9.99"
+                    data-description="Embark on a unique RPG journey where your choices affect the fate of all.">
+              Add to Cart
+            </button>
+            <button class="details-btn" onclick="location.href='#'">Details</button>
+            <button class="favorite" title="Add to Favorites"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="all-games">
+        <a href="list.html" class="btn">View All Games</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 IndieCrate. All rights reserved.
+  </footer>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
