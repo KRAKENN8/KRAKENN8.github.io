@@ -192,9 +192,21 @@ main { margin-top: 80px; }
   font-size: 32px;
   color: #aaa;
   transition: color 0.6s, transform 0.6s;
+  position: relative;   /* уже есть, но важно оставить */
+  top: -7px;            /* сдвигаем вверх */
 }
 .favorite:hover { transform: scale(1.2); }
 .favorite:hover::before { color: #e60000; transform: scale(1.2); }
+
+/* Кнопка «Избранное» — всегда красная, если есть класс .permanent */
+.favorite.permanent::before {
+  color: #e60000 !important;   /* принудительно красное */
+}
+
+/* При наведении — только масштаб, цвет уже красный */
+.favorite.permanent:hover::before {
+  transform: scale(1.2);
+}
 
 /* ---------- Notification (Add-to-Cart pop-ups) ---------- */
 .notification {
