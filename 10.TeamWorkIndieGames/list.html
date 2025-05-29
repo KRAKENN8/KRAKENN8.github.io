@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IndieCrate – All Games</title>
+  <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="img/icon/icon.png" alt="Icon" class="logo-icon">
+        <h1>IndieCrate</h1>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-btn">
+              <img src="img/icon/market.png" alt="Cart" class="cart-icon">
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="list-bg">
+      <section class="products" id="products">
+        <h2>All Indie Games</h2>
+
+        <div class="product-list">
+          <!-- ---------- Hollow Knight ---------- -->
+          <div class="product-card">
+            <img src="img/picture/hollowknight.jpg" alt="Hollow Knight" class="product-image">
+            <h3 class="product-title">Hollow Knight</h3>
+            <p class="developer">Developer: Team Cherry</p>
+            <p class="release-date">Release Date: 02/24/2017</p>
+            <p class="price">Price: $14.99</p>
+            <p class="short-description">
+              Explore the mysterious world of Hallownest in this immersive Metroidvania adventure.
+            </p>
+            <div class="product-buttons">
+              <button class="add-to-cart"
+                      data-title="Hollow Knight"
+                      data-developer="Team Cherry"
+                      data-release="02/24/2017"
+                      data-price="$14.99"
+                      data-description="Explore the mysterious world of Hallownest in this immersive Metroidvania adventure.">
+                Add to Cart
+              </button>
+              <button class="details-btn" onclick="location.href='details/hollowknight.html'">Details</button>
+              <button class="favorite" title="Add to Favorites"></button>
+            </div>
+          </div>
+
+          <!-- ---------- Celeste ---------- -->
+          <div class="product-card">
+            <img src="img/picture/celeste.jpg" alt="Celeste" class="product-image">
+            <h3 class="product-title">Celeste</h3>
+            <p class="developer">Developer: Maddy Makes Games</p>
+            <p class="release-date">Release Date: 01/25/2018</p>
+            <p class="price">Price: $19.99</p>
+            <p class="short-description">
+              Climb the mountain and overcome your inner demons in this challenging platformer.
+            </p>
+            <div class="product-buttons">
+              <button class="add-to-cart"
+                      data-title="Celeste"
+                      data-developer="Maddy Makes Games"
+                      data-release="01/25/2018"
+                      data-price="$19.99"
+                      data-description="Climb the mountain and overcome your inner demons in this challenging platformer.">
+                Add to Cart
+              </button>
+              <button class="details-btn" onclick="location.href='details/celeste.html'">Details</button>
+              <button class="favorite permanent" title="Add to Favorites"></button>
+            </div>
+          </div>
+
+          <!-- ---------- Undertale ---------- -->
+          <div class="product-card">
+            <img src="img/picture/undertale.jpg" alt="Undertale" class="product-image">
+            <h3 class="product-title">Undertale</h3>
+            <p class="developer">Developer: Toby Fox</p>
+            <p class="release-date">Release Date: 09/15/2015</p>
+            <p class="price">Price: $9.99</p>
+            <p class="short-description">
+              Embark on a unique RPG journey where your choices affect the fate of all.
+            </p>
+            <div class="product-buttons">
+              <button class="add-to-cart"
+                      data-title="Undertale"
+                      data-developer="Toby Fox"
+                      data-release="09/15/2015"
+                      data-price="$9.99"
+                      data-description="Embark on a unique RPG journey where your choices affect the fate of all.">
+                Add to Cart
+              </button>
+              <button class="details-btn" onclick="location.href='details/undertale.html'">Details</button>
+              <button class="favorite" title="Add to Favorites"></button>
+            </div>
+          </div>
+
+          <!-- ---------- Stardew Valley ---------- -->
+          <div class="product-card">
+            <img src="img/picture/stardewvalley.jpg" alt="Stardew Valley" class="product-image">
+            <h3 class="product-title">Stardew Valley</h3>
+            <p class="developer">Developer: ConcernedApe</p>
+            <p class="release-date">Release Date: 02/26/2016</p>
+            <p class="price">Price: $14.99</p>
+            <p class="short-description">
+              Build the farm of your dreams and form meaningful relationships in a relaxing rural world.
+            </p>
+            <div class="product-buttons">
+              <button class="add-to-cart"
+                      data-title="Stardew Valley"
+                      data-developer="ConcernedApe"
+                      data-release="02/26/2016"
+                      data-price="$14.99"
+                      data-description="Build the farm of your dreams and form meaningful relationships in a relaxing rural world.">
+                Add to Cart
+              </button>
+              <button class="details-btn" onclick="location.href='details/stardew.html'">Details</button>
+              <button class="favorite" title="Add to Favorites"></button>
+            </div>
+          </div>
+
+          <!-- ---------- Hades ---------- -->
+          <div class="product-card">
+            <img src="img/picture/hades.jpg" alt="Hades" class="product-image">
+            <h3 class="product-title">Hades</h3>
+            <p class="developer">Developer: Supergiant Games</p>
+            <p class="release-date">Release Date: 09/17/2020</p>
+            <p class="price">Price: $24.99</p>
+            <p class="short-description">
+              Battle out of the Underworld in this award-winning roguelike dungeon crawler.
+            </p>
+            <div class="product-buttons">
+              <button class="add-to-cart"
+                      data-title="Hades"
+                      data-developer="Supergiant Games"
+                      data-release="09/17/2020"
+                      data-price="$24.99"
+                      data-description="Battle out of the Underworld in this award-winning roguelike dungeon crawler.">
+                Add to Cart
+              </button>
+              <button class="details-btn" onclick="location.href='details/hades.html'">Details</button>
+              <button class="favorite" title="Add to Favorites"></button>
+            </div>
+          </div>
+
+          <!-- ---------- Cuphead ---------- -->
+          <div class="product-card">
+            <img src="img/picture/cuphead.jpg" alt="Cuphead" class="product-image">
+            <h3 class="product-title">Cuphead</h3>
+            <p class="developer">Developer: Studio MDHR</p>
+            <p class="release-date">Release Date: 09/29/2017</p>
+            <p class="price">Price: $19.99</p>
+            <p class="short-description">
+              Classic run-and-gun action with spectacular hand-drawn 1930s cartoon style.
+            </p>
+            <div class="product-buttons">
+              <button class="add-to-cart"
+                      data-title="Cuphead"
+                      data-developer="Studio MDHR"
+                      data-release="09/29/2017"
+                      data-price="$19.99"
+                      data-description="Classic run-and-gun action with spectacular hand-drawn 1930s cartoon style.">
+                Add to Cart
+              </button>
+              <button class="details-btn" onclick="location.href='details/cuphead.html'">Details</button>
+              <button class="favorite" title="Add to Favorites"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 IndieCrate. All rights reserved.
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="js/index.js"></script>
+</body>
+</html>
